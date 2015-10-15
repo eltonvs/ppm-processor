@@ -8,12 +8,12 @@ typedef struct {
 } Pixel;
 
 void menu() {
-    printf("'thr' - binarizacao da imagem usando thresholding\n");
-    printf("'blu' - executa blurring\n");
-    printf("'sha' - executa sharpening\n");
-    printf("'rot: - rotacao da imagem, dado o angulo\n");
-    printf("'amp' - ampliar a imagem, dado o zoom.\n");
-    printf("'red' - reduzir a imagem, dado o zoom.\n");
+    printf("'thr' \t binarizacao da imagem usando thresholding\n");
+    printf("'blu' \t executa blurring\n");
+    printf("'sha' \t executa sharpening\n");
+    printf("'rot' \t rotacao da imagem, dado o angulo\n");
+    printf("'amp' \t ampliar a imagem, dado o zoom.\n");
+    printf("'red' \t reduzir a imagem, dado o zoom.\n");
 }
 
 void read_ppm(char file_name[]) {
