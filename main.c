@@ -20,7 +20,7 @@ void menu() {
 }
 
 void read_ppm(char file_name[]) {
-    char header[3], op[4];
+    char header[3];
     int i, j; //Iteradores
     int w, h, max_color; //Dados da imagem
 
