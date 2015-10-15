@@ -25,13 +25,13 @@ void read_ppm(char file_name[]) {
     int w, h, max_color; //Dados da imagem
 
     FILE *img;
-    
+
     img = fopen(file_name, "r");
     if (img == NULL) {
         printf("Erro ao abrir o arquivo.\n");
         return;
     }
-    
+
     fscanf(img, "%s", header);
     fscanf(img, "%i %i", &w, &h);
     fscanf(img, "%i", &max_color);
@@ -41,7 +41,7 @@ void read_ppm(char file_name[]) {
     for (i = 0; i < h; i++)
         for (j = 0; j < w; j++)
             fscanf(img, "%i %i %i", &imagem[i][j].r, &imagem[i][j].g, &imagem[i][j].b);
-    
+
     fclose(img);
 
     printf("Dados da Imagem lida:\n");
