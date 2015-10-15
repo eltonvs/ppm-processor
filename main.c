@@ -8,12 +8,15 @@ typedef struct {
 } Pixel;
 
 void menu() {
-    printf("'thr' \t binarizacao da imagem usando thresholding\n");
-    printf("'blu' \t executa blurring\n");
-    printf("'sha' \t executa sharpening\n");
-    printf("'rot' \t rotacao da imagem, dado o angulo\n");
-    printf("'amp' \t ampliar a imagem, dado o zoom.\n");
-    printf("'red' \t reduzir a imagem, dado o zoom.\n");
+    printf("-------------------- MENU --------------------\n");
+    printf("'thr' \t binarizar imagem usando thresholding.\n");
+    printf("'blu' \t executar blurring.\n");
+    printf("'sha' \t executar sharpening.\n");
+    printf("'rot' \t rotacionar imagem.\n");
+    printf("'amp' \t ampliar imagem.\n");
+    printf("'red' \t reduzir imagem.\n\n");
+    printf("'fim' \t finalizar programa.\n");
+    printf("----------------------------------------------\n\n");
 }
 
 void read_ppm(char file_name[]) {
@@ -53,11 +56,11 @@ void read_ppm(char file_name[]) {
 
 int main() {
     char file[50];
-    
+
     //Recebe o nome do arquivo
     printf("Digite o nome do arquivo a ser lido: ");
     scanf("%s", file);
-    
+
     //Lê a imagem
     read_ppm(file);
 
