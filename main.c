@@ -16,16 +16,14 @@ void menu() {
     printf("'red' - reduzir a imagem, dado o zoom.\n");
 }
 
-int main() {
-    char header[3], op[4];
+void read_ppm(char nome[]) {
+	char header[3], op[4];
     int i, j; //Iteradores
     int w, h, max_color; //Dados da imagem
 
-    printf("Lendo imagem...\n\n");
-
     FILE *img;
     
-    img = fopen("teste.ppm", "r");
+    img = fopen(nome, "r");
 
     fscanf(img, "%s", header);
     fscanf(img, "%i %i", &w, &h);
@@ -47,6 +45,11 @@ int main() {
     for (i = 0; i < h; i++)
         for (j = 0; j < w; j++)
             printf("%i %i %i\n", imagem[i][j].r, imagem[i][j].g, imagem[i][j].b);
+}
+
+int main() {
+	//Lê a imagem
+    read_ppm("teste.ppm");
 
     return 0;
 }
