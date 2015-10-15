@@ -17,18 +17,18 @@ void menu() {
 }
 
 void read_ppm(char file_name[]) {
-	char header[3], op[4];
+    char header[3], op[4];
     int i, j; //Iteradores
     int w, h, max_color; //Dados da imagem
 
     FILE *img;
     
     img = fopen(file_name, "r");
-	if (img == NULL) {
-		printf("Erro ao abrir o arquivo.\n");
-		return;
-	}
-	
+    if (img == NULL) {
+        printf("Erro ao abrir o arquivo.\n");
+        return;
+    }
+    
     fscanf(img, "%s", header);
     fscanf(img, "%i %i", &w, &h);
     fscanf(img, "%i", &max_color);
@@ -52,13 +52,13 @@ void read_ppm(char file_name[]) {
 }
 
 int main() {
-	char file[50];
-	
-	//Recebe o nome do arquivo
-	printf("Digite o nome do arquivo a ser lido: ");
-	scanf("%s", file);
-	
-	//Lê a imagem
+    char file[50];
+    
+    //Recebe o nome do arquivo
+    printf("Digite o nome do arquivo a ser lido: ");
+    scanf("%s", file);
+    
+    //Lê a imagem
     read_ppm(file);
 
     return 0;
