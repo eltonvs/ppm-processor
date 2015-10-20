@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 #include "libs/functions.h"
 
 int main() {
@@ -10,6 +12,8 @@ int main() {
 
     //Lê a imagem
     read_ppm(file);
+
+    printf("\nPrograma finalizado.\n");
 
     return 0;
 }
