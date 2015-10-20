@@ -1,25 +1,3 @@
-char header[3];
-int w, h, max_color;
-
-typedef struct {
-    int r;
-    int g;
-    int b;
-} Pixel;
-
-void menu() {
-    printf("-------------------- MENU --------------------\n");
-    printf("'inf' \t mostrar informacoes da imagem.\n");
-    printf("'thr' \t binarizar imagem usando thresholding.\n");
-    printf("'blu' \t executar blurring.\n");
-    printf("'sha' \t executar sharpening.\n");
-    printf("'rot' \t rotacionar imagem.\n");
-    printf("'amp' \t ampliar imagem.\n");
-    printf("'red' \t reduzir imagem.\n\n");
-    printf("'fim' \t finalizar programa.\n");
-    printf("----------------------------------------------\n\n");
-}
-
 void img_info(Pixel img[w][h]) {
     int i, j;
     printf("Dados da Imagem lida:\n");
@@ -37,38 +15,39 @@ void choice(char op[3], Pixel img[w][h]) {
     op[1] = tolower(op[1]),
     op[2] = tolower(op[2]);
 
-    system("clear");
-
     if (strcmp(op, "fim") == 0)
         return;
-    else if (strcmp(op, "inf") == 0) {
-        printf("Exibindo informacoes da imagem...\n");
-        img_info(img);
-    }else if (strcmp(op, "thr") == 0)
-        printf("Executando thresholding...\n");
-    else if (strcmp(op, "blu") == 0)
-        printf("Executando blurring...\n");
-    else if (strcmp(op, "sha") == 0)
-        printf("Executando sharpening...\n");
-    else if (strcmp(op, "rot") == 0) {
-        int ang;
-        printf("Digite o angulo de rotacao: ");
-        scanf("%i", &ang);
-        printf("Rotacionando Imagem...\n");
-    }else if (strcmp(op, "amp") == 0) {
-        int zoom;
-        printf("Digite o zoom: ");
-        scanf("%i", &zoom);
-        printf("Ampliando Imagem...\n");
-    }else if (strcmp(op, "red") == 0) {
-        int zoom;
-        printf("Digite o zoom: ");
-        scanf("%i", &zoom);
-        printf("Reduzindo Imagem...\n");
-    }else {
-        printf("A opcao selecionada nao esta disponivel.\nTente novamente: ");
-        scanf("%s", op);
-        choice(op, img);
+    else {
+        system("clear");
+        if (strcmp(op, "inf") == 0) {
+            printf("Exibindo informacoes da imagem...\n");
+            img_info(img);
+        }else if (strcmp(op, "thr") == 0)
+            printf("Executando thresholding...\n");
+        else if (strcmp(op, "blu") == 0)
+            printf("Executando blurring...\n");
+        else if (strcmp(op, "sha") == 0)
+            printf("Executando sharpening...\n");
+        else if (strcmp(op, "rot") == 0) {
+            int ang;
+            printf("Digite o angulo de rotacao: ");
+            scanf("%i", &ang);
+            printf("Rotacionando Imagem...\n");
+        }else if (strcmp(op, "amp") == 0) {
+            int zoom;
+            printf("Digite o zoom: ");
+            scanf("%i", &zoom);
+            printf("Ampliando Imagem...\n");
+        }else if (strcmp(op, "red") == 0) {
+            int zoom;
+            printf("Digite o zoom: ");
+            scanf("%i", &zoom);
+            printf("Reduzindo Imagem...\n");
+        }else {
+            printf("A opcao selecionada nao esta disponivel.\nTente novamente: ");
+            scanf("%s", op);
+            choice(op, img);
+        }
     }
 }
 
