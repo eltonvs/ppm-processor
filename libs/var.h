@@ -1,5 +1,5 @@
 char header[3];
-int w, h, max_color;
+int w, h, component;
 
 typedef struct {
     int r;

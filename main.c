@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include "libs/var.h"
-#include "libs/visual.h"
 #include "libs/functions.h"
 
 int main() {

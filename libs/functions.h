@@ -1,9 +1,12 @@
+#include "var.h"
+#include "visual.h"
+
 void img_info(Pixel img[w][h]) {
     int i, j;
     printf("Dados da Imagem lida:\n");
     printf("Tipo: %s\n", header);
     printf("Tamanho: %ix%i\n", w, h);
-    printf("Cor maxima: %i\n", max_color);
+    printf("Cor maxima: %i\n", component);
     printf("Cores de cada pixel:\n");
     for (i = 0; i < h; i++)
         for (j = 0; j < w; j++)
@@ -64,7 +67,7 @@ int read_ppm(char file_name[]) {
 
     fscanf(img, "%s", header);
     fscanf(img, "%i %i", &w, &h);
-    fscanf(img, "%i", &max_color);
+    fscanf(img, "%i", &component);
 
     Pixel image[w][h];
 
