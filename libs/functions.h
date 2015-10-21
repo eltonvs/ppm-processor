@@ -54,3 +54,69 @@ void img_invert(Pixel img[w][h]) {
 
     fclose(img_f);
 }
+
+void img_rot_90(Pixel img[w][h]) {
+    int i, j;
+    char file_name_rot_90[50];
+
+    strcpy(file_name_rot_90,  file_name);
+    strcat(file_name_rot_90,"-rot-90.ppm");
+
+    FILE *img_f;
+    img_f = fopen(file_name_rot_90, "w");
+
+    fprintf(img_f, "%s\n", header);
+    fprintf(img_f, "%i %i\n", w, h);
+    fprintf(img_f, "%i\n", comp);
+    for (i = 0; i < h; i++) {
+        for (j = w-1; j >= 0; j--) {
+            fprintf(img_f, "%i %i %i%c", img[j][i].r, img[j][i].g, img[j][i].b, (j == 0)?'\n':' ');
+        }
+    }
+
+    fclose(img_f);
+}
+
+void img_rot_180(Pixel img[w][h]) {
+    int i, j;
+    char file_name_rot_180[50];
+
+    strcpy(file_name_rot_180,  file_name);
+    strcat(file_name_rot_180,"-rot-180.ppm");
+
+    FILE *img_f;
+    img_f = fopen(file_name_rot_180, "w");
+
+    fprintf(img_f, "%s\n", header);
+    fprintf(img_f, "%i %i\n", w, h);
+    fprintf(img_f, "%i\n", comp);
+    for (i = h-1; i >= 0; i--) {
+        for (j = w-1; j >= 0; j--) {
+            fprintf(img_f, "%i %i %i%c", img[i][j].r, img[i][j].g, img[i][j].b, (j == 0)?'\n':' ');
+        }
+    }
+
+    fclose(img_f);
+}
+
+void img_rot_270(Pixel img[w][h]) {
+    int i, j;
+    char file_name_rot_270[50];
+
+    strcpy(file_name_rot_270,  file_name);
+    strcat(file_name_rot_270,"-rot-270.ppm");
+
+    FILE *img_f;
+    img_f = fopen(file_name_rot_270, "w");
+
+    fprintf(img_f, "%s\n", header);
+    fprintf(img_f, "%i %i\n", w, h);
+    fprintf(img_f, "%i\n", comp);
+    for (i = h-1; i >= 0; i--) {
+        for (j = 0; j < w; j++) {
+            fprintf(img_f, "%i %i %i%c", img[j][i].r, img[j][i].g, img[j][i].b, (j == w-1)?'\n':' ');
+        }
+    }
+
+    fclose(img_f);
+}

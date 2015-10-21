@@ -20,15 +20,21 @@ void choice(char op[3], Pixel img[w][h]) {
         }else if (strcmp(op, "thr") == 0) {
             printf("Executando thresholding...\n");
             img_thresholding(img);
-        }else if (strcmp(op, "blu") == 0)
+        }else if (strcmp(op, "blu") == 0) {
             printf("Executando blurring...\n");
-        else if (strcmp(op, "sha") == 0)
+        }else if (strcmp(op, "sha") == 0) {
             printf("Executando sharpening...\n");
-        else if (strcmp(op, "rot") == 0) {
+        }else if (strcmp(op, "rot") == 0) {
             int ang;
             printf("Digite o angulo de rotacao: ");
             scanf("%i", &ang);
             printf("Rotacionando Imagem...\n");
+            if(ang%360 == 90)
+                img_rot_90(img);
+            if(ang%360 == 180)
+                img_rot_180(img);
+            if(ang%360 == 270)
+                img_rot_270(img);
         }else if (strcmp(op, "amp") == 0) {
             int zoom;
             printf("Digite o zoom: ");
