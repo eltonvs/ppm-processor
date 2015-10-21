@@ -15,18 +15,17 @@ void img_info(Pixel img[w][h]) {
 
 void img_thresholding(Pixel img[w][h]) {
 	FILE *img_f;
-    img_f = fopen(file_name, "w");
+    img_f = fopen(strcat(file_name,"-thr.ppm"), "w");
 
-    int i, j, rgb;
+    int i, j, pb;
     fprintf(img_f, "%s\n", header);
     fprintf(img_f, "%i %i\n", w, h);
     fprintf(img_f, "%i\n", component);
     for (i = 0; i < h; i++) {
         for (j = 0; j < w; j++) {
-			rgb = (img[i][j].r + img[i][j].g + img[i][j].b)/3;
-            fprintf(img_f, "%i %i %i%c", rgb, rgb, rgb, j == w - 1 ? '\n' : ' ');
+			pb = (img[i][j].r + img[i][j].g + img[i][j].b)/3;
+            fprintf(img_f, "%i %i %i%c", pb, pb, pb, j == w - 1 ? '\n' : ' ');
 		}
-		fprintf(img_f, "\n");
 	}
 	
 	fclose(img_f);
