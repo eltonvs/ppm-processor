@@ -1,4 +1,4 @@
-char header[3];
+char file_name[50], header[3];
 int w, h, component;
 
 typedef struct {

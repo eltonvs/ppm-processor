@@ -13,6 +13,25 @@ void img_info(Pixel img[w][h]) {
             printf("%i %i %i\n", img[i][j].r, img[i][j].g, img[i][j].b);
 }
 
+void img_thresholding(Pixel img[w][h]) {
+	FILE *img_f;
+    img_f = fopen(strcat("thr-", file_name), "w");
+
+    int i, j, rgb;
+    fprintf(img_f, "%s\n", header);
+    fprintf(img_f, "%i %i\n", w, h);
+    fprintf(img_f, "%i\n", component);
+    for (i = 0; i < h; i++) {
+        for (j = 0; j < w; j++) {
+			rgb = (img[i][j].r + img[i][j].g + img[i][j].b)/3;
+            fprintf(img_f, "%i %i %i%c", rgb, rgb, rgb, j == w - 1 ? '\n' : ' ');
+		}
+		fprintf(img_f, "\n");
+	}
+	
+	fclose(img_f);
+}
+
 void choice(char op[3], Pixel img[w][h]) {
     op[0] = tolower(op[0]),
     op[1] = tolower(op[1]),
@@ -25,9 +44,10 @@ void choice(char op[3], Pixel img[w][h]) {
         if (strcmp(op, "inf") == 0) {
             printf("Exibindo informacoes da imagem...\n");
             img_info(img);
-        }else if (strcmp(op, "thr") == 0)
+        }else if (strcmp(op, "thr") == 0) {
             printf("Executando thresholding...\n");
-        else if (strcmp(op, "blu") == 0)
+            img_thresholding(img);
+        }else if (strcmp(op, "blu") == 0)
             printf("Executando blurring...\n");
         else if (strcmp(op, "sha") == 0)
             printf("Executando sharpening...\n");
@@ -54,7 +74,8 @@ void choice(char op[3], Pixel img[w][h]) {
     }
 }
 
-int read_ppm(char file_name[]) {
+int read_ppm(char file[]) {
+	strcpy(file_name, file);
     int i, j; //Iteradores
 
     FILE *img;
