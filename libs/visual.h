@@ -1,6 +1,7 @@
 void menu() {
     printf("-------------------- MENU --------------------\n");
     printf("'inf' \t mostrar informacoes da imagem.\n");
+    printf("'inv' \t inverter cores da imagem.\n");
     printf("'thr' \t binarizar imagem usando thresholding.\n");
     printf("'blu' \t executar blurring.\n");
     printf("'sha' \t executar sharpening.\n");
