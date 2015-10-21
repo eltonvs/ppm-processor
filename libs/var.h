@@ -1,5 +1,5 @@
 char file_name[50], header[3];
-int w, h, component;
+int w, h, comp;
 
 typedef struct {
     int r;

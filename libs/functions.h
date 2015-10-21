@@ -6,7 +6,7 @@ void img_info(Pixel img[w][h]) {
     printf("Dados da Imagem lida:\n");
     printf("Tipo: %s\n", header);
     printf("Tamanho: %ix%i\n", w, h);
-    printf("Cor maxima: %i\n", component);
+    printf("Cor maxima: %i\n", comp);
     printf("Cores de cada pixel:\n");
     for (i = 0; i < h; i++)
         for (j = 0; j < w; j++)
@@ -25,11 +25,11 @@ void img_thresholding(Pixel img[w][h]) {
 
     fprintf(img_f, "%s\n", header);
     fprintf(img_f, "%i %i\n", w, h);
-    fprintf(img_f, "%i\n", component);
+    fprintf(img_f, "%i\n", comp);
     for (i = 0; i < h; i++) {
         for (j = 0; j < w; j++) {
             pb = (img[i][j].r + img[i][j].g + img[i][j].b)/3;
-            fprintf(img_f, "%i %i %i%c", pb, pb, pb, j == w - 1 ? '\n' : ' ');
+            fprintf(img_f, "%i %i %i%c", pb, pb, pb, (j == w-1)?'\n':' ');
         }
     }
 
@@ -48,14 +48,10 @@ void img_invert(Pixel img[w][h]) {
 
     fprintf(img_f, "%s\n", header);
     fprintf(img_f, "%i %i\n", w, h);
-    fprintf(img_f, "%i\n", component);
+    fprintf(img_f, "%i\n", comp);
     for (i = 0; i < h; i++) {
         for (j = 0; j < w; j++) {
-            fprintf(img_f, "%i %i %i%c",
-                    component - img[i][j].r,
-                    component-img[i][j].g,
-                    component-img[i][j].b,
-                    j == w - 1 ? '\n' : ' ');
+            fprintf(img_f, "%i %i %i%c", comp-img[i][j].r, comp-img[i][j].g, comp-img[i][j].b, (j == w-1)?'\n':' ');
         }
     }
 
@@ -122,7 +118,7 @@ int read_ppm(char file[]) {
 
     fscanf(img, "%s", header);
     fscanf(img, "%i %i", &w, &h);
-    fscanf(img, "%i", &component);
+    fscanf(img, "%i", &comp);
 
     Pixel image[w][h];
 
