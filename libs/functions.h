@@ -14,10 +14,15 @@ void img_info(Pixel img[w][h]) {
 }
 
 void img_thresholding(Pixel img[w][h]) {
-	FILE *img_f;
-    img_f = fopen(strcat(file_name,"-thr.ppm"), "w");
-
     int i, j, pb;
+    char file_name_thr[50];
+
+    strcpy(file_name_thr,  file_name);
+    strcat(file_name_thr,"-thr.ppm");
+
+	FILE *img_f;
+    img_f = fopen(file_name_thr, "w");
+
     fprintf(img_f, "%s\n", header);
     fprintf(img_f, "%i %i\n", w, h);
     fprintf(img_f, "%i\n", component);
@@ -76,10 +81,11 @@ void choice(char op[3], Pixel img[w][h]) {
 int read_ppm(char file[]) {
 	strcpy(file_name, file);
     int i, j; //Iteradores
+    char op[3];
 
     FILE *img;
 
-    img = fopen(file_name, "r");
+    img = fopen(strcat(file,".ppm"), "r");
     if (img == NULL) {
         printf("Erro ao abrir o arquivo.\n");
         return 0;
@@ -98,7 +104,6 @@ int read_ppm(char file[]) {
     fclose(img);
 
     menu();
-    char op[3];
     printf("O que voce deseja fazer? ");
     scanf("%s", op);
     choice(op, image);
