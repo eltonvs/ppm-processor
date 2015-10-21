@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include "libs/manip.h"
+#include "libs/img_manip.h"
 
 int main() {
     char file[50];
