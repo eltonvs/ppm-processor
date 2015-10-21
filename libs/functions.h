@@ -15,7 +15,7 @@ void img_info(Pixel img[w][h]) {
 
 void img_thresholding(Pixel img[w][h]) {
 	FILE *img_f;
-    img_f = fopen(strcat("thr-", file_name), "w");
+    img_f = fopen(file_name, "w");
 
     int i, j, rgb;
     fprintf(img_f, "%s\n", header);
