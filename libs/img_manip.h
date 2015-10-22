@@ -26,7 +26,7 @@ void choice(char op[3], Pixel img[w][h]) {
             printf("Executando sharpening...\n");
         }else if (strcmp(op, "rot") == 0) {
             int ang;
-            printf("Digite o angulo de rotacao: ");
+            printf("Digite o angulo de rotacao [90, 180, 270]: ");
             scanf("%i", &ang);
             printf("Rotacionando Imagem...\n");
             if(ang%360 == 90)
