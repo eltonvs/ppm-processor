@@ -11,7 +11,7 @@ int main() {
     scanf("%s", file);
 
     //Lê a imagem
-    read_ppm(file);
+    manip_ppm(file);
 
     printf("\nPrograma finalizado.\n");
 

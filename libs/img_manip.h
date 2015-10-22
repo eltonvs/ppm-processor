@@ -53,7 +53,7 @@ void choice(char op[3], Pixel img[w][h]) {
     }
 }
 
-int read_ppm(char file[]) {
+int manip_ppm(char file[]) {
     strcpy(file_name, file);
     int i, j; //Iteradores
     char op[3];
