@@ -66,9 +66,7 @@ int manip_ppm(char file[]) {
         return 0;
     }
 
-    fscanf(img, "%s", header);
-    fscanf(img, "%i %i", &w, &h);
-    fscanf(img, "%i", &comp);
+    fscanf(img, "P3 %i %i 255", &w, &h);
 
     Pixel image[w][h];
 
