@@ -2,7 +2,25 @@
 #include "visual.h"
 #include "functions.h"
 
-void choice(char op[3], Pixel img[w][h]) {
+void build_img(char file[], Pixel img[w][h]){
+    int i, j;
+
+    strcat(strcat(strcat(file, "-"), op), ".ppm");
+
+    FILE *img_f;
+    img_f = fopen(file, "w");
+
+    fprintf(img_f, "%s\n", header);
+    fprintf(img_f, "%i %i\n", w, h);
+    fprintf(img_f, "%i\n", comp);
+    for (i = 0; i < h; i++)
+        for (j = 0; j < w; j++)
+            fprintf(img_f, "%i %i %i%c", img[i][j].r, img[i][j].g, img[i][j].b, (j == w-1)?'\n':' ');
+
+    fclose(img_f);
+}
+
+void choice(Pixel img[w][h]) {
     op[0] = tolower(op[0]),
     op[1] = tolower(op[1]),
     op[2] = tolower(op[2]);
@@ -17,9 +35,11 @@ void choice(char op[3], Pixel img[w][h]) {
         }else if (strcmp(op, "inv") == 0) {
             printf("Executando inversao...\n");
             img_invert(img);
+            build_img(file_name, img);
         }else if (strcmp(op, "thr") == 0) {
             printf("Executando thresholding...\n");
             img_thresholding(img);
+            build_img(file_name, img);
         }else if (strcmp(op, "blu") == 0) {
             printf("Executando blurring...\n");
         }else if (strcmp(op, "sha") == 0) {
@@ -48,7 +68,7 @@ void choice(char op[3], Pixel img[w][h]) {
         }else {
             printf("A opcao selecionada nao esta disponivel.\nTente novamente: ");
             scanf("%s", op);
-            choice(op, img);
+            choice(img);
         }
     }
 }
@@ -56,7 +76,6 @@ void choice(char op[3], Pixel img[w][h]) {
 int manip_ppm(char file[]) {
     strcpy(file_name, file);
     int i, j; //Iteradores
-    char op[3];
 
     FILE *img;
 
@@ -79,7 +98,7 @@ int manip_ppm(char file[]) {
     menu();
     printf("O que voce deseja fazer? ");
     scanf("%s", op);
-    choice(op, image);
+    choice(image);
 
     return 1;
 }

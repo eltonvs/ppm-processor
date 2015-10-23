@@ -12,47 +12,21 @@ void img_info(Pixel img[w][h]) {
 
 void img_thresholding(Pixel img[w][h]) {
     int i, j, pb;
-    char file_name_thr[50];
-
-    strcpy(file_name_thr,  file_name);
-    strcat(file_name_thr,"-thr.ppm");
-
-    FILE *img_f;
-    img_f = fopen(file_name_thr, "w");
-
-    fprintf(img_f, "%s\n", header);
-    fprintf(img_f, "%i %i\n", w, h);
-    fprintf(img_f, "%i\n", comp);
-    for (i = 0; i < h; i++) {
-        for (j = 0; j < w; j++) {
-            pb = (img[i][j].r + img[i][j].g + img[i][j].b)/3;
-            fprintf(img_f, "%i %i %i%c", pb, pb, pb, (j == w-1)?'\n':' ');
-        }
-    }
-
-    fclose(img_f);
+    for (i = 0; i < h; i++)
+        for (j = 0; j < w; j++)
+            pb = (img[i][j].r + img[i][j].g + img[i][j].b)/3,
+            img[i][j].r = pb,
+            img[i][j].g = pb,
+            img[i][j].b = pb;
 }
 
 void img_invert(Pixel img[w][h]) {
     int i, j;
-    char file_name_inv[50];
-
-    strcpy(file_name_inv,  file_name);
-    strcat(file_name_inv,"-inv.ppm");
-
-    FILE *img_f;
-    img_f = fopen(file_name_inv, "w");
-
-    fprintf(img_f, "%s\n", header);
-    fprintf(img_f, "%i %i\n", w, h);
-    fprintf(img_f, "%i\n", comp);
-    for (i = 0; i < h; i++) {
-        for (j = 0; j < w; j++) {
-            fprintf(img_f, "%i %i %i%c", comp-img[i][j].r, comp-img[i][j].g, comp-img[i][j].b, (j == w-1)?'\n':' ');
-        }
-    }
-
-    fclose(img_f);
+    for (i = 0; i < h; i++)
+        for (j = 0; j < w; j++)
+            img[i][j].r = comp-img[i][j].r,
+            img[i][j].g = comp-img[i][j].g,
+            img[i][j].b = comp-img[i][j].b;
 }
 
 void img_rot_90(Pixel img[w][h]) {
