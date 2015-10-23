@@ -66,10 +66,10 @@ void img_rot_90(Pixel img[w][h]) {
     img_f = fopen(file_name_rot_90, "w");
 
     fprintf(img_f, "%s\n", header);
-    fprintf(img_f, "%i %i\n", w, h);
+    fprintf(img_f, "%i %i\n", h, w);
     fprintf(img_f, "%i\n", comp);
-    for (i = 0; i < h; i++) {
-        for (j = w-1; j >= 0; j--) {
+    for (i = 0; i < w; i++) {
+        for (j = h-1; j >= 0; j--) {
             fprintf(img_f, "%i %i %i%c", img[j][i].r, img[j][i].g, img[j][i].b, (j == 0)?'\n':' ');
         }
     }
@@ -110,10 +110,10 @@ void img_rot_270(Pixel img[w][h]) {
     img_f = fopen(file_name_rot_270, "w");
 
     fprintf(img_f, "%s\n", header);
-    fprintf(img_f, "%i %i\n", w, h);
+    fprintf(img_f, "%i %i\n", h, w);
     fprintf(img_f, "%i\n", comp);
-    for (i = h-1; i >= 0; i--) {
-        for (j = 0; j < w; j++) {
+    for (i = w-1; i >= 0; i--) {
+        for (j = 0; j < h; j++) {
             fprintf(img_f, "%i %i %i%c", img[j][i].r, img[j][i].g, img[j][i].b, (j == w-1)?'\n':' ');
         }
     }
