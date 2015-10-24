@@ -13,18 +13,37 @@ void img_info(Pixel img[w][h]) {
 void img_auto_relevo(Pixel img[w][h]) {
     int i, j;
     Pixel tmp[w][h];
-    //faz as alterações em temp
     for (i = 1; i < h - 1; i++)
         for (j = 0; j < w; j++)
             tmp[i][j].r = abs(img[i+1][j].r - img[i-1][j].r),
             tmp[i][j].g = abs(img[i+1][j].g - img[i-1][j].g),
             tmp[i][j].b = abs(img[i+1][j].b - img[i-1][j].b);
-    //Passa para img
     for (i = 1; i < h - 1; i++)
         for (j = 0; j < w; j++)
             img[i][j].r = tmp[i][j].r + comp/2,
             img[i][j].g = tmp[i][j].g + comp/2,
             img[i][j].b = tmp[i][j].b + comp/2;
+}
+
+void img_blurring(Pixel img[w][h]) {
+    int i, j;
+    Pixel tmp[w][h];
+    for (i = 1; i < h - 1; i++)
+        for (j = 1; j < w - 1; j++)
+            tmp[i][j].r = (img[i-1][j-1].r + img[i-1][j].r + img[i-1][j+1].r +
+                            img[i][j-1].r + img[i][j].r + img[i][j+1].r +
+                            img[i+1][j-1].r + img[i+1][j].r + img[i+1][j+1].r)/9,
+            tmp[i][j].g = (img[i-1][j-1].g + img[i-1][j].g + img[i-1][j+1].g +
+                            img[i][j-1].g + img[i][j].g + img[i][j+1].g +
+                            img[i+1][j-1].g + img[i+1][j].g + img[i+1][j+1].g)/9,
+            tmp[i][j].b = (img[i-1][j-1].b + img[i-1][j].b + img[i-1][j+1].b +
+                            img[i][j-1].b + img[i][j].b + img[i][j+1].b +
+                            img[i+1][j-1].b + img[i+1][j].b + img[i+1][j+1].b)/9;
+    for (i = 1; i < h - 1; i++)
+        for (j = 1; j < w - 1; j++)
+            img[i][j].r = tmp[i][j].r,
+            img[i][j].g = tmp[i][j].g,
+            img[i][j].b = tmp[i][j].b;
 }
 
 void img_thresholding(Pixel img[w][h]) {

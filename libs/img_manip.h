@@ -50,6 +50,8 @@ void choice(Pixel img[w][h]) {
             build_img(file_name, img);
         }else if (strcmp(op, "blu") == 0) {
             printf("Executando blurring...\n");
+            img_blurring(img);
+            build_img(file_name, img);
         }else if (strcmp(op, "sha") == 0) {
             printf("Executando sharpening...\n");
         }else if (strcmp(op, "rot") == 0) {
