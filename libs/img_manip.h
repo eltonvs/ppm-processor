@@ -59,11 +59,11 @@ void choice(Pixel img[w][h]) {
             printf("Digite o tipo de rotacao [dir, esq, 180]: ");
             scanf("%s", ang);
             if(strcmp(ang, "dir") == 0) {
-                img_rot_dir(img);
+                img_rot_right(img);
             }else if(strcmp(ang, "180") == 0) {
                 img_rot_180(img);
             }else if(strcmp(ang, "esq") == 0) {
-                img_rot_esq(img);
+                img_rot_left(img);
             }else {
                 printf("Voce nao escolheu uma opcao valida. Tente novamente:\n");
                 choice(img);

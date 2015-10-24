@@ -80,7 +80,7 @@ void img_invert(Pixel img[w][h]) {
             img[i][j].b = comp-img[i][j].b;
 }
 
-void img_rot_esq(Pixel img[MAX][MAX]) {
+void img_rot_left(Pixel img[MAX][MAX]) {
     int i, j, aux;
     Pixel tmp[MAX][MAX];
     for (i = 0; i < h; i++)
@@ -96,14 +96,14 @@ void img_rot_esq(Pixel img[MAX][MAX]) {
     aux = h, h = w, w = aux;
 }
 
-void img_rot_dir(Pixel img[MAX][MAX]) {
+void img_rot_right(Pixel img[MAX][MAX]) {
     int i;
     for (i = 0; i < 3; i++)
-        img_rot_esq(img);
+        img_rot_left(img);
 }
 
 void img_rot_180(Pixel img[MAX][MAX]) {
     int i;
     for (i = 0; i < 2; i++)
-        img_rot_esq(img);
+        img_rot_left(img);
 }
