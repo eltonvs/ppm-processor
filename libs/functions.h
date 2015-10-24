@@ -10,6 +10,23 @@ void img_info(Pixel img[w][h]) {
             printf("%i %i %i\n", img[i][j].r, img[i][j].g, img[i][j].b);
 }
 
+void img_auto_relevo(Pixel img[w][h]) {
+    int i, j;
+    Pixel tmp[w][h];
+    //faz as alterações em temp
+    for (i = 1; i < h - 1; i++)
+        for (j = 0; j < w; j++)
+            tmp[i][j].r = abs(img[i+1][j].r - img[i-1][j].r),
+            tmp[i][j].g = abs(img[i+1][j].g - img[i-1][j].g),
+            tmp[i][j].b = abs(img[i+1][j].b - img[i-1][j].b);
+    //Passa para img
+    for (i = 1; i < h - 1; i++)
+        for (j = 0; j < w; j++)
+            img[i][j].r = tmp[i][j].r + comp/2,
+            img[i][j].g = tmp[i][j].g + comp/2,
+            img[i][j].b = tmp[i][j].b + comp/2;
+}
+
 void img_thresholding(Pixel img[w][h]) {
     int i, j, pb;
     for (i = 0; i < h; i++)

@@ -15,7 +15,11 @@ void build_img(char file[], Pixel img[w][h]){
     fprintf(img_f, "%i\n", comp);
     for (i = 0; i < h; i++)
         for (j = 0; j < w; j++)
-            fprintf(img_f, "%i %i %i%c", img[i][j].r, img[i][j].g, img[i][j].b, (j == w-1)?'\n':' ');
+            fprintf(img_f, "%i %i %i%c",
+            (img[i][j].r > comp) ? comp : img[i][j].r,
+            (img[i][j].g > comp) ? comp : img[i][j].g,
+            (img[i][j].b > comp) ? comp : img[i][j].b,
+            (j == w-1) ? '\n' : ' ');
 
     fclose(img_f);
 }
@@ -35,6 +39,10 @@ void choice(Pixel img[w][h]) {
         }else if (strcmp(op, "inv") == 0) {
             printf("Executando inversao...\n");
             img_invert(img);
+            build_img(file_name, img);
+        }else if (strcmp(op, "rlv") == 0) {
+            printf("Executando auto-relevo...\n");
+            img_auto_relevo(img);
             build_img(file_name, img);
         }else if (strcmp(op, "thr") == 0) {
             printf("Executando thresholding...\n");
