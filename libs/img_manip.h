@@ -2,7 +2,7 @@
 #include "visual.h"
 #include "functions.h"
 
-void build_img(char file[], Pixel img[w][h]){
+void build_img(char file[], Pixel img[MAX][MAX]){
     int i, j;
 
     strcat(strcat(strcat(file, "-"), op), ".ppm");
@@ -15,11 +15,10 @@ void build_img(char file[], Pixel img[w][h]){
     fprintf(img_f, "%i\n", comp);
     for (i = 0; i < h; i++)
         for (j = 0; j < w; j++)
-            fprintf(img_f, "%i %i %i%c",
+            fprintf(img_f, "%i %i %i\n",
             (img[i][j].r > comp) ? comp : img[i][j].r,
             (img[i][j].g > comp) ? comp : img[i][j].g,
-            (img[i][j].b > comp) ? comp : img[i][j].b,
-            (j == w-1) ? '\n' : ' ');
+            (img[i][j].b > comp) ? comp : img[i][j].b);
 
     fclose(img_f);
 }
@@ -32,7 +31,6 @@ void choice(Pixel img[w][h]) {
     if (strcmp(op, "fim") == 0)
         return;
     else {
-        system("clear");
         if (strcmp(op, "inf") == 0) {
             printf("Exibindo informacoes da imagem...\n");
             img_info(img);
@@ -57,16 +55,23 @@ void choice(Pixel img[w][h]) {
             img_sharpening(img);
             build_img(file_name, img);
         }else if (strcmp(op, "rot") == 0) {
-            int ang;
-            printf("Digite o angulo de rotacao [90, 180, 270]: ");
-            scanf("%i", &ang);
+            char ang[3];
+            printf("Digite o tipo de rotacao [dir, esq, 180]: ");
+            scanf("%s", ang);
             printf("Rotacionando Imagem...\n");
-            if(ang%360 == 90)
-                img_rot_90(img);
-            if(ang%360 == 180)
+            if(strcmp(ang, "dir") == 0) {
+                img_rot_dir(img);
+            }else if(strcmp(ang, "180") == 0) {
                 img_rot_180(img);
-            if(ang%360 == 270)
-                img_rot_270(img);
+            }else if(strcmp(ang, "esq") == 0) {
+                img_rot_esq(img);
+            }else {
+                printf("Voce nao escolheu uma opcao valida. Tente novamente:\n");
+                choice(img);
+                return;
+            }
+            strcat(strcat(op, "-"), ang);
+            build_img(file_name, img);
         }else if (strcmp(op, "amp") == 0) {
             int zoom;
             printf("Digite o zoom: ");
@@ -99,7 +104,9 @@ int manip_ppm(char file[]) {
 
     fscanf(img, "P3 %i %i 255", &w, &h);
 
-    Pixel image[w][h];
+    MAX = (w > h) ? w : h;
+
+    Pixel image[MAX][MAX];
 
     for (i = 0; i < h; i++)
         for (j = 0; j < w; j++)
