@@ -54,6 +54,8 @@ void choice(Pixel img[w][h]) {
             build_img(file_name, img);
         }else if (strcmp(op, "sha") == 0) {
             printf("Executando sharpening...\n");
+            img_sharpening(img);
+            build_img(file_name, img);
         }else if (strcmp(op, "rot") == 0) {
             int ang;
             printf("Digite o angulo de rotacao [90, 180, 270]: ");

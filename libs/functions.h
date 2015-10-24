@@ -46,6 +46,21 @@ void img_blurring(Pixel img[w][h]) {
             img[i][j].b = tmp[i][j].b;
 }
 
+void img_sharpening(Pixel img[w][h]) {
+    int i, j;
+    Pixel tmp[w][h];
+    for (i = 1; i < h - 1; i++)
+        for (j = 1; j < w - 1; j++)
+            tmp[i][j].r = abs(5*img[i][j].r - img[i-1][j].r - img[i][j-1].r - img[i][j+1].r - img[i+1][j].r),
+            tmp[i][j].g = abs(5*img[i][j].g - img[i-1][j].g - img[i][j-1].g - img[i][j+1].g - img[i+1][j].g),
+            tmp[i][j].b = abs(5*img[i][j].b - img[i-1][j].b - img[i][j-1].b - img[i][j+1].b - img[i+1][j].b);
+    for (i = 1; i < h - 1; i++)
+        for (j = 1; j < w - 1; j++)
+            img[i][j].r = tmp[i][j].r,
+            img[i][j].g = tmp[i][j].g,
+            img[i][j].b = tmp[i][j].b;
+}
+
 void img_thresholding(Pixel img[w][h]) {
     int i, j, pb;
     for (i = 0; i < h; i++)
