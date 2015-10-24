@@ -107,3 +107,26 @@ void img_rot_180(Pixel img[MAX][MAX]) {
     for (i = 0; i < 2; i++)
         img_rot_left(img);
 }
+
+void img_amp(char file[], int zoom, Pixel img[MAX][MAX]) {
+    int i, j, k, l;
+
+    strcat(file, "-amp.ppm");
+
+    FILE *img_f;
+    img_f = fopen(file, "w");
+
+    fprintf(img_f, "%s\n", header);
+    fprintf(img_f, "%i %i\n", w*zoom, h*zoom);
+    fprintf(img_f, "%i\n", comp);
+    for (i = 0; i < h; i++)
+        for (k = 0; k < zoom; k++)
+            for (j = 0; j < w; j++)
+                for (l = 0; l < zoom; l++)
+                    fprintf(img_f, "%i %i %i\n",
+                    (img[i][j].r > comp) ? comp : img[i][j].r,
+                    (img[i][j].g > comp) ? comp : img[i][j].g,
+                    (img[i][j].b > comp) ? comp : img[i][j].b);
+
+    fclose(img_f);
+}

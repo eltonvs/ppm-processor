@@ -77,6 +77,7 @@ void choice(Pixel img[w][h]) {
             printf("Digite o zoom: ");
             scanf("%i", &zoom);
             printf("Ampliando Imagem...\n");
+            img_amp(file_name, zoom, img);
         }else if (strcmp(op, "red") == 0) {
             int zoom;
             printf("Digite o zoom: ");
