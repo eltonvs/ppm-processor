@@ -58,7 +58,6 @@ void choice(Pixel img[w][h]) {
             char ang[3];
             printf("Digite o tipo de rotacao [dir, esq, 180]: ");
             scanf("%s", ang);
-            printf("Rotacionando Imagem...\n");
             if(strcmp(ang, "dir") == 0) {
                 img_rot_dir(img);
             }else if(strcmp(ang, "180") == 0) {
@@ -70,6 +69,7 @@ void choice(Pixel img[w][h]) {
                 choice(img);
                 return;
             }
+            printf("Rotacionando Imagem...\n");
             strcat(strcat(op, "-"), ang);
             build_img(file_name, img);
         }else if (strcmp(op, "amp") == 0) {
