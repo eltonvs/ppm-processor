@@ -10,7 +10,7 @@ void img_info(Pixel img[w][h]) {
             printf("%i %i %i\n", img[i][j].r, img[i][j].g, img[i][j].b);
 }
 
-void img_auto_relevo(Pixel img[w][h]) {
+void img_high_relief(Pixel img[w][h]) {
     int i, j;
     Pixel tmp[w][h];
     for (i = 1; i < h - 1; i++)
@@ -59,6 +59,15 @@ void img_sharpening(Pixel img[w][h]) {
             img[i][j].r = tmp[i][j].r,
             img[i][j].g = tmp[i][j].g,
             img[i][j].b = tmp[i][j].b;
+}
+
+void img_popart(Pixel img[w][h]) {
+    int i, j, pb;
+    for (i = 0; i < h; i++)
+        for (j = 0; j < w; j++)
+            img[i][j].r = (img[i][j].r > 127) ? 255: 0,
+            img[i][j].g = (img[i][j].g > 127) ? 255: 0,
+            img[i][j].b = (img[i][j].b > 127) ? 255: 0;
 }
 
 void img_thresholding(Pixel img[w][h]) {

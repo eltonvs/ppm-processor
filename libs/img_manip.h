@@ -16,9 +16,9 @@ void build_img(char file[], Pixel img[MAX][MAX]){
     for (i = 0; i < h; i++)
         for (j = 0; j < w; j++)
             fprintf(img_f, "%i %i %i\n",
-            (img[i][j].r > comp) ? comp : img[i][j].r,
-            (img[i][j].g > comp) ? comp : img[i][j].g,
-            (img[i][j].b > comp) ? comp : img[i][j].b);
+            (img[i][j].r > comp) ? comp : (img[i][j].r < 0) ? 0 : img[i][j].r,
+            (img[i][j].g > comp) ? comp : (img[i][j].g < 0) ? 0 : img[i][j].g,
+            (img[i][j].b > comp) ? comp : (img[i][j].b < 0) ? 0 : img[i][j].b);
 
     fclose(img_f);
 }
@@ -39,8 +39,12 @@ void choice(Pixel img[w][h]) {
             img_invert(img);
             build_img(file_name, img);
         }else if (strcmp(op, "rlv") == 0) {
-            printf("Executando auto-relevo...\n");
-            img_auto_relevo(img);
+            printf("Executando alto-relevo...\n");
+            img_high_relief(img);
+            build_img(file_name, img);
+        }else if (strcmp(op, "pop") == 0) {
+            printf("Convertendo para o Pop Art...\n");
+            img_popart(img);
             build_img(file_name, img);
         }else if (strcmp(op, "thr") == 0) {
             printf("Executando thresholding...\n");
@@ -82,7 +86,16 @@ void choice(Pixel img[w][h]) {
             int zoom;
             printf("Digite o zoom: ");
             scanf("%i", &zoom);
-            printf("Reduzindo Imagem...\n");
+            if(h%zoom == 0 && w%zoom == 0) {
+                printf("Reduzindo Imagem...\n");
+                //Pixel img_out[w/zoom][h/zoom];
+                //img_red(zoom, img, img_out);
+                //build_img(file_name, img_out);
+            }else {
+                printf("O zoom de reducao deve ser um multiplo dos lados (%i, %i).\n", w, h);
+                choice(img);
+                return;
+            }
         }else {
             printf("A opcao selecionada nao esta disponivel.\nTente novamente: ");
             scanf("%s", op);
