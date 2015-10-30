@@ -51,6 +51,10 @@ void choice(Pixel img[w][h]) {
             printf("Executando thresholding...\n");
             img_thresholding(img);
             build_img(file_name, img);
+        }else if (strcmp(op, "peb") == 0) {
+            printf("Deixando em Preto e Branco...\n");
+            img_grayscale(img);
+            build_img(file_name, img);
         }else if (strcmp(op, "blu") == 0) {
             printf("Executando blurring...\n");
             img_blurring(img);

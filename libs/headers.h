@@ -16,6 +16,7 @@ void menu();
  */
 void img_amp(char file[], int zoom, Pixel img[MAX][MAX]);
 void img_blurring(Pixel img[w][h]);
+void img_grayscale(Pixel img[w][h]);
 void img_high_relief(Pixel img[w][h]);
 void img_info(Pixel img[w][h]);
 void img_invert(Pixel img[w][h]);

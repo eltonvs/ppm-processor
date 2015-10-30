@@ -71,6 +71,17 @@ void img_popart(Pixel img[w][h]) {
 }
 
 void img_thresholding(Pixel img[w][h]) {
+    int i, j, bin_color;
+    for (i = 0; i < h; i++)
+        for (j = 0; j < w; j++)
+            bin_color = (img[i][j].r + img[i][j].g + img[i][j].b)/3 > comp/2,
+            img[i][j].r = bin_color,
+            img[i][j].g = bin_color,
+            img[i][j].b = bin_color;
+    comp = 1;
+}
+
+void img_grayscale(Pixel img[w][h]) {
     int i, j, pb;
     for (i = 0; i < h; i++)
         for (j = 0; j < w; j++)
