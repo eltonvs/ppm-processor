@@ -13,3 +13,11 @@ void menu() {
     printf("'fim' \t finalizar programa.\n");
     printf("----------------------------------------------\n\n");
 }
+
+void clr_screen() {
+    #if defined WIN32
+    system("cls");
+    #else
+    system("clear");
+    #endif
+}
