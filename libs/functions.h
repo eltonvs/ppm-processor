@@ -139,3 +139,31 @@ void img_amp(char file[], int zoom, Pixel img[MAX][MAX]) {
 
     fclose(img_f);
 }
+
+void img_red(char file[], int zoom, Pixel img[MAX][MAX]) {
+    int i, j, k, l, area = zoom*zoom;
+    Pixel mean = {0, 0, 0};
+
+    strcat(file, "-red.ppm");
+
+    FILE *img_f;
+    img_f = fopen(file, "w");
+
+    fprintf(img_f, "%s\n", header);
+    fprintf(img_f, "%i %i\n", w/zoom, h/zoom);
+    fprintf(img_f, "%i\n", comp);
+    for (i = 0; i <= h-zoom; i += zoom)
+        for (j = 0; j <= w-zoom; j += zoom, mean.r = 0, mean.g = 0, mean.b = 0) {
+            for (k = 0; k < zoom; k++)
+                for (l = 0; l < zoom; l++)
+                    mean.r += img[i+k][j+l].r/area,
+                    mean.g += img[i+k][j+l].g/area,
+                    mean.b += img[i+k][j+l].b/area;
+            fprintf(img_f, "%i %i %i\n",
+            (mean.r > comp) ? comp : mean.r,
+            (mean.g > comp) ? comp : mean.g,
+            (mean.b > comp) ? comp : mean.b);
+        }
+
+    fclose(img_f);
+}

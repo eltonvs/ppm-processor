@@ -88,9 +88,7 @@ void choice(Pixel img[w][h]) {
             scanf("%i", &zoom);
             if(h%zoom == 0 && w%zoom == 0) {
                 printf("Reduzindo Imagem...\n");
-                //Pixel img_out[w/zoom][h/zoom];
-                //img_red(zoom, img, img_out);
-                //build_img(file_name, img_out);
+                img_red(file_name, zoom, img);
             }else {
                 printf("O zoom de reducao deve ser um multiplo dos lados (%i, %i).\n", w, h);
                 choice(img);
