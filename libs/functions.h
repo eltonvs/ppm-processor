@@ -13,13 +13,13 @@ void img_info(Pixel img[w][h]) {
 void img_high_relief(Pixel img[w][h]) {
     int i, j;
     Pixel tmp[w][h];
-    for (i = 1; i < h - 1; i++)
-        for (j = 0; j < w; j++)
+    for (i = 1; i < w - 1; i++)
+        for (j = 0; j < h; j++)
             tmp[i][j].r = abs(img[i+1][j].r - img[i-1][j].r),
             tmp[i][j].g = abs(img[i+1][j].g - img[i-1][j].g),
             tmp[i][j].b = abs(img[i+1][j].b - img[i-1][j].b);
-    for (i = 1; i < h - 1; i++)
-        for (j = 0; j < w; j++)
+    for (i = 1; i < w - 1; i++)
+        for (j = 0; j < h; j++)
             img[i][j].r = tmp[i][j].r + comp/2,
             img[i][j].g = tmp[i][j].g + comp/2,
             img[i][j].b = tmp[i][j].b + comp/2;
@@ -28,8 +28,8 @@ void img_high_relief(Pixel img[w][h]) {
 void img_blurring(Pixel img[w][h]) {
     int i, j;
     Pixel tmp[w][h];
-    for (i = 1; i < h - 1; i++)
-        for (j = 1; j < w - 1; j++)
+    for (i = 1; i < w - 1; i++)
+        for (j = 1; j < h - 1; j++)
             tmp[i][j].r = (img[i-1][j-1].r + img[i-1][j].r + img[i-1][j+1].r +
                             img[i][j-1].r + img[i][j].r + img[i][j+1].r +
                             img[i+1][j-1].r + img[i+1][j].r + img[i+1][j+1].r)/9,
@@ -39,8 +39,8 @@ void img_blurring(Pixel img[w][h]) {
             tmp[i][j].b = (img[i-1][j-1].b + img[i-1][j].b + img[i-1][j+1].b +
                             img[i][j-1].b + img[i][j].b + img[i][j+1].b +
                             img[i+1][j-1].b + img[i+1][j].b + img[i+1][j+1].b)/9;
-    for (i = 1; i < h - 1; i++)
-        for (j = 1; j < w - 1; j++)
+    for (i = 1; i < w - 1; i++)
+        for (j = 1; j < h - 1; j++)
             img[i][j].r = tmp[i][j].r,
             img[i][j].g = tmp[i][j].g,
             img[i][j].b = tmp[i][j].b;
@@ -49,13 +49,13 @@ void img_blurring(Pixel img[w][h]) {
 void img_sharpening(Pixel img[w][h]) {
     int i, j;
     Pixel tmp[w][h];
-    for (i = 1; i < h - 1; i++)
-        for (j = 1; j < w - 1; j++)
+    for (i = 1; i < w - 1; i++)
+        for (j = 1; j < h - 1; j++)
             tmp[i][j].r = abs(5*img[i][j].r - img[i-1][j].r - img[i][j-1].r - img[i][j+1].r - img[i+1][j].r),
             tmp[i][j].g = abs(5*img[i][j].g - img[i-1][j].g - img[i][j-1].g - img[i][j+1].g - img[i+1][j].g),
             tmp[i][j].b = abs(5*img[i][j].b - img[i-1][j].b - img[i][j-1].b - img[i][j+1].b - img[i+1][j].b);
-    for (i = 1; i < h - 1; i++)
-        for (j = 1; j < w - 1; j++)
+    for (i = 1; i < w - 1; i++)
+        for (j = 1; j < h - 1; j++)
             img[i][j].r = tmp[i][j].r,
             img[i][j].g = tmp[i][j].g,
             img[i][j].b = tmp[i][j].b;
@@ -63,8 +63,8 @@ void img_sharpening(Pixel img[w][h]) {
 
 void img_popart(Pixel img[w][h]) {
     int i, j, pb;
-    for (i = 0; i < h; i++)
-        for (j = 0; j < w; j++)
+    for (i = 0; i < w; i++)
+        for (j = 0; j < h; j++)
             img[i][j].r = (img[i][j].r > 127) ? 255: 0,
             img[i][j].g = (img[i][j].g > 127) ? 255: 0,
             img[i][j].b = (img[i][j].b > 127) ? 255: 0;
@@ -72,8 +72,8 @@ void img_popart(Pixel img[w][h]) {
 
 void img_thresholding(Pixel img[w][h]) {
     int i, j, bin_color;
-    for (i = 0; i < h; i++)
-        for (j = 0; j < w; j++)
+    for (i = 0; i < w; i++)
+        for (j = 0; j < h; j++)
             bin_color = (img[i][j].r + img[i][j].g + img[i][j].b)/3 > comp/2,
             img[i][j].r = bin_color,
             img[i][j].g = bin_color,
@@ -83,8 +83,8 @@ void img_thresholding(Pixel img[w][h]) {
 
 void img_grayscale(Pixel img[w][h]) {
     int i, j, pb;
-    for (i = 0; i < h; i++)
-        for (j = 0; j < w; j++)
+    for (i = 0; i < w; i++)
+        for (j = 0; j < h; j++)
             pb = (img[i][j].r + img[i][j].g + img[i][j].b)/3,
             img[i][j].r = pb,
             img[i][j].g = pb,
@@ -93,8 +93,8 @@ void img_grayscale(Pixel img[w][h]) {
 
 void img_invert(Pixel img[w][h]) {
     int i, j;
-    for (i = 0; i < h; i++)
-        for (j = 0; j < w; j++)
+    for (i = 0; i < w; i++)
+        for (j = 0; j < h; j++)
             img[i][j].r = comp-img[i][j].r,
             img[i][j].g = comp-img[i][j].g,
             img[i][j].b = comp-img[i][j].b;
@@ -153,7 +153,7 @@ void img_amp(char file[], int zoom, Pixel img[MAX][MAX]) {
 
 void img_red(char file[], int zoom, Pixel img[MAX][MAX]) {
     int i, j, k, l, area = zoom*zoom;
-    Pixel mean = {0, 0, 0};
+    Pixel sum = {0, 0, 0};
 
     strcat(file, "-red.ppm");
 
@@ -164,16 +164,16 @@ void img_red(char file[], int zoom, Pixel img[MAX][MAX]) {
     fprintf(img_f, "%i %i\n", w/zoom, h/zoom);
     fprintf(img_f, "%i\n", comp);
     for (i = 0; i <= h-zoom; i += zoom)
-        for (j = 0; j <= w-zoom; j += zoom, mean.r = 0, mean.g = 0, mean.b = 0) {
+        for (j = 0; j <= w-zoom; j += zoom, sum.r = 0, sum.g = 0, sum.b = 0) {
             for (k = 0; k < zoom; k++)
                 for (l = 0; l < zoom; l++)
-                    mean.r += img[i+k][j+l].r/area,
-                    mean.g += img[i+k][j+l].g/area,
-                    mean.b += img[i+k][j+l].b/area;
+                    sum.r += img[i+k][j+l].r,
+                    sum.g += img[i+k][j+l].g,
+                    sum.b += img[i+k][j+l].b;
             fprintf(img_f, "%i %i %i\n",
-            (mean.r > comp) ? comp : mean.r,
-            (mean.g > comp) ? comp : mean.g,
-            (mean.b > comp) ? comp : mean.b);
+            (sum.r/area > comp) ? comp : sum.r/area,
+            (sum.g/area > comp) ? comp : sum.g/area,
+            (sum.b/area > comp) ? comp : sum.b/area);
         }
 
     fclose(img_f);
