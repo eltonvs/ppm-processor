@@ -1,17 +1,17 @@
 void menu() {
     printf("-------------------- MENU --------------------\n");
-    printf("'inf' \t mostrar informacoes da imagem.\n");
-    printf("'inv' \t inverter cores da imagem.\n");
-    printf("'rlv' \t deixar imagem em auto-relevo.\n");
-    printf("'peb' \t deixar imagem em Preto e Branco.\n");
-    printf("'pop' \t deixar a imagem no estilo pop art.\n");
-    printf("'thr' \t binarizar imagem usando thresholding.\n");
-    printf("'blu' \t executar blurring.\n");
-    printf("'sha' \t executar sharpening.\n");
-    printf("'rot' \t rotacionar imagem.\n");
-    printf("'amp' \t ampliar imagem.\n");
-    printf("'red' \t reduzir imagem.\n\n");
-    printf("'fim' \t finalizar programa.\n");
+    printf("'inv' \t Inverter cores da imagem.\n");
+    printf("'rlv' \t Deixar imagem em auto-relevo.\n");
+    printf("'pop' \t Deixar a imagem no estilo pop art.\n");
+    printf("'peb' \t Deixar imagem em Preto e Branco.\n");
+    printf("'thr' \t Binarizar imagem usando thresholding.\n");
+    printf("'blu' \t Executar blurring.\n");
+    printf("'sha' \t Executar sharpening.\n");
+    printf("'rot' \t Rotacionar imagem.\n");
+    printf("'amp' \t Ampliar imagem.\n");
+    printf("'red' \t Reduzir imagem.\n\n");
+    printf("'inf' \t Mostrar informacoes da imagem.\n");
+    printf("'fim' \t Finalizar programa.\n");
     printf("----------------------------------------------\n\n");
 }
 
