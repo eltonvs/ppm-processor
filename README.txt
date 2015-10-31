@@ -1,10 +1,14 @@
-INFORMAÇÕES GERAIS
-------------------
+----------------------
++ INFORMAÇÕES GERAIS +
+----------------------
+
 * Aluno: Elton de Souza Vieira
 
 
-O QUE FOI FEITO
----------------
+-------------------
++ O QUE FOI FEITO +
+-------------------
+
 === BÁSICO ===
 1. Thresholding
 2. Blurring
@@ -18,3 +22,24 @@ O QUE FOI FEITO
 2. Alto-relevo
 3. Inversão de cores
 4. Filtro Pop Art
+
+
+-------------------------------
++ O QUE SERIA FEITO DIFERENTE +
+-------------------------------
+
+  A função para reduzir imagem seria feita para
+  uma matriz e não diretamente para um arquivo.
+
+
+-----------------
++ COMO COMPILAR +
+-----------------
+
+Abra o terminal na pasta do projeto e digite:
+$ gcc main.c -o main
+
+Para executar, digite o comando:
+$ ./main
+
+That's all, Folks!
