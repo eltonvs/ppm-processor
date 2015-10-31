@@ -119,7 +119,7 @@ int manip_ppm(char file[]) {
         return 0;
     }
 
-    fscanf(img, "P3 %i %i 255", &w, &h);
+    fscanf(img, "P3 %i %i %i", &w, &h, &comp);
 
     MAX = (w > h) ? w : h;
 
