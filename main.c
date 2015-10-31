@@ -16,7 +16,7 @@ int main() {
     //Lê a imagem
     manip_ppm(file);
 
-    printf("\nPrograma finalizado.\n");
+    printf("Programa finalizado.\n");
 
     return 0;
 }
