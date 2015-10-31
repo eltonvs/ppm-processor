@@ -22,3 +22,18 @@ void clr_screen() {
     system("clear");
     #endif
 }
+
+void invalid_option(int type) {
+    clr_screen();
+    if (type == 1) {
+        menu();
+        printf("Voce nao escolheu uma opcao valida. Tente novamente:\n");
+        printf("O que voce deseja fazer? ");
+        scanf("%s", op);
+        clr_screen();
+    }else if (type == 2) {
+        printf("Voce nao escolheu uma opcao valida. Tente novamente:\n");
+    }else if (type == 3) {
+        printf("O zoom de reducao deve ser um multiplo dos lados (%i, %i).\n", w, h);
+    }
+}

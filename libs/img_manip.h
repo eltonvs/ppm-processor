@@ -25,9 +25,7 @@ void build_img(char file[], Pixel img[MAX][MAX]){
 }
 
 void choice(Pixel img[w][h]) {
-    op[0] = tolower(op[0]),
-    op[1] = tolower(op[1]),
-    op[2] = tolower(op[2]);
+    for(int i = 0; op[i] != '\0'; i++) op[i] = tolower(op[i]);
 
     if (strcmp(op, "fim") == 0)
         return;
@@ -74,7 +72,7 @@ void choice(Pixel img[w][h]) {
             }else if(strcmp(ang, "esq") == 0) {
                 img_rot_left(img);
             }else {
-                printf("Voce nao escolheu uma opcao valida. Tente novamente:\n");
+                invalid_option(2);
                 choice(img);
                 return;
             }
@@ -95,13 +93,12 @@ void choice(Pixel img[w][h]) {
                 printf("Reduzindo Imagem...\n");
                 img_red(file_name, zoom, img);
             }else {
-                printf("O zoom de reducao deve ser um multiplo dos lados (%i, %i).\n", w, h);
+                invalid_option(3);
                 choice(img);
                 return;
             }
         }else {
-            printf("A opcao selecionada nao esta disponivel.\nTente novamente: ");
-            scanf("%s", op);
+            invalid_option(1);
             choice(img);
         }
     }
@@ -134,6 +131,7 @@ int manip_ppm(char file[]) {
     menu();
     printf("O que voce deseja fazer? ");
     scanf("%s", op);
+    clr_screen();
     choice(image);
 
     return 1;
