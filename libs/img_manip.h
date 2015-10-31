@@ -1,4 +1,4 @@
-#include "var.h"
+#include "global.h"
 #include "headers.h"
 #include "visual.h"
 #include "functions.h"
