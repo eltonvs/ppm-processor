@@ -83,7 +83,7 @@ void choice(Pixel img[w][h]) {
     }
 }
 
-int manip_ppm(char file[]) {
+void manip_ppm(char file[]) {
     strcpy(file_name, file);
     int i, j; //Iteradores
 
@@ -92,7 +92,7 @@ int manip_ppm(char file[]) {
     img = fopen(strcat(file,".ppm"), "r");
     if (img == NULL) {
         printf("Erro ao abrir o arquivo.\n");
-        return 0;
+        return;
     }
 
     fscanf(img, "P3 %i %i %i", &w, &h, &comp);
@@ -112,6 +112,4 @@ int manip_ppm(char file[]) {
     scanf("%s", op);
     clr_screen();
     choice(image);
-
-    return 1;
 }
