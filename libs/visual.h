@@ -10,7 +10,7 @@ void menu() {
     printf("'rot' \t Rotacionar imagem.\n");
     printf("'amp' \t Ampliar imagem.\n");
     printf("'red' \t Reduzir imagem.\n\n");
-    printf("'inf' \t Mostrar informacoes da imagem.\n");
+    printf("'inf' \t Mostrar informações da imagem.\n");
     printf("'fim' \t Finalizar programa.\n");
     printf("----------------------------------------------\n\n");
 }
@@ -28,15 +28,15 @@ void invalid_option(int type) {
     switch (type) {
         case 1:
             menu();
-            printf("Voce nao escolheu uma opcao valida. Tente novamente:\n");
-            printf("O que voce deseja fazer? ");
+            printf("Você não escolheu uma opção válida. Tente novamente:\n");
+            printf("O que você deseja fazer? ");
             scanf("%s", op);
             clr_screen();
             break;
         case 2:
-            printf("O zoom de reducao deve ser um multiplo dos lados (%i, %i).\n", w, h);
+            printf("O zoom de redução deve ser múltiplo de ambos os lados (%i, %i).\n", w, h);
             break;
         default:
-            printf("Voce nao escolheu uma opcao valida. Tente novamente:\n");
+            printf("Você nao escolheu uma opção válida. Tente novamente:\n");
     }
 }

@@ -39,7 +39,7 @@ int main() {
     clr_screen();
 
     // Recebe o nome do arquivo
-    printf("Digite o nome do arquivo a ser lido (sem extensao): ");
+    printf("Digite o nome do arquivo a ser lido (sem extensão): ");
     scanf("%s", file);
 
     // Processa a imagem

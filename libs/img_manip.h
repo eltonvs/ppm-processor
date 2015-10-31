@@ -13,10 +13,10 @@ void choice(Pixel img[w][h]) {
         return;
     else {
         if (strcmp(op, "inf") == 0) {
-            printf("Exibindo informacoes da imagem...\n");
+            printf("Exibindo informações da imagem...\n");
             img_info(img);
         }else if (strcmp(op, "inv") == 0) {
-            printf("Executando inversao...\n");
+            printf("Executando inversão...\n");
             img_invert(img);
             build_img(file_name, img);
         }else if (strcmp(op, "rlv") == 0) {
@@ -45,7 +45,7 @@ void choice(Pixel img[w][h]) {
             build_img(file_name, img);
         }else if (strcmp(op, "rot") == 0) {
             char ang[3];
-            printf("Digite o tipo de rotacao [dir, esq, 180]: ");
+            printf("Digite o tipo de rotação [dir, esq, 180]: ");
             scanf("%s", ang);
             if(strcmp(ang, "dir") == 0) {
                 img_rot_right(img);
@@ -111,7 +111,7 @@ void manip_ppm(char file[]) {
     fclose(img);
 
     menu();
-    printf("O que voce deseja fazer? ");
+    printf("O que você deseja fazer? ");
     scanf("%s", op);
     clr_screen();
     choice(image);
