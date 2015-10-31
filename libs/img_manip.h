@@ -54,7 +54,7 @@ void choice(Pixel img[w][h]) {
             }else if(strcmp(ang, "esq") == 0) {
                 img_rot_left(img);
             }else {
-                invalid_option(2);
+                invalid_option(3);
                 choice(img);
                 return;
             }
@@ -75,7 +75,7 @@ void choice(Pixel img[w][h]) {
                 printf("Reduzindo Imagem...\n");
                 img_red(file_name, zoom, img);
             }else {
-                invalid_option(3);
+                invalid_option(2);
                 choice(img);
                 return;
             }
