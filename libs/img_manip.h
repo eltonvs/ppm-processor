@@ -4,7 +4,10 @@
 #include "functions.h"
 
 void choice(Pixel img[w][h]) {
-    for(int i = 0; op[i] != '\0'; i++) op[i] = tolower(op[i]);
+    int i;
+
+    for(i = 0; op[i] != '\0'; i++)
+        op[i] = tolower(op[i]);
 
     if (strcmp(op, "fim") == 0)
         return;
