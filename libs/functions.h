@@ -149,6 +149,8 @@ void img_amp(char file[], int zoom, Pixel img[MAX][MAX]) {
                     (img[i][j].b > comp) ? comp : img[i][j].b);
 
     fclose(img_f);
+
+    printf("\nA imagem foi salva como %s\n", file);
 }
 
 void img_red(char file[], int zoom, Pixel img[MAX][MAX]) {
@@ -177,6 +179,8 @@ void img_red(char file[], int zoom, Pixel img[MAX][MAX]) {
         }
 
     fclose(img_f);
+
+    printf("\nA imagem foi salva como %s\n", file);
 }
 
 void build_img(char file[], Pixel img[MAX][MAX]){
@@ -198,4 +202,6 @@ void build_img(char file[], Pixel img[MAX][MAX]){
             (img[i][j].b > comp) ? comp : (img[i][j].b < 0) ? 0 : img[i][j].b);
 
     fclose(img_f);
+
+    printf("\nA imagem foi salva como %s\n", file);
 }
