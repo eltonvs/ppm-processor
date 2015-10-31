@@ -65,9 +65,9 @@ void img_popart(Pixel img[w][h]) {
     int i, j, pb;
     for (i = 0; i < w; i++)
         for (j = 0; j < h; j++)
-            img[i][j].r = (img[i][j].r > 127) ? 255: 0,
-            img[i][j].g = (img[i][j].g > 127) ? 255: 0,
-            img[i][j].b = (img[i][j].b > 127) ? 255: 0;
+            img[i][j].r = (img[i][j].r > comp/2) ? comp: 0,
+            img[i][j].g = (img[i][j].g > comp/2) ? comp: 0,
+            img[i][j].b = (img[i][j].b > comp/2) ? comp: 0;
 }
 
 void img_thresholding(Pixel img[w][h]) {
