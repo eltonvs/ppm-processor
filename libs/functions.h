@@ -178,3 +178,24 @@ void img_red(char file[], int zoom, Pixel img[MAX][MAX]) {
 
     fclose(img_f);
 }
+
+void build_img(char file[], Pixel img[MAX][MAX]){
+    int i, j;
+
+    strcat(strcat(strcat(file, "-"), op), ".ppm");
+
+    FILE *img_f;
+    img_f = fopen(file, "w");
+
+    fprintf(img_f, "%s\n", header);
+    fprintf(img_f, "%i %i\n", w, h);
+    fprintf(img_f, "%i\n", comp);
+    for (i = 0; i < h; i++)
+        for (j = 0; j < w; j++)
+            fprintf(img_f, "%i %i %i\n",
+            (img[i][j].r > comp) ? comp : (img[i][j].r < 0) ? 0 : img[i][j].r,
+            (img[i][j].g > comp) ? comp : (img[i][j].g < 0) ? 0 : img[i][j].g,
+            (img[i][j].b > comp) ? comp : (img[i][j].b < 0) ? 0 : img[i][j].b);
+
+    fclose(img_f);
+}
