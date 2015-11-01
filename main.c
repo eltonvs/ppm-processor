@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
-#include <locale.h>
 #include "libs/img_manip.h"
 
 /*
@@ -18,14 +17,11 @@
  *     - strcpy() para copiar strings ("backup" do nome do arquivo original)
  *  - ctype.h:
  *     - tolower() para prevenir letras maiúsculas na interação com o usuário
- *  - locale.h:
- *     - Biblioteca para poder usar caracteres UTF-8
  *  - img_manip.h:
  *     - Biblioteca com todas as funcionalidades do processamento de imagem
  */
 
 int main() {
-    setlocale(LC_ALL,"");
     /*
      * Variáveis utilizadas
      *  - file:
