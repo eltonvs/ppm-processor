@@ -4,10 +4,12 @@ void img_info(Pixel img[w][h]) {
     printf("Tipo: %s\n", header);
     printf("Tamanho: %ix%i\n", w, h);
     printf("Cor maxima: %i\n", comp);
+    /*
     printf("Cores de cada pixel:\n");
     for (i = 0; i < h; i++)
         for (j = 0; j < w; j++)
             printf("%i %i %i\n", img[i][j].r, img[i][j].g, img[i][j].b);
+    */
 }
 
 void img_high_relief(Pixel img[w][h]) {
