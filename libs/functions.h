@@ -1,4 +1,4 @@
-void img_info(Pixel img[w][h]) {
+void img_info(Pixel img[MAX][MAX]) {
     int i, j;
     printf("Dados da Imagem lida:\n");
     printf("Tipo: %s\n", header);
@@ -12,9 +12,9 @@ void img_info(Pixel img[w][h]) {
     */
 }
 
-void img_high_relief(Pixel img[w][h]) {
+void img_high_relief(Pixel img[MAX][MAX]) {
     int i, j;
-    Pixel tmp[w][h];
+    Pixel tmp[MAX][MAX];
     for (i = 1; i < w - 1; i++)
         for (j = 0; j < h; j++)
             tmp[i][j].r = abs(img[i+1][j].r - img[i-1][j].r),
@@ -27,9 +27,9 @@ void img_high_relief(Pixel img[w][h]) {
             img[i][j].b = tmp[i][j].b + comp/2;
 }
 
-void img_blurring(Pixel img[w][h]) {
+void img_blurring(Pixel img[MAX][MAX]) {
     int i, j;
-    Pixel tmp[w][h];
+    Pixel tmp[MAX][MAX];
     for (i = 1; i < w - 1; i++)
         for (j = 1; j < h - 1; j++)
             tmp[i][j].r = (img[i-1][j-1].r + img[i-1][j].r + img[i-1][j+1].r +
@@ -48,9 +48,9 @@ void img_blurring(Pixel img[w][h]) {
             img[i][j].b = tmp[i][j].b;
 }
 
-void img_sharpening(Pixel img[w][h]) {
+void img_sharpening(Pixel img[MAX][MAX]) {
     int i, j;
-    Pixel tmp[w][h];
+    Pixel tmp[MAX][MAX];
     for (i = 1; i < w - 1; i++)
         for (j = 1; j < h - 1; j++)
             tmp[i][j].r = abs(5*img[i][j].r - img[i-1][j].r - img[i][j-1].r - img[i][j+1].r - img[i+1][j].r),
@@ -63,7 +63,7 @@ void img_sharpening(Pixel img[w][h]) {
             img[i][j].b = tmp[i][j].b;
 }
 
-void img_popart(Pixel img[w][h]) {
+void img_popart(Pixel img[MAX][MAX]) {
     int i, j, pb;
     for (i = 0; i < w; i++)
         for (j = 0; j < h; j++)
@@ -72,7 +72,7 @@ void img_popart(Pixel img[w][h]) {
             img[i][j].b = (img[i][j].b > comp/2) ? comp: 0;
 }
 
-void img_thresholding(Pixel img[w][h]) {
+void img_thresholding(Pixel img[MAX][MAX]) {
     int i, j, bin_color;
     for (i = 0; i < w; i++)
         for (j = 0; j < h; j++)
@@ -83,7 +83,7 @@ void img_thresholding(Pixel img[w][h]) {
     comp = 1;
 }
 
-void img_grayscale(Pixel img[w][h]) {
+void img_grayscale(Pixel img[MAX][MAX]) {
     int i, j, pb;
     for (i = 0; i < w; i++)
         for (j = 0; j < h; j++)
@@ -93,7 +93,7 @@ void img_grayscale(Pixel img[w][h]) {
             img[i][j].b = pb;
 }
 
-void img_negative(Pixel img[w][h]) {
+void img_negative(Pixel img[MAX][MAX]) {
     int i, j;
     for (i = 0; i < w; i++)
         for (j = 0; j < h; j++)
