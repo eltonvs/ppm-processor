@@ -1,19 +1,13 @@
-/*
- * img_manip.h
- */
+// img_manip.h
 void build_img(char file[], Pixel img[MAX][MAX]);
 void choice(Pixel img[w][h]);
 void manip_ppm(char file[]);
 
-/*
- * visual.h
- */
+// visual.h
 void clr_screen();
 void menu();
 
-/*
- * functions.h
- */
+// functions.h
 void img_amp(char file[], int zoom, Pixel img[MAX][MAX]);
 void img_blurring(Pixel img[w][h]);
 void img_grayscale(Pixel img[w][h]);
