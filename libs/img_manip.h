@@ -14,9 +14,9 @@ void choice(Pixel img[w][h]) {
     if (strcmp(op, "inf") == 0) {
         printf("Exibindo informações da imagem...\n");
         img_info(img);
-    }else if (strcmp(op, "inv") == 0) {
-        printf("Executando inversão...\n");
-        img_invert(img);
+    }else if (strcmp(op, "neg") == 0) {
+        printf("Criando o negativo da imagem...\n");
+        img_negative(img);
         build_img(file_name, img);
     }else if (strcmp(op, "rlv") == 0) {
         printf("Executando alto-relevo...\n");
@@ -41,6 +41,23 @@ void choice(Pixel img[w][h]) {
     }else if (strcmp(op, "sha") == 0) {
         printf("Executando sharpening...\n");
         img_sharpening(img);
+        build_img(file_name, img);
+    }else if (strcmp(op, "inv") == 0) {
+        char dir;
+        printf("Digite o tipo de inversão [h: horizontal ou v: vertical]: ");
+        scanf(" %c", &dir);
+        if(dir == 'h') {
+            img_invert_h(img);
+            strcat(op, "-h");
+        }else if(dir == 'v') {
+            img_invert_v(img);
+            strcat(op, "-v");
+        }else {
+            invalid_option(3);
+            choice(img);
+            return;
+        }
+        printf("Invertendo imagem...\n");
         build_img(file_name, img);
     }else if (strcmp(op, "rot") == 0) {
         char ang[3];

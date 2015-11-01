@@ -1,6 +1,7 @@
 void menu() {
     printf("-------------------- MENU --------------------\n");
-    printf("'inv' \t Inverter cores da imagem.\n");
+    printf("'neg' \t Criar o negativo da imagem.\n");
+    printf("'inv' \t Inverter imagem (flip).\n");
     printf("'rlv' \t Deixar imagem em auto-relevo.\n");
     printf("'pop' \t Deixar a imagem no estilo pop art.\n");
     printf("'peb' \t Deixar imagem em Preto e Branco.\n");
