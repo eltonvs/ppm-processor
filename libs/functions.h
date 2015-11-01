@@ -155,9 +155,8 @@ void img_rot_right(Pixel img[MAX][MAX]) {
 }
 
 void img_rot_180(Pixel img[MAX][MAX]) {
-    int i;
-    for (i = 0; i < 2; i++)
-        img_rot_left(img);
+    img_invert_v(img);
+    img_invert_h(img);
 }
 
 void img_amp(char file[], int zoom, Pixel img[MAX][MAX]) {
