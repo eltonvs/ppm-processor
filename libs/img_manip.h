@@ -3,6 +3,21 @@
 #include "visual.h"
 #include "functions.h"
 
+/*
+ * Bibliotecas utilizadas:
+ *  - global.h:
+ *     - Variáveis e typedefs globais
+ *  - headers.h:
+ *     - Inicialização das funções para evitar erros de declaração implícita
+ *  - visual.h:
+ *     - Funções com o intuito "visual"
+ *        - clr_screen()
+ *        - menu()
+ *        - invalid_option()
+ *  - functions.h:
+ *     - Funções de processamento da imagem
+ */
+
 void choice(Pixel img[w][h]) {
     int i;
 
