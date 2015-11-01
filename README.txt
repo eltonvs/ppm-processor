@@ -20,8 +20,9 @@
 === EXTRAS ===
 1. Escala de Cinza
 2. Alto-relevo
-3. Inversão de cores
+3. Inversão de cores (negativo)
 4. Filtro Pop Art
+5. Inversão da imagem (flip) horizontal e vertical
 
 
 ===============================
