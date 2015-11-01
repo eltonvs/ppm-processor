@@ -3,7 +3,7 @@ void img_info(Pixel img[w][h]) {
     printf("Dados da Imagem lida:\n");
     printf("Tipo: %s\n", header);
     printf("Tamanho: %ix%i\n", w, h);
-    printf("Cor maxima: %i\n", comp);
+    printf("Cor máxima: %i\n", comp);
     /*
     printf("Cores de cada pixel:\n");
     for (i = 0; i < h; i++)
