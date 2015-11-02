@@ -16,7 +16,7 @@ void img_info(Pixel img[w][h]);
 void img_invert_h(Pixel img[w][h]);
 void img_invert_v(Pixel img[w][h]);
 void img_negative(Pixel img[w][h]);
-void img_popart(Pixel img[w][h]);
+void img_posterize(Pixel img[w][h]);
 void img_red(char file[], int zoom, Pixel img[MAX][MAX]);
 void img_rot_180(Pixel img[MAX][MAX]);
 void img_rot_left(Pixel img[MAX][MAX]);

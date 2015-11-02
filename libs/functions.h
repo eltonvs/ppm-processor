@@ -63,7 +63,7 @@ void img_sharpening(Pixel img[MAX][MAX]) {
             img[i][j].b = tmp[i][j].b;
 }
 
-void img_popart(Pixel img[MAX][MAX]) {
+void img_posterize(Pixel img[MAX][MAX]) {
     int i, j, pb;
     for (i = 0; i < w; i++)
         for (j = 0; j < h; j++)

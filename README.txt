@@ -21,7 +21,7 @@
 1. Escala de Cinza
 2. Alto-relevo
 3. Inversão de cores (negativo)
-4. Filtro Pop Art
+4. Filtro de Posterização
 5. Inversão da imagem (flip) horizontal e vertical
 
 

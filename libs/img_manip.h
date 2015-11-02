@@ -38,8 +38,8 @@ void choice(Pixel img[w][h]) {
         img_high_relief(img);
         build_img(file_name, img);
     }else if (strcmp(op, "pop") == 0) {
-        printf("Convertendo para o Pop Art...\n");
-        img_popart(img);
+        printf("Executando Posterização...\n");
+        img_posterize(img);
         build_img(file_name, img);
     }else if (strcmp(op, "thr") == 0) {
         printf("Executando thresholding...\n");
