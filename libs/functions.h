@@ -17,14 +17,14 @@ void img_high_relief(Pixel img[MAX][MAX]) {
     Pixel tmp[MAX][MAX];
     for (i = 1; i < w - 1; i++)
         for (j = 0; j < h; j++)
-            tmp[i][j].r = abs(img[i+1][j].r - img[i-1][j].r),
-            tmp[i][j].g = abs(img[i+1][j].g - img[i-1][j].g),
-            tmp[i][j].b = abs(img[i+1][j].b - img[i-1][j].b);
+            tmp[i][j].r = abs(img[i+1][j].r - img[i-1][j].r) + comp/2,
+            tmp[i][j].g = abs(img[i+1][j].g - img[i-1][j].g) + comp/2,
+            tmp[i][j].b = abs(img[i+1][j].b - img[i-1][j].b) + comp/2;
     for (i = 1; i < w - 1; i++)
         for (j = 0; j < h; j++)
-            img[i][j].r = tmp[i][j].r + comp/2,
-            img[i][j].g = tmp[i][j].g + comp/2,
-            img[i][j].b = tmp[i][j].b + comp/2;
+            img[i][j].r = tmp[i][j].r,
+            img[i][j].g = tmp[i][j].g,
+            img[i][j].b = tmp[i][j].b;
 }
 
 void img_blurring(Pixel img[MAX][MAX]) {
