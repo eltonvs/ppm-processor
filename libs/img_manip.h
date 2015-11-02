@@ -21,7 +21,7 @@
 void choice(Pixel img[w][h]) {
     int i;
 
-    for(i = 0; op[i] != '\0'; i++)
+    for(i = 0; i < strlen(op); i++)
         op[i] = tolower(op[i]);
 
     if (!strcmp(op, "fim"))
