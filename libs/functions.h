@@ -12,24 +12,29 @@ void img_info(Pixel img[MAX][MAX]) {
     */
 }
 
+void copy_img(Pixel origin[MAX][MAX], Pixel destiny[MAX][MAX]) {
+    int i, j;
+    for (i = 0; i < w; i++)
+        for (j = 0; j < h; j++)
+            destiny[i][j] = origin[i][j];
+}
+
 void img_high_relief(Pixel img[MAX][MAX]) {
     int i, j;
     Pixel tmp[MAX][MAX];
+    copy_img(img, tmp);
     for (i = 1; i < w - 1; i++)
         for (j = 0; j < h; j++)
             tmp[i][j].r = abs(img[i+1][j].r - img[i-1][j].r) + comp/2,
             tmp[i][j].g = abs(img[i+1][j].g - img[i-1][j].g) + comp/2,
             tmp[i][j].b = abs(img[i+1][j].b - img[i-1][j].b) + comp/2;
-    for (i = 1; i < w - 1; i++)
-        for (j = 0; j < h; j++)
-            img[i][j].r = tmp[i][j].r,
-            img[i][j].g = tmp[i][j].g,
-            img[i][j].b = tmp[i][j].b;
+    copy_img(tmp, img);
 }
 
 void img_blurring(Pixel img[MAX][MAX]) {
     int i, j;
     Pixel tmp[MAX][MAX];
+    copy_img(img, tmp);
     for (i = 1; i < w - 1; i++)
         for (j = 1; j < h - 1; j++)
             tmp[i][j].r = (img[i-1][j-1].r + img[i-1][j].r + img[i-1][j+1].r +
@@ -41,26 +46,19 @@ void img_blurring(Pixel img[MAX][MAX]) {
             tmp[i][j].b = (img[i-1][j-1].b + img[i-1][j].b + img[i-1][j+1].b +
                             img[i][j-1].b + img[i][j].b + img[i][j+1].b +
                             img[i+1][j-1].b + img[i+1][j].b + img[i+1][j+1].b)/9;
-    for (i = 1; i < w - 1; i++)
-        for (j = 1; j < h - 1; j++)
-            img[i][j].r = tmp[i][j].r,
-            img[i][j].g = tmp[i][j].g,
-            img[i][j].b = tmp[i][j].b;
+    copy_img(tmp, img);
 }
 
 void img_sharpening(Pixel img[MAX][MAX]) {
     int i, j;
     Pixel tmp[MAX][MAX];
+    copy_img(img, tmp);
     for (i = 1; i < w - 1; i++)
         for (j = 1; j < h - 1; j++)
             tmp[i][j].r = abs(5*img[i][j].r - img[i-1][j].r - img[i][j-1].r - img[i][j+1].r - img[i+1][j].r),
             tmp[i][j].g = abs(5*img[i][j].g - img[i-1][j].g - img[i][j-1].g - img[i][j+1].g - img[i+1][j].g),
             tmp[i][j].b = abs(5*img[i][j].b - img[i-1][j].b - img[i][j-1].b - img[i][j+1].b - img[i+1][j].b);
-    for (i = 1; i < w - 1; i++)
-        for (j = 1; j < h - 1; j++)
-            img[i][j].r = tmp[i][j].r,
-            img[i][j].g = tmp[i][j].g,
-            img[i][j].b = tmp[i][j].b;
+    copy_img(tmp, img);
 }
 
 void img_posterize(Pixel img[MAX][MAX]) {
@@ -105,11 +103,7 @@ void img_negative(Pixel img[MAX][MAX]) {
 void img_invert_h(Pixel img[MAX][MAX]) {
     int i, j;
     Pixel tmp[MAX][MAX];
-    for (i = 0; i < h; i++)
-        for (j = 0; j < w; j++)
-            tmp[i][j].r = img[i][j].r,
-            tmp[i][j].g = img[i][j].g,
-            tmp[i][j].b = img[i][j].b;
+    copy_img(img, tmp);
     for (i = 0; i < h; i++)
         for (j = 0; j < w; j++)
             img[h-i-1][j].r = tmp[i][j].r,
@@ -120,11 +114,7 @@ void img_invert_h(Pixel img[MAX][MAX]) {
 void img_invert_v(Pixel img[MAX][MAX]) {
     int i, j;
     Pixel tmp[MAX][MAX];
-    for (i = 0; i < h; i++)
-        for (j = 0; j < w; j++)
-            tmp[i][j].r = img[i][j].r,
-            tmp[i][j].g = img[i][j].g,
-            tmp[i][j].b = img[i][j].b;
+    copy_img(img, tmp);
     for (i = 0; i < h; i++)
         for (j = 0; j < w; j++)
             img[i][w-j-1].r = tmp[i][j].r,
@@ -135,11 +125,7 @@ void img_invert_v(Pixel img[MAX][MAX]) {
 void img_rot_left(Pixel img[MAX][MAX]) {
     int i, j, aux;
     Pixel tmp[MAX][MAX];
-    for (i = 0; i < h; i++)
-        for (j = 0; j < w; j++)
-            tmp[i][j].r = img[i][j].r,
-            tmp[i][j].g = img[i][j].g,
-            tmp[i][j].b = img[i][j].b;
+    copy_img(img, tmp);
     for (i = 0; i < h; i++)
         for (j = 0; j < w; j++)
             img[w-j-1][i].r = tmp[i][j].r,
