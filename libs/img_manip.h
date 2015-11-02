@@ -24,40 +24,40 @@ void choice(Pixel img[w][h]) {
     for(i = 0; op[i] != '\0'; i++)
         op[i] = tolower(op[i]);
 
-    if (strcmp(op, "fim") == 0)
+    if (!strcmp(op, "fim"))
         return;
-    if (strcmp(op, "inf") == 0) {
+    if (!strcmp(op, "inf")) {
         printf("Exibindo informações da imagem...\n");
         img_info(img);
-    }else if (strcmp(op, "neg") == 0) {
+    }else if (!strcmp(op, "neg")) {
         printf("Criando o negativo da imagem...\n");
         img_negative(img);
         build_img(file_name, img);
-    }else if (strcmp(op, "rlv") == 0) {
+    }else if (!strcmp(op, "rlv")) {
         printf("Executando alto-relevo...\n");
         img_high_relief(img);
         build_img(file_name, img);
-    }else if (strcmp(op, "pop") == 0) {
+    }else if (!strcmp(op, "pos")) {
         printf("Executando Posterização...\n");
         img_posterize(img);
         build_img(file_name, img);
-    }else if (strcmp(op, "thr") == 0) {
+    }else if (!strcmp(op, "thr")) {
         printf("Executando thresholding...\n");
         img_thresholding(img);
         build_img(file_name, img);
-    }else if (strcmp(op, "peb") == 0) {
+    }else if (!strcmp(op, "peb")) {
         printf("Deixando em Preto e Branco...\n");
         img_grayscale(img);
         build_img(file_name, img);
-    }else if (strcmp(op, "blu") == 0) {
+    }else if (!strcmp(op, "blu")) {
         printf("Executando blurring...\n");
         img_blurring(img);
         build_img(file_name, img);
-    }else if (strcmp(op, "sha") == 0) {
+    }else if (!strcmp(op, "sha")) {
         printf("Executando sharpening...\n");
         img_sharpening(img);
         build_img(file_name, img);
-    }else if (strcmp(op, "inv") == 0) {
+    }else if (!strcmp(op, "inv")) {
         char dir;
         printf("Digite o tipo de inversão [h: horizontal ou v: vertical]: ");
         scanf(" %c", &dir);
@@ -74,15 +74,15 @@ void choice(Pixel img[w][h]) {
         }
         printf("Invertendo imagem...\n");
         build_img(file_name, img);
-    }else if (strcmp(op, "rot") == 0) {
+    }else if (!strcmp(op, "rot")) {
         char ang[3];
         printf("Digite o tipo de rotação [dir, esq, 180]: ");
         scanf("%s", ang);
-        if(strcmp(ang, "dir") == 0) {
+        if(!strcmp(ang, "dir")) {
             img_rot_right(img);
-        }else if(strcmp(ang, "180") == 0) {
+        }else if(!strcmp(ang, "180")) {
             img_rot_180(img);
-        }else if(strcmp(ang, "esq") == 0) {
+        }else if(!strcmp(ang, "esq")) {
             img_rot_left(img);
         }else {
             invalid_option(0);
@@ -92,13 +92,13 @@ void choice(Pixel img[w][h]) {
         printf("Rotacionando Imagem...\n");
         strcat(strcat(op, "-"), ang);
         build_img(file_name, img);
-    }else if (strcmp(op, "amp") == 0) {
+    }else if (!strcmp(op, "amp")) {
         int zoom;
         printf("Digite o zoom: ");
         scanf("%i", &zoom);
         printf("Ampliando Imagem...\n");
         img_amp(file_name, zoom, img);
-    }else if (strcmp(op, "red") == 0) {
+    }else if (!strcmp(op, "red")) {
         int zoom;
         printf("Digite o zoom: ");
         scanf("%i", &zoom);

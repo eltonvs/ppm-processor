@@ -3,7 +3,7 @@ void menu() {
     printf("'neg' \t Criar o negativo da imagem.\n");
     printf("'inv' \t Inverter imagem (flip).\n");
     printf("'rlv' \t Deixar imagem em auto-relevo.\n");
-    printf("'pop' \t Posterizar imagem.\n");
+    printf("'pos' \t Posterizar imagem.\n");
     printf("'peb' \t Deixar imagem em Preto e Branco.\n");
     printf("'thr' \t Binarizar imagem usando thresholding.\n");
     printf("'blu' \t Executar blurring.\n");
