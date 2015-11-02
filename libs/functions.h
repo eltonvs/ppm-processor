@@ -135,9 +135,8 @@ void img_rot_left(Pixel img[MAX][MAX]) {
 }
 
 void img_rot_right(Pixel img[MAX][MAX]) {
-    int i;
-    for (i = 0; i < 3; i++)
-        img_rot_left(img);
+    img_rot_left(img);
+    img_rot_180(img);
 }
 
 void img_rot_180(Pixel img[MAX][MAX]) {
