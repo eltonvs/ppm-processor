@@ -106,9 +106,9 @@ void img_invert_h(Pixel img[MAX][MAX]) {
     copy_img(img, tmp);
     for (i = 0; i < h; i++)
         for (j = 0; j < w; j++)
-            img[h-i-1][j].r = tmp[i][j].r,
-            img[h-i-1][j].g = tmp[i][j].g,
-            img[h-i-1][j].b = tmp[i][j].b;
+            img[i][w-j-1].r = tmp[i][j].r,
+            img[i][w-j-1].g = tmp[i][j].g,
+            img[i][w-j-1].b = tmp[i][j].b;
 }
 
 void img_invert_v(Pixel img[MAX][MAX]) {
@@ -117,9 +117,9 @@ void img_invert_v(Pixel img[MAX][MAX]) {
     copy_img(img, tmp);
     for (i = 0; i < h; i++)
         for (j = 0; j < w; j++)
-            img[i][w-j-1].r = tmp[i][j].r,
-            img[i][w-j-1].g = tmp[i][j].g,
-            img[i][w-j-1].b = tmp[i][j].b;
+            img[h-i-1][j].r = tmp[i][j].r,
+            img[h-i-1][j].g = tmp[i][j].g,
+            img[h-i-1][j].b = tmp[i][j].b;
 }
 
 void img_rot_left(Pixel img[MAX][MAX]) {
