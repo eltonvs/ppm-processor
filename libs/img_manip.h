@@ -117,18 +117,24 @@ void choice(Pixel img[w][h]) {
 }
 
 void manip_ppm(char file[]) {
-    strcpy(file_name, file);
     int i, j; //Iteradores
 
-    FILE *img;
+    strcpy(file_name, file);
 
-    img = fopen(strcat(file,".ppm"), "r");
-    if (img == NULL) {
+    img_file = fopen(strcat(file,".ppm"), "r");
+    if (img_file == NULL) {
         printf("Erro ao abrir o arquivo.\n");
         return;
     }
 
-    fscanf(img, "P3 %i %i %i", &w, &h, &comp);
+    fscanf(img_file, "P3\n");
+    fscanf(img_file, "%i %i\n", &w, &h);
+    fscanf(img_file, "%i\n", &comp);
+
+    if (w == 0 || h == 0 || comp == 0) {
+        printf("Erro ao abrir o arquivo.\n");
+        return;
+    }
 
     MAX = (w > h) ? w : h;
 
@@ -136,9 +142,9 @@ void manip_ppm(char file[]) {
 
     for (i = 0; i < h; i++)
         for (j = 0; j < w; j++)
-            fscanf(img, "%i %i %i", &image[i][j].r, &image[i][j].g, &image[i][j].b);
+            fscanf(img_file, "%i %i %i", &image[i][j].r, &image[i][j].g, &image[i][j].b);
 
-    fclose(img);
+    fclose(img_file);
 
     menu();
     printf("O que você deseja fazer? ");
