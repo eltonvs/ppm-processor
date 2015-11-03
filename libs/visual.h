@@ -24,7 +24,7 @@ void clr_screen() {
     #endif
 }
 
-void invalid_option(int type) {
+void error_message(int type) {
     clr_screen();
     switch (type) {
         case 1:

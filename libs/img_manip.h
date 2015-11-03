@@ -13,7 +13,7 @@
  *     - Funções com o intuito "visual"
  *        - clr_screen()
  *        - menu()
- *        - invalid_option()
+ *        - error_message()
  *  - functions.h:
  *     - Funções de processamento da imagem
  */
@@ -68,7 +68,7 @@ void choice(Pixel img[w][h]) {
             img_invert_v(img);
             strcat(op, "-v");
         }else {
-            invalid_option(0);
+            error_message(0);
             choice(img);
             return;
         }
@@ -85,7 +85,7 @@ void choice(Pixel img[w][h]) {
         }else if(!strcmp(ang, "esq")) {
             img_rot_left(img);
         }else {
-            invalid_option(0);
+            error_message(0);
             choice(img);
             return;
         }
@@ -106,12 +106,12 @@ void choice(Pixel img[w][h]) {
             printf("Reduzindo Imagem...\n");
             img_red(file_name, zoom, img);
         }else {
-            invalid_option(2);
+            error_message(2);
             choice(img);
             return;
         }
     }else {
-        invalid_option(1);
+        error_message(1);
         choice(img);
     }
 }

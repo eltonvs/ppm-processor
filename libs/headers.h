@@ -6,7 +6,7 @@ void skip_comments();
 
 // visual.h
 void clr_screen();
-void invalid_option(int type);
+void error_message(int type);
 void menu();
 
 // functions.h
