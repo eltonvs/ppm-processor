@@ -5,6 +5,7 @@ void manip_ppm(char file[]);
 
 // visual.h
 void clr_screen();
+void invalid_option(int type);
 void menu();
 
 // functions.h
