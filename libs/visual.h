@@ -27,20 +27,20 @@ void clr_screen() {
 void error_message(int type) {
     clr_screen();
     switch (type) {
-        case 1:
+        case 1: // Opção inválida do menu
             menu();
             printf("Você não escolheu uma opção válida. Tente novamente:\n");
             printf("O que você deseja fazer? ");
             scanf("%s", op);
             clr_screen();
             break;
-        case 2:
+        case 2: // Zoom de redução inválida
             printf("O zoom de redução deve ser múltiplo de ambos os lados (%i, %i).\n", w, h);
             break;
-        case 3:
+        case 3: // Erro de abertura de arquivo
             printf("Erro ao abrir o arquivo.\n");
             break;
-        default:
+        default: // Erro padrão de opção inválida
             printf("Você nao escolheu uma opção válida. Tente novamente:\n");
     }
 }
