@@ -133,7 +133,7 @@ void manip_ppm(char file[]) {
 
     img_file = fopen(strcat(file,".ppm"), "r");
     if (img_file == NULL) {
-        printf("Erro ao abrir o arquivo.\n");
+        error_message(3);
         return;
     }
 
@@ -147,8 +147,8 @@ void manip_ppm(char file[]) {
     fscanf(img_file, "%i ", &comp);
     skip_comments();
 
-    if (w == 0 || h == 0 || comp == 0) {
-        printf("Erro ao abrir o arquivo.\n");
+    if (!w || !h || !comp) {
+        error_message(3);
         return;
     }
 

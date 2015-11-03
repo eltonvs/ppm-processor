@@ -37,6 +37,9 @@ void error_message(int type) {
         case 2:
             printf("O zoom de redução deve ser múltiplo de ambos os lados (%i, %i).\n", w, h);
             break;
+        case 3:
+            printf("Erro ao abrir o arquivo.\n");
+            break;
         default:
             printf("Você nao escolheu uma opção válida. Tente novamente:\n");
     }
