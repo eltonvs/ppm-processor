@@ -158,7 +158,11 @@ void manip_ppm(char file[]) {
 
     for (i = 0; i < h; i++)
         for (j = 0; j < w; j++) {
-            fscanf(img_file, "%i %i %i", &image[i][j].r, &image[i][j].g, &image[i][j].b);
+            fscanf(img_file, "%i ", &image[i][j].r);
+            skip_comments();
+            fscanf(img_file, "%i ", &image[i][j].g);
+            skip_comments();
+            fscanf(img_file, "%i ", &image[i][j].b);
             skip_comments();
         }
 
