@@ -141,7 +141,7 @@ void img_rot_180(Pixel img[MAX][MAX]) {
 void img_amp(char file[], int zoom, Pixel img[MAX][MAX]) {
     int i, j, k, l;
 
-    strcat(file, "-amp.ppm");
+    strcat(file, "_amp.ppm");
 
     FILE *img_f;
     img_f = fopen(file, "w");
@@ -167,7 +167,7 @@ void img_red(char file[], int zoom, Pixel img[MAX][MAX]) {
     int i, j, k, l, area = zoom*zoom;
     Pixel sum = {0, 0, 0};
 
-    strcat(file, "-red.ppm");
+    strcat(file, "_red.ppm");
 
     FILE *img_f;
     img_f = fopen(file, "w");
@@ -196,7 +196,7 @@ void img_red(char file[], int zoom, Pixel img[MAX][MAX]) {
 void build_img(char file[], Pixel img[MAX][MAX]){
     int i, j;
 
-    strcat(strcat(strcat(file, "-"), op), ".ppm");
+    strcat(strcat(strcat(file, "_"), op), ".ppm");
 
     FILE *img_f;
     img_f = fopen(file, "w");

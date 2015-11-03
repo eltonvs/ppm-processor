@@ -63,10 +63,10 @@ void choice(Pixel img[w][h]) {
         scanf(" %c", &dir);
         if(dir == 'h') {
             img_invert_h(img);
-            strcat(op, "-h");
+            strcat(op, "_h");
         }else if(dir == 'v') {
             img_invert_v(img);
-            strcat(op, "-v");
+            strcat(op, "_v");
         }else {
             error_message(0);
             choice(img);
