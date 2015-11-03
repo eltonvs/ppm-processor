@@ -116,6 +116,16 @@ void choice(Pixel img[w][h]) {
     }
 }
 
+void skip_comments() {
+    char buffer;
+    buffer = fgetc(img_file);
+    if (buffer == '#' || buffer == ' ')
+        while(buffer != '\n')
+            buffer = fgetc(img_file);
+    else
+        ungetc(buffer, img_file);
+}
+
 void manip_ppm(char file[]) {
     int i, j; //Iteradores
 
@@ -127,9 +137,15 @@ void manip_ppm(char file[]) {
         return;
     }
 
-    fscanf(img_file, "P3\n");
-    fscanf(img_file, "%i %i\n", &w, &h);
-    fscanf(img_file, "%i\n", &comp);
+    skip_comments();
+    fscanf(img_file, "P3 ");
+    skip_comments();
+    fscanf(img_file, "%i ", &w);
+    skip_comments();
+    fscanf(img_file, "%i ", &h);
+    skip_comments();
+    fscanf(img_file, "%i ", &comp);
+    skip_comments();
 
     if (w == 0 || h == 0 || comp == 0) {
         printf("Erro ao abrir o arquivo.\n");
@@ -141,8 +157,10 @@ void manip_ppm(char file[]) {
     Pixel image[MAX][MAX];
 
     for (i = 0; i < h; i++)
-        for (j = 0; j < w; j++)
+        for (j = 0; j < w; j++) {
             fscanf(img_file, "%i %i %i", &image[i][j].r, &image[i][j].g, &image[i][j].b);
+            skip_comments();
+        }
 
     fclose(img_file);
 
