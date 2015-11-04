@@ -1,4 +1,8 @@
 void menu() {
+    /*
+     * Função para mostrar o menu de opções para o usuário
+     */
+
     printf("-------------------- MENU --------------------\n");
     printf("'rle' \t Comprimir imagem usando RLE.\n");
     printf("'neg' \t Criar o negativo da imagem.\n");
@@ -18,6 +22,10 @@ void menu() {
 }
 
 void clr_screen() {
+    /*
+     * Função para limpar a tela do console em qualquer SO
+     */
+
     #if defined WIN32
     system("cls");
     #else
@@ -26,8 +34,15 @@ void clr_screen() {
 }
 
 void error_message(int type) {
+    /*
+     * Função para mostrar as mensagens de erro para cada situação
+     */
+
     clr_screen();
     switch (type) {
+        case 0: // Erro padrão de opção inválida
+            printf("Você nao escolheu uma opção válida. Tente novamente:\n");
+            break;
         case 1: // Opção inválida do menu
             menu();
             printf("Você não escolheu uma opção válida. Tente novamente:\n");
@@ -41,7 +56,7 @@ void error_message(int type) {
         case 3: // Erro de abertura de arquivo
             printf("Erro ao abrir o arquivo.\n");
             break;
-        default: // Erro padrão de opção inválida
-            printf("Você nao escolheu uma opção válida. Tente novamente:\n");
+        default: // Erro desconhecido
+            printf("Ocorreu um erro desconhecido.\n");
     }
 }
