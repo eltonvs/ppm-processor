@@ -246,3 +246,21 @@ void img_compress(char file[], Pixel img[MAX][MAX]) {
 
     printf("\nA imagem foi salva como %s\n", file);
 }
+
+void img_uncompress(char file[], Pixel img[MAX][MAX]) {
+    int i, rpt;
+    Pixel p;
+    strcat(file, "_uncompressed.ppm");
+
+    FILE *uncomp_img;
+
+    uncomp_img = fopen(file, "w");
+
+    fprintf(uncomp_img, "%s\n%i %i\n%i\n", header, w, h, comp);
+
+    while (fscanf(file_img, "%i(%i %i %i) ", &rpt, &p.r, &p.g, &p.b) != EOF)
+        for (i = 0; i < rpt; i++)
+            fprintf(uncomp_img, "%i %i %i\n", p.r, p.g, p.b);
+
+    fclose(uncomp_img);
+}
