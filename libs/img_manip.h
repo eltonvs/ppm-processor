@@ -131,6 +131,7 @@ void skip_comments() {
 
 void manip_ppm(char file[]) {
     int i, j; //Iteradores
+    char compressed;
 
     strcpy(file_name, file);
 
@@ -147,7 +148,7 @@ void manip_ppm(char file[]) {
     skip_comments();
     fscanf(img_file, "%i ", &h);
     skip_comments();
-    fscanf(img_file, "%i ", &comp);
+    fscanf(img_file, "%i%c", &comp, &compressed);
     skip_comments();
 
     if (!w || !h || !comp) {
@@ -158,6 +159,11 @@ void manip_ppm(char file[]) {
     MAX = (w > h) ? w : h;
 
     Pixel image[MAX][MAX];
+
+    if (compressed == 'c') {
+        printf("A imagem está comprimida.\n");
+        return;
+    }
 
     for (i = 0; i < h; i++)
         for (j = 0; j < w; j++) {
