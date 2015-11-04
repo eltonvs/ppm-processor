@@ -120,13 +120,16 @@ void choice(Pixel img[w][h]) {
 }
 
 void skip_comments() {
-    char buffer;
-    buffer = fgetc(img_file);
-    if (buffer == '#' || buffer == ' ')
-        while(buffer != '\n')
-            buffer = fgetc(img_file);
-    else
-        ungetc(buffer, img_file);
+    char buffer = fgetc(img_file);
+    do {
+        if (buffer == '#')
+            while (buffer != '\n')
+                buffer = fgetc(img_file);
+        else
+            ungetc(buffer, img_file);
+        buffer = fgetc(img_file);
+    } while (buffer == '#');
+    ungetc(buffer, img_file);
 }
 
 void read_ppm(Pixel img[MAX][MAX]) {
