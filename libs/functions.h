@@ -1,5 +1,4 @@
 void img_info(Pixel img[MAX][MAX]) {
-    int i, j;
     printf("Dados da Imagem lida:\n");
     printf("Tipo: %s\n", header);
     printf("Tamanho: %ix%i\n", w, h);
@@ -13,14 +12,12 @@ void img_info(Pixel img[MAX][MAX]) {
 }
 
 void copy_img(Pixel origin[MAX][MAX], Pixel destiny[MAX][MAX]) {
-    int i, j;
     for (i = 0; i < h; i++)
         for (j = 0; j < w; j++)
             destiny[i][j] = origin[i][j];
 }
 
 void img_high_relief(Pixel img[MAX][MAX]) {
-    int i, j;
     Pixel tmp[MAX][MAX];
     copy_img(img, tmp);
     for (i = 1; i < h - 1; i++)
@@ -32,7 +29,6 @@ void img_high_relief(Pixel img[MAX][MAX]) {
 }
 
 void img_blurring(Pixel img[MAX][MAX]) {
-    int i, j;
     Pixel tmp[MAX][MAX];
     copy_img(img, tmp);
     for (i = 1; i < h - 1; i++)
@@ -50,7 +46,6 @@ void img_blurring(Pixel img[MAX][MAX]) {
 }
 
 void img_sharpening(Pixel img[MAX][MAX]) {
-    int i, j;
     Pixel tmp[MAX][MAX];
     copy_img(img, tmp);
     for (i = 1; i < h - 1; i++)
@@ -62,7 +57,6 @@ void img_sharpening(Pixel img[MAX][MAX]) {
 }
 
 void img_posterize(Pixel img[MAX][MAX]) {
-    int i, j, pb;
     for (i = 0; i < h; i++)
         for (j = 0; j < w; j++)
             img[i][j].r = (img[i][j].r > comp/2) ? comp: 0,
@@ -71,7 +65,7 @@ void img_posterize(Pixel img[MAX][MAX]) {
 }
 
 void img_thresholding(Pixel img[MAX][MAX]) {
-    int i, j, bin_color;
+    int bin_color;
     for (i = 0; i < h; i++)
         for (j = 0; j < w; j++)
             bin_color = (img[i][j].r + img[i][j].g + img[i][j].b)/3 > comp/2,
@@ -82,7 +76,7 @@ void img_thresholding(Pixel img[MAX][MAX]) {
 }
 
 void img_grayscale(Pixel img[MAX][MAX]) {
-    int i, j, pb;
+    int pb;
     for (i = 0; i < h; i++)
         for (j = 0; j < w; j++)
             pb = (img[i][j].r + img[i][j].g + img[i][j].b)/3,
@@ -92,7 +86,6 @@ void img_grayscale(Pixel img[MAX][MAX]) {
 }
 
 void img_negative(Pixel img[MAX][MAX]) {
-    int i, j;
     for (i = 0; i < h; i++)
         for (j = 0; j < w; j++)
             img[i][j].r = comp-img[i][j].r,
@@ -101,7 +94,6 @@ void img_negative(Pixel img[MAX][MAX]) {
 }
 
 void img_invert_h(Pixel img[MAX][MAX]) {
-    int i, j;
     Pixel tmp[MAX][MAX];
     copy_img(img, tmp);
     for (i = 0; i < h; i++)
@@ -110,7 +102,6 @@ void img_invert_h(Pixel img[MAX][MAX]) {
 }
 
 void img_invert_v(Pixel img[MAX][MAX]) {
-    int i, j;
     Pixel tmp[MAX][MAX];
     copy_img(img, tmp);
     for (i = 0; i < h; i++)
@@ -119,7 +110,7 @@ void img_invert_v(Pixel img[MAX][MAX]) {
 }
 
 void img_rot_left(Pixel img[MAX][MAX]) {
-    int i, j, aux;
+    int aux;
     Pixel tmp[MAX][MAX];
     copy_img(img, tmp);
     for (i = 0; i < h; i++)
@@ -139,7 +130,7 @@ void img_rot_180(Pixel img[MAX][MAX]) {
 }
 
 void img_amp(char file[], int zoom, Pixel img[MAX][MAX]) {
-    int i, j, k, l;
+    int k, l;
 
     strcat(file, "_amp.ppm");
 
@@ -164,7 +155,7 @@ void img_amp(char file[], int zoom, Pixel img[MAX][MAX]) {
 }
 
 void img_red(char file[], int zoom, Pixel img[MAX][MAX]) {
-    int i, j, k, l, area = zoom*zoom;
+    int k, l, area = zoom*zoom;
     Pixel sum = {0, 0, 0};
 
     strcat(file, "_red.ppm");
@@ -194,8 +185,6 @@ void img_red(char file[], int zoom, Pixel img[MAX][MAX]) {
 }
 
 void build_img(char file[], Pixel img[MAX][MAX]){
-    int i, j;
-
     strcat(strcat(strcat(file, "_"), op), ".ppm");
 
     FILE *img_f;
@@ -217,7 +206,7 @@ void build_img(char file[], Pixel img[MAX][MAX]){
 }
 
 void img_compress(char file[], Pixel img[MAX][MAX]) {
-    int i, j, cont = 0;
+    int cont = 0;
     Pixel t1 = img[0][0], t2;
 
     strcat(file, "_compressed.ppm");
@@ -248,7 +237,7 @@ void img_compress(char file[], Pixel img[MAX][MAX]) {
 }
 
 void img_uncompress(char file[], Pixel img[MAX][MAX]) {
-    int i, rpt;
+    int rpt;
     Pixel p;
     strcat(file, "_uncompressed.ppm");
 

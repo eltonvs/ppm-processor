@@ -27,6 +27,9 @@
  *  - comp:
  *     - Tipo: Inteiro
  *     - Função: Armazenar o máximo de cor da imagem (qualidade)
+ *  - i, j:
+ *     - Tipo: Inteiro
+ *     - Função: Variáveis padrão para iteração
  *
  * Estruturas
  *  - Pixel:
@@ -49,7 +52,7 @@
 FILE *file_img;
 
 char file_name[50], op[3];
-int w, h, MAX, comp;
+int w, h, MAX, comp, i, j;
 
 typedef struct {
     int r, g, b;

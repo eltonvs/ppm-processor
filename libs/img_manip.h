@@ -19,8 +19,6 @@
  */
 
 void choice(Pixel img[w][h]) {
-    int i;
-
     for(i = 0; i < strlen(op); i++)
         op[i] = tolower(op[i]);
 
@@ -133,8 +131,6 @@ void skip_comments() {
 }
 
 void read_ppm(Pixel img[MAX][MAX]) {
-    int i, j;
-
     for (i = 0; i < h; i++)
         for (j = 0; j < w; j++) {
             fscanf(file_img, "%i ", &img[i][j].r);
@@ -147,7 +143,6 @@ void read_ppm(Pixel img[MAX][MAX]) {
 }
 
 void manip_ppm(char file[]) {
-    int i, j; //Iteradores
     char compressed;
 
     strcpy(file_name, file);
