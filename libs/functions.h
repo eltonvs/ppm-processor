@@ -14,8 +14,8 @@ void img_info(Pixel img[MAX][MAX]) {
 
 void copy_img(Pixel origin[MAX][MAX], Pixel destiny[MAX][MAX]) {
     int i, j;
-    for (i = 0; i < w; i++)
-        for (j = 0; j < h; j++)
+    for (i = 0; i < h; i++)
+        for (j = 0; j < w; j++)
             destiny[i][j] = origin[i][j];
 }
 
@@ -23,8 +23,8 @@ void img_high_relief(Pixel img[MAX][MAX]) {
     int i, j;
     Pixel tmp[MAX][MAX];
     copy_img(img, tmp);
-    for (i = 1; i < w - 1; i++)
-        for (j = 0; j < h; j++)
+    for (i = 1; i < h - 1; i++)
+        for (j = 0; j < w; j++)
             tmp[i][j].r = abs(img[i+1][j].r - img[i-1][j].r) + comp/2,
             tmp[i][j].g = abs(img[i+1][j].g - img[i-1][j].g) + comp/2,
             tmp[i][j].b = abs(img[i+1][j].b - img[i-1][j].b) + comp/2;
@@ -35,8 +35,8 @@ void img_blurring(Pixel img[MAX][MAX]) {
     int i, j;
     Pixel tmp[MAX][MAX];
     copy_img(img, tmp);
-    for (i = 1; i < w - 1; i++)
-        for (j = 1; j < h - 1; j++)
+    for (i = 1; i < h - 1; i++)
+        for (j = 1; j < w - 1; j++)
             tmp[i][j].r = (img[i-1][j-1].r + img[i-1][j].r + img[i-1][j+1].r +
                             img[i][j-1].r + img[i][j].r + img[i][j+1].r +
                             img[i+1][j-1].r + img[i+1][j].r + img[i+1][j+1].r)/9,
@@ -53,8 +53,8 @@ void img_sharpening(Pixel img[MAX][MAX]) {
     int i, j;
     Pixel tmp[MAX][MAX];
     copy_img(img, tmp);
-    for (i = 1; i < w - 1; i++)
-        for (j = 1; j < h - 1; j++)
+    for (i = 1; i < h - 1; i++)
+        for (j = 1; j < w - 1; j++)
             tmp[i][j].r = abs(5*img[i][j].r - img[i-1][j].r - img[i][j-1].r - img[i][j+1].r - img[i+1][j].r),
             tmp[i][j].g = abs(5*img[i][j].g - img[i-1][j].g - img[i][j-1].g - img[i][j+1].g - img[i+1][j].g),
             tmp[i][j].b = abs(5*img[i][j].b - img[i-1][j].b - img[i][j-1].b - img[i][j+1].b - img[i+1][j].b);
@@ -63,8 +63,8 @@ void img_sharpening(Pixel img[MAX][MAX]) {
 
 void img_posterize(Pixel img[MAX][MAX]) {
     int i, j, pb;
-    for (i = 0; i < w; i++)
-        for (j = 0; j < h; j++)
+    for (i = 0; i < h; i++)
+        for (j = 0; j < w; j++)
             img[i][j].r = (img[i][j].r > comp/2) ? comp: 0,
             img[i][j].g = (img[i][j].g > comp/2) ? comp: 0,
             img[i][j].b = (img[i][j].b > comp/2) ? comp: 0;
@@ -72,8 +72,8 @@ void img_posterize(Pixel img[MAX][MAX]) {
 
 void img_thresholding(Pixel img[MAX][MAX]) {
     int i, j, bin_color;
-    for (i = 0; i < w; i++)
-        for (j = 0; j < h; j++)
+    for (i = 0; i < h; i++)
+        for (j = 0; j < w; j++)
             bin_color = (img[i][j].r + img[i][j].g + img[i][j].b)/3 > comp/2,
             img[i][j].r = bin_color,
             img[i][j].g = bin_color,
@@ -83,8 +83,8 @@ void img_thresholding(Pixel img[MAX][MAX]) {
 
 void img_grayscale(Pixel img[MAX][MAX]) {
     int i, j, pb;
-    for (i = 0; i < w; i++)
-        for (j = 0; j < h; j++)
+    for (i = 0; i < h; i++)
+        for (j = 0; j < w; j++)
             pb = (img[i][j].r + img[i][j].g + img[i][j].b)/3,
             img[i][j].r = pb,
             img[i][j].g = pb,
@@ -93,8 +93,8 @@ void img_grayscale(Pixel img[MAX][MAX]) {
 
 void img_negative(Pixel img[MAX][MAX]) {
     int i, j;
-    for (i = 0; i < w; i++)
-        for (j = 0; j < h; j++)
+    for (i = 0; i < h; i++)
+        for (j = 0; j < w; j++)
             img[i][j].r = comp-img[i][j].r,
             img[i][j].g = comp-img[i][j].g,
             img[i][j].b = comp-img[i][j].b;
