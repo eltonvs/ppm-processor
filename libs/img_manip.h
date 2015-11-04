@@ -175,10 +175,11 @@ void manip_ppm(char file[]) {
     if (compressed == 'c') {
         int c;
         printf("A imagem selecionada está comprimida.\n");
-        printf("Deseja descomprimir? [1 - Sim / 2 - Não] ");
+        printf("Deseja descomprimir? [0 - Sim / 1 - Não] ");
         scanf("%i", &c);
-        if (c) img_uncompress(file_name, image);
-        printf("\nA imagem foi salva como %s\n", file_name);
+        if (!c)
+            img_uncompress(file_name, image);
+        fclose(file_img);
         return;
     }else {
         read_ppm(image);

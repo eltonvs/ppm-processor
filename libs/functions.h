@@ -252,4 +252,6 @@ void img_uncompress(char file[], Pixel img[MAX][MAX]) {
             fprintf(uncomp_img, "%i %i %i\n", p.r, p.g, p.b);
 
     fclose(uncomp_img);
+
+    printf("\nA imagem foi salva como %s\n", file);
 }
