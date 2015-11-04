@@ -129,6 +129,20 @@ void skip_comments() {
         ungetc(buffer, img_file);
 }
 
+void read_ppm(Pixel img[MAX][MAX]) {
+    int i, j;
+
+    for (i = 0; i < h; i++)
+        for (j = 0; j < w; j++) {
+            fscanf(img_file, "%i ", &img[i][j].r);
+            skip_comments();
+            fscanf(img_file, "%i ", &img[i][j].g);
+            skip_comments();
+            fscanf(img_file, "%i ", &img[i][j].b);
+            skip_comments();
+        }
+}
+
 void manip_ppm(char file[]) {
     int i, j; //Iteradores
     char compressed;
@@ -163,17 +177,9 @@ void manip_ppm(char file[]) {
     if (compressed == 'c') {
         printf("A imagem está comprimida.\n");
         return;
+    }else {
+        read_ppm(image);
     }
-
-    for (i = 0; i < h; i++)
-        for (j = 0; j < w; j++) {
-            fscanf(img_file, "%i ", &image[i][j].r);
-            skip_comments();
-            fscanf(img_file, "%i ", &image[i][j].g);
-            skip_comments();
-            fscanf(img_file, "%i ", &image[i][j].b);
-            skip_comments();
-        }
 
     fclose(img_file);
 

@@ -2,6 +2,7 @@
 void build_img(char file[], Pixel img[MAX][MAX]);
 void choice(Pixel img[w][h]);
 void manip_ppm(char file[]);
+void read_ppm(Pixel img[MAX][MAX]);
 void skip_comments();
 
 // visual.h
