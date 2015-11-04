@@ -120,16 +120,16 @@ void choice(Pixel img[w][h]) {
 }
 
 void skip_comments() {
-    char buffer = fgetc(img_file);
+    char buffer = fgetc(file_img);
     do {
         if (buffer == '#')
             while (buffer != '\n')
-                buffer = fgetc(img_file);
+                buffer = fgetc(file_img);
         else
-            ungetc(buffer, img_file);
-        buffer = fgetc(img_file);
+            ungetc(buffer, file_img);
+        buffer = fgetc(file_img);
     } while (buffer == '#');
-    ungetc(buffer, img_file);
+    ungetc(buffer, file_img);
 }
 
 void read_ppm(Pixel img[MAX][MAX]) {
@@ -137,11 +137,11 @@ void read_ppm(Pixel img[MAX][MAX]) {
 
     for (i = 0; i < h; i++)
         for (j = 0; j < w; j++) {
-            fscanf(img_file, "%i ", &img[i][j].r);
+            fscanf(file_img, "%i ", &img[i][j].r);
             skip_comments();
-            fscanf(img_file, "%i ", &img[i][j].g);
+            fscanf(file_img, "%i ", &img[i][j].g);
             skip_comments();
-            fscanf(img_file, "%i ", &img[i][j].b);
+            fscanf(file_img, "%i ", &img[i][j].b);
             skip_comments();
         }
 }
@@ -152,20 +152,20 @@ void manip_ppm(char file[]) {
 
     strcpy(file_name, file);
 
-    img_file = fopen(strcat(file,".ppm"), "r");
-    if (img_file == NULL) {
+    file_img = fopen(strcat(file,".ppm"), "r");
+    if (file_img == NULL) {
         error_message(3);
         return;
     }
 
     skip_comments();
-    fscanf(img_file, "P3 ");
+    fscanf(file_img, "P3 ");
     skip_comments();
-    fscanf(img_file, "%i ", &w);
+    fscanf(file_img, "%i ", &w);
     skip_comments();
-    fscanf(img_file, "%i ", &h);
+    fscanf(file_img, "%i ", &h);
     skip_comments();
-    fscanf(img_file, "%i%c", &comp, &compressed);
+    fscanf(file_img, "%i%c", &comp, &compressed);
     skip_comments();
 
     if (!w || !h || !comp) {
@@ -184,7 +184,7 @@ void manip_ppm(char file[]) {
         read_ppm(image);
     }
 
-    fclose(img_file);
+    fclose(file_img);
 
     menu();
     printf("O que você deseja fazer? ");
