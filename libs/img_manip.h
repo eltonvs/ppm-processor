@@ -6,16 +6,16 @@
 /*
  * Bibliotecas utilizadas:
  *  - global.h:
- *     - Variáveis e typedefs globais
+ *     - Constantes, variáveis e typedefs globais
  *  - headers.h:
  *     - Inicialização das funções para evitar erros de declaração implícita
  *  - visual.h:
  *     - Funções com o intuito "visual"
  *        - clr_screen()
- *        - menu()
  *        - error_message()
+ *        - menu()
  *  - functions.h:
- *     - Funções de processamento da imagem
+ *     - Funções de processamento e manipulação da imagem
  */
 
 void choice(Pixel img[w][h]) {
