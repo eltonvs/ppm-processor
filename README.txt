@@ -18,11 +18,12 @@
 6. Redução da Imagem, dado o zoom.
 
 === EXTRAS ===
-1. Escala de Cinza
-2. Alto-relevo
-3. Inversão de cores (negativo)
-4. Filtro de Posterização
-5. Inversão da imagem (flip) horizontal e vertical
+1. Compressão de imagem usando algoritmo RLE
+2. Escala de Cinza
+3. Alto-relevo
+4. Inversão de cores (negativo)
+5. Filtro de Posterização
+6. Inversão da imagem (flip) horizontal e vertical
 
 
 ===============================
