@@ -110,6 +110,9 @@ void choice(Pixel img[w][h]) {
             choice(img);
             return;
         }
+    }else if (!strcmp(op, "rle")) {
+        printf("Comprimindo Imagem...\n");
+        img_compress(file_name, img);
     }else {
         error_message(1);
         choice(img);

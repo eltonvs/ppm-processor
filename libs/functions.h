@@ -215,3 +215,34 @@ void build_img(char file[], Pixel img[MAX][MAX]){
 
     printf("\nA imagem foi salva como %s\n", file);
 }
+
+void img_compress(char file[], Pixel img[MAX][MAX]) {
+    int i, j, cont = 0;
+    Pixel t1 = img[0][0], t2;
+
+    strcat(file, "_compressed.ppm");
+
+    FILE *img_f;
+    img_f = fopen(file, "w");
+
+    fprintf(img_f, "%s\n", header);
+    fprintf(img_f, "%i %i\n", w, h);
+    fprintf(img_f, "%ic\n", comp);
+
+    for (i = 0; i < h; i++)
+        for (j = 0; j < w; j++){
+            t2 = img[i][j];
+            if (t1.r == t2.r && t1.g == t2.g && t1.b == t2.b && !(i == h-1 && j == w-1)) {
+                cont++;
+                continue;
+            }
+            if (t1.r == t2.r && t1.g == t2.g && t1.b == t2.b && i == h-1 && j == w-1)
+                cont++;
+            fprintf(img_f, "%i(%i %i %i)\n", cont, t1.r, t1.g, t1.b);
+            t1 = t2, cont = 1;
+        }
+
+    fclose(img_f);
+
+    printf("\nA imagem foi salva como %s\n", file);
+}

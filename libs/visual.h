@@ -1,5 +1,6 @@
 void menu() {
     printf("-------------------- MENU --------------------\n");
+    printf("'rle' \t Comprimir imagem usando RLE.\n");
     printf("'neg' \t Criar o negativo da imagem.\n");
     printf("'inv' \t Inverter imagem (flip).\n");
     printf("'rlv' \t Deixar imagem em auto-relevo.\n");

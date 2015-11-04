@@ -10,9 +10,10 @@ void error_message(int type);
 void menu();
 
 // functions.h
+void copy_img(Pixel origin[MAX][MAX], Pixel destiny[MAX][MAX]);
 void img_amp(char file[], int zoom, Pixel img[MAX][MAX]);
 void img_blurring(Pixel img[w][h]);
-void copy_img(Pixel origin[MAX][MAX], Pixel destiny[MAX][MAX]);
+void img_compress(char file[], Pixel img[MAX][MAX]);
 void img_grayscale(Pixel img[w][h]);
 void img_high_relief(Pixel img[w][h]);
 void img_info(Pixel img[w][h]);
