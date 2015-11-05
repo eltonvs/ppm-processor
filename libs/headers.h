@@ -1,3 +1,10 @@
+/*
+ * Arquivo com os protótipos (headers) das funções,
+ * a fim de se evitar erros de declaração implícita
+ *
+ * Obs: As funções estão separadas por arquivo e organizadas alfabeticamente
+ */
+
 // img_manip.h
 void build_img(char file[], Pixel img[MAX][MAX]);
 void choice(Pixel img[w][h]);
