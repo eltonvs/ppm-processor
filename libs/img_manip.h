@@ -42,9 +42,9 @@ void choice(Pixel img[w][h]) {
         // Cria um novo arquivo ppm com as alterações feitas
         build_img(file_name, img);
     }else if (!strcmp(op, "rlv")) {
-        // Se a opção escolhida foi rlv, chama a função img_high_relief()
+        // Se a opção escolhida foi rlv, chama a função img_emboss()
         printf("Executando alto-relevo...\n");
-        img_high_relief(img);
+        img_emboss(img);
         // Cria um novo arquivo ppm com as alterações feitas
         build_img(file_name, img);
     }else if (!strcmp(op, "pos")) {

@@ -3,29 +3,50 @@
  */
 
 void copy_img(Pixel origin[MAX][MAX], Pixel destiny[MAX][MAX]) {
+    /*
+     * Função que copia uma imagem de uma matriz para outra
+     * através da passagem de parâmetros por referência
+     */
+
     for (i = 0; i < h; i++)
         for (j = 0; j < w; j++)
+            // Percorre cada elemento da matriz origem e copia para a matriz de destino
             destiny[i][j] = origin[i][j];
 }
 
 void build_img(char file[], Pixel img[MAX][MAX]){
+    /*
+     * Função que gera uma imagem ppm a partir de uma matriz de Pixels
+     */
+
+    // Concatena "_" e a opção do usuário ao nome final do arquivo a ser gerado
     strcat(strcat(strcat(file, "_"), op), ".ppm");
 
+    // Cria uma variável do tipo arquivo
     FILE *img_f;
+    // Cria um arquivo com o nome do arquivo + '_' + operação escolhida
     img_f = fopen(file, "w");
 
+    // Cria o cabeçalho da imagem ppm
     fprintf(img_f, "%s\n", header);
+    // Define a largura e altura da imagem
     fprintf(img_f, "%i %i\n", w, h);
+    // Define a cor máximo (qualidade) da imagem
     fprintf(img_f, "%i\n", comp);
+
     for (i = 0; i < h; i++)
         for (j = 0; j < w; j++)
+            // Percorre cada elemento da matriz img e adiciona as cores de cada pixel \
+               Tratando erros básicos, como de cor negativa e/ou maior que o máximo.
             fprintf(img_f, "%i %i %i\n",
             (img[i][j].r > comp) ? comp : (img[i][j].r < 0) ? 0 : img[i][j].r,
             (img[i][j].g > comp) ? comp : (img[i][j].g < 0) ? 0 : img[i][j].g,
             (img[i][j].b > comp) ? comp : (img[i][j].b < 0) ? 0 : img[i][j].b);
 
+    // Fecha o arquivo aberto
     fclose(img_f);
 
+    // Mostra para o usuário o nome da imagem final gerada
     printf("\nA imagem foi salva como %s\n", file);
 }
 
@@ -34,6 +55,14 @@ void build_img(char file[], Pixel img[MAX][MAX]){
  */
 
 void img_info(Pixel img[MAX][MAX]) {
+    /*
+     * Função que mostra informações sobre a imagem lida
+     * Tipo do cabeçalho, largura, altura e cor máxima
+     *
+     * Obs: As cores de cada pixel foram comentadas para
+     *      evitar um laço muito extenso em imagens grandes
+     */
+
     printf("Dados da Imagem lida:\n");
     printf("Tipo: %s\n", header);
     printf("Tamanho: %ix%i\n", w, h);
@@ -46,14 +75,30 @@ void img_info(Pixel img[MAX][MAX]) {
     */
 }
 
-void img_high_relief(Pixel img[MAX][MAX]) {
+void img_emboss(Pixel img[MAX][MAX]) {
+    /*
+     * Função para deixar a imagem com o efeito de Alto Relevo
+     *
+     * Esse filtro pega o valor de uma posição (i+1, j) e subtrai do
+     * valor da posição oposta (i-1, j), substiruindo no valor central
+     * (i, j) e somando com a metade do componente para clareamento.
+     */
+
+    // Cria uma matriz para armazenar a imagem original temporariamente
     Pixel tmp[MAX][MAX];
+
+    // Copia a imagem original para a temporária
     copy_img(img, tmp);
+
     for (i = 1; i < h - 1; i++)
         for (j = 0; j < w; j++)
-            tmp[i][j].r = abs(img[i+1][j].r - img[i-1][j].r) + comp/2,
-            tmp[i][j].g = abs(img[i+1][j].g - img[i-1][j].g) + comp/2,
-            tmp[i][j].b = abs(img[i+1][j].b - img[i-1][j].b) + comp/2;
+            // Percorre cada elemento do array img e atribui à matriz \
+               temporária o valor do algoritmo de alto relevo.
+            tmp[i][j].r = img[i+1][j].r - img[i-1][j].r + comp/2,
+            tmp[i][j].g = img[i+1][j].g - img[i-1][j].g + comp/2,
+            tmp[i][j].b = img[i+1][j].b - img[i-1][j].b + comp/2;
+
+    // Copia a matriz temporária para a matriz da imagem original
     copy_img(tmp, img);
 }
 
