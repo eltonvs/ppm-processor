@@ -54,34 +54,43 @@ void build_img(char file[], Pixel img[MAX][MAX]){
  * Funções de Manipulação de Imagem
  */
 
-void img_info(Pixel img[MAX][MAX]) {
+// Funções "Obrigatórias"
+
+void img_thresholding(Pixel img[MAX][MAX]) {
     /*
-     * Função que mostra informações sobre a imagem lida
-     * Tipo do cabeçalho, largura, altura e cor máxima
+     * Função de thresholding
      *
-     * Obs: As cores de cada pixel foram comentadas para
-     *      evitar um laço muito extenso em imagens grandes
+     * Binariza a imagem, deixando-a apenas com as
+     * cores preta e branca, sem tons de cinza.
      */
 
-    printf("Dados da Imagem lida:\n");
-    printf("Tipo: %s\n", header);
-    printf("Tamanho: %ix%i\n", w, h);
-    printf("Cor máxima: %i\n", comp);
-    /*
-    printf("Cores de cada pixel:\n");
+    // Cria uma variável para armazenar o valor da cor binária
+    int bin_color;
+
     for (i = 0; i < h; i++)
         for (j = 0; j < w; j++)
-            printf("%i %i %i\n", img[i][j].r, img[i][j].g, img[i][j].b);
-    */
+            // Percorre cada elemento da matriz imagem e atribui a \
+               bin_color 1 se a média dos 3 componentes (r, g, b) do \
+               pixel for maior ou igual à metade da cor máxima, e 0 \
+               se a média for menor, atribuindo o mesmo valor a cada um
+            bin_color = (img[i][j].r + img[i][j].g + img[i][j].b)/3 > comp/2,
+            img[i][j].r = bin_color,
+            img[i][j].g = bin_color,
+            img[i][j].b = bin_color;
+
+    // Define a cor máxima (componente) como 1, literalmente, binárizando a imagem
+    comp = 1;
 }
 
-void img_emboss(Pixel img[MAX][MAX]) {
+void img_blurring(Pixel img[MAX][MAX]) {
     /*
-     * Função para deixar a imagem com o efeito de Alto Relevo
+     * Função de blurring
      *
-     * Esse filtro pega o valor de uma posição (i+1, j) e subtrai do
-     * valor da posição oposta (i-1, j), substiruindo no valor central
-     * (i, j) e somando com a metade do componente para clareamento.
+     * Desfoca a imagem atribuindo o valor da média do pixel (i, j)
+     * e todos os 8 pixels ao redor, de acordo com a matriz:
+     *      | 1  1  1 |
+     *  1/9 | 1  1  1 |
+     *      | 1  1  1 |
      */
 
     // Cria uma matriz para armazenar a imagem original temporariamente
@@ -91,115 +100,107 @@ void img_emboss(Pixel img[MAX][MAX]) {
     copy_img(img, tmp);
 
     for (i = 1; i < h - 1; i++)
-        for (j = 0; j < w; j++)
+        for (j = 1; j < w - 1; j++)
             // Percorre cada elemento do array img e atribui à matriz \
-               temporária o valor do algoritmo de alto relevo.
-            tmp[i][j].r = img[i+1][j].r - img[i-1][j].r + comp/2,
-            tmp[i][j].g = img[i+1][j].g - img[i-1][j].g + comp/2,
-            tmp[i][j].b = img[i+1][j].b - img[i-1][j].b + comp/2;
+               temporária o valor do algoritmo de blurring.
+            tmp[i][j].r = (img[i-1][j-1].r + img[i-1][j].r + img[i-1][j+1].r +
+                           img[i][j-1].r + img[i][j].r + img[i][j+1].r +
+                           img[i+1][j-1].r + img[i+1][j].r + img[i+1][j+1].r)/9,
+            tmp[i][j].g = (img[i-1][j-1].g + img[i-1][j].g + img[i-1][j+1].g +
+                           img[i][j-1].g + img[i][j].g + img[i][j+1].g +
+                           img[i+1][j-1].g + img[i+1][j].g + img[i+1][j+1].g)/9,
+            tmp[i][j].b = (img[i-1][j-1].b + img[i-1][j].b + img[i-1][j+1].b +
+                           img[i][j-1].b + img[i][j].b + img[i][j+1].b +
+                           img[i+1][j-1].b + img[i+1][j].b + img[i+1][j+1].b)/9;
 
     // Copia a matriz temporária para a matriz da imagem original
     copy_img(tmp, img);
 }
 
-void img_blurring(Pixel img[MAX][MAX]) {
-    Pixel tmp[MAX][MAX];
-    copy_img(img, tmp);
-    for (i = 1; i < h - 1; i++)
-        for (j = 1; j < w - 1; j++)
-            tmp[i][j].r = (img[i-1][j-1].r + img[i-1][j].r + img[i-1][j+1].r +
-                            img[i][j-1].r + img[i][j].r + img[i][j+1].r +
-                            img[i+1][j-1].r + img[i+1][j].r + img[i+1][j+1].r)/9,
-            tmp[i][j].g = (img[i-1][j-1].g + img[i-1][j].g + img[i-1][j+1].g +
-                            img[i][j-1].g + img[i][j].g + img[i][j+1].g +
-                            img[i+1][j-1].g + img[i+1][j].g + img[i+1][j+1].g)/9,
-            tmp[i][j].b = (img[i-1][j-1].b + img[i-1][j].b + img[i-1][j+1].b +
-                            img[i][j-1].b + img[i][j].b + img[i][j+1].b +
-                            img[i+1][j-1].b + img[i+1][j].b + img[i+1][j+1].b)/9;
-    copy_img(tmp, img);
-}
-
 void img_sharpening(Pixel img[MAX][MAX]) {
+    /*
+     * Função de sharpening
+     *
+     * Aumenta a clareza de detalhes da imagem subtraindo de 5x o pixel
+     * (i, j) cada um dos 4 pixels laterais, segundo a matriz:
+     *  | 0  1  0 |
+     *  | 1  5  1 |
+     *  | 0  1  0 |
+     */
+
+    // Cria uma matriz para armazenar a imagem original temporariamente
     Pixel tmp[MAX][MAX];
+
+    // Copia a imagem original para a temporária
     copy_img(img, tmp);
+
     for (i = 1; i < h - 1; i++)
         for (j = 1; j < w - 1; j++)
-            tmp[i][j].r = abs(5*img[i][j].r - img[i-1][j].r - img[i][j-1].r - img[i][j+1].r - img[i+1][j].r),
-            tmp[i][j].g = abs(5*img[i][j].g - img[i-1][j].g - img[i][j-1].g - img[i][j+1].g - img[i+1][j].g),
-            tmp[i][j].b = abs(5*img[i][j].b - img[i-1][j].b - img[i][j-1].b - img[i][j+1].b - img[i+1][j].b);
+            // Percorre cada elemento do array img e atribui à matriz \
+               temporária o valor do algoritmo de sharpening
+            tmp[i][j].r = 5*img[i][j].r - img[i-1][j].r - img[i][j-1].r - img[i][j+1].r - img[i+1][j].r,
+            tmp[i][j].g = 5*img[i][j].g - img[i-1][j].g - img[i][j-1].g - img[i][j+1].g - img[i+1][j].g,
+            tmp[i][j].b = 5*img[i][j].b - img[i-1][j].b - img[i][j-1].b - img[i][j+1].b - img[i+1][j].b;
+
+    // Copia a matriz temporária para a matriz da imagem original
     copy_img(tmp, img);
-}
-
-void img_posterize(Pixel img[MAX][MAX]) {
-    for (i = 0; i < h; i++)
-        for (j = 0; j < w; j++)
-            img[i][j].r = (img[i][j].r > comp/2) ? comp: 0,
-            img[i][j].g = (img[i][j].g > comp/2) ? comp: 0,
-            img[i][j].b = (img[i][j].b > comp/2) ? comp: 0;
-}
-
-void img_thresholding(Pixel img[MAX][MAX]) {
-    int bin_color;
-    for (i = 0; i < h; i++)
-        for (j = 0; j < w; j++)
-            bin_color = (img[i][j].r + img[i][j].g + img[i][j].b)/3 > comp/2,
-            img[i][j].r = bin_color,
-            img[i][j].g = bin_color,
-            img[i][j].b = bin_color;
-    comp = 1;
-}
-
-void img_grayscale(Pixel img[MAX][MAX]) {
-    int pb;
-    for (i = 0; i < h; i++)
-        for (j = 0; j < w; j++)
-            pb = (img[i][j].r + img[i][j].g + img[i][j].b)/3,
-            img[i][j].r = pb,
-            img[i][j].g = pb,
-            img[i][j].b = pb;
-}
-
-void img_negative(Pixel img[MAX][MAX]) {
-    for (i = 0; i < h; i++)
-        for (j = 0; j < w; j++)
-            img[i][j].r = comp-img[i][j].r,
-            img[i][j].g = comp-img[i][j].g,
-            img[i][j].b = comp-img[i][j].b;
-}
-
-void img_invert_h(Pixel img[MAX][MAX]) {
-    Pixel tmp[MAX][MAX];
-    copy_img(img, tmp);
-    for (i = 0; i < h; i++)
-        for (j = 0; j < w; j++)
-            img[i][w-j-1] = tmp[i][j];
-}
-
-void img_invert_v(Pixel img[MAX][MAX]) {
-    Pixel tmp[MAX][MAX];
-    copy_img(img, tmp);
-    for (i = 0; i < h; i++)
-        for (j = 0; j < w; j++)
-            img[h-i-1][j] = tmp[i][j];
 }
 
 void img_rot_left(Pixel img[MAX][MAX]) {
+    /*
+     * Função de rotação em 90º para a esquerda
+     */
+
+    // Cria uma variável auxiliar para poder fazer o swap
     int aux;
+
+    // Cria uma matriz para armazenar a imagem original temporariamente
     Pixel tmp[MAX][MAX];
+
+    // Copia a imagem original para a temporária
     copy_img(img, tmp);
+
     for (i = 0; i < h; i++)
         for (j = 0; j < w; j++)
+            // Copia para a matriz temporária a transposta da matriz original
             img[w-j-1][i] = tmp[i][j];
+
+    // Faz o swap entre h e w, pois ao rotacionar, a altura troca com a largura
     aux = h, h = w, w = aux;
 }
 
 void img_rot_right(Pixel img[MAX][MAX]) {
+    /*
+     * Função de rotação em 90º para a direita
+     *
+     * Se considerarmos o ângulo de rotação para esquerda como x,
+     * o ângulo de rotação para esquerda se dá por x + 180º, portanto,
+     * para rotacionar a imagem para esquerda, podemos rotacioná-la para
+     * esquerda uma vez e depois rotacionar em 180º. E é isso que essa
+     * função faz.
+     */
+
+    // Rotaciona a imagem original 1 vez para a esquerda
     img_rot_left(img);
+    // Rotaciona a imagem original em 180º
     img_rot_180(img);
 }
 
 void img_rot_180(Pixel img[MAX][MAX]) {
+    /*
+     * Função de rotação em 180º
+     *
+     * Para rotacionar uma imagem em 180º, poderíamos aplicar duas vezes
+     * o algoritmo de rotação para a esquerda (ou para a direita), no
+     * entanto, não há essa necessidade, pois uma imagem rotacionada em
+     * 180º nada mais é do que uma imagem invertida horizontalmente e
+     * verticalmente ao mesmo tempo (flip_h + flip_v). E é isso que essa
+     * função faz.
+     */
+
+    // Inverte a imagem verticalmente (flip vertical)
     img_invert_v(img);
+    // Inverte a imagem horizontalmente (flip horizontal)
     img_invert_h(img);
 }
 
@@ -256,6 +257,102 @@ void img_red(char file[], int zoom, Pixel img[MAX][MAX]) {
     fclose(img_f);
 
     printf("\nA imagem foi salva como %s\n", file);
+}
+
+// Funções Extras
+
+void img_info(Pixel img[MAX][MAX]) {
+    /*
+     * Função que mostra informações sobre a imagem lida
+     * Tipo do cabeçalho, largura, altura e cor máxima
+     *
+     * Obs: As cores de cada pixel foram comentadas para
+     *      evitar um laço muito extenso em imagens grandes
+     */
+
+    printf("Dados da Imagem lida:\n");
+    printf("Tipo: %s\n", header);
+    printf("Tamanho: %ix%i\n", w, h);
+    printf("Cor máxima: %i\n", comp);
+    /*
+    printf("Cores de cada pixel:\n");
+    for (i = 0; i < h; i++)
+        for (j = 0; j < w; j++)
+            printf("%i %i %i\n", img[i][j].r, img[i][j].g, img[i][j].b);
+    */
+}
+
+void img_emboss(Pixel img[MAX][MAX]) {
+    /*
+     * Função para deixar a imagem com o efeito de Alto Relevo
+     *
+     * Esse filtro pega o valor de uma posição (i+1, j) e subtrai do
+     * valor da posição oposta (i-1, j), substiruindo no valor central
+     * (i, j) e somando com a metade do componente para clareamento.
+     * Seguindo a matriz:
+     * | 0  -1   0 |
+     * | 0   0   0 | + component/2
+     * | 0   1   0 |
+     */
+
+    // Cria uma matriz para armazenar a imagem original temporariamente
+    Pixel tmp[MAX][MAX];
+
+    // Copia a imagem original para a temporária
+    copy_img(img, tmp);
+
+    for (i = 1; i < h - 1; i++)
+        for (j = 0; j < w; j++)
+            // Percorre cada elemento do array img e atribui à matriz \
+               temporária o valor do algoritmo de alto relevo.
+            tmp[i][j].r = img[i+1][j].r - img[i-1][j].r + comp/2,
+            tmp[i][j].g = img[i+1][j].g - img[i-1][j].g + comp/2,
+            tmp[i][j].b = img[i+1][j].b - img[i-1][j].b + comp/2;
+
+    // Copia a matriz temporária para a matriz da imagem original
+    copy_img(tmp, img);
+}
+
+void img_posterize(Pixel img[MAX][MAX]) {
+    for (i = 0; i < h; i++)
+        for (j = 0; j < w; j++)
+            img[i][j].r = (img[i][j].r > comp/2) ? comp: 0,
+            img[i][j].g = (img[i][j].g > comp/2) ? comp: 0,
+            img[i][j].b = (img[i][j].b > comp/2) ? comp: 0;
+}
+
+void img_grayscale(Pixel img[MAX][MAX]) {
+    int pb;
+    for (i = 0; i < h; i++)
+        for (j = 0; j < w; j++)
+            pb = (img[i][j].r + img[i][j].g + img[i][j].b)/3,
+            img[i][j].r = pb,
+            img[i][j].g = pb,
+            img[i][j].b = pb;
+}
+
+void img_negative(Pixel img[MAX][MAX]) {
+    for (i = 0; i < h; i++)
+        for (j = 0; j < w; j++)
+            img[i][j].r = comp-img[i][j].r,
+            img[i][j].g = comp-img[i][j].g,
+            img[i][j].b = comp-img[i][j].b;
+}
+
+void img_invert_h(Pixel img[MAX][MAX]) {
+    Pixel tmp[MAX][MAX];
+    copy_img(img, tmp);
+    for (i = 0; i < h; i++)
+        for (j = 0; j < w; j++)
+            img[i][w-j-1] = tmp[i][j];
+}
+
+void img_invert_v(Pixel img[MAX][MAX]) {
+    Pixel tmp[MAX][MAX];
+    copy_img(img, tmp);
+    for (i = 0; i < h; i++)
+        for (j = 0; j < w; j++)
+            img[h-i-1][j] = tmp[i][j];
 }
 
 /*
