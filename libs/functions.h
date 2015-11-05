@@ -1,3 +1,38 @@
+/*
+ * Helpers
+ */
+
+void copy_img(Pixel origin[MAX][MAX], Pixel destiny[MAX][MAX]) {
+    for (i = 0; i < h; i++)
+        for (j = 0; j < w; j++)
+            destiny[i][j] = origin[i][j];
+}
+
+void build_img(char file[], Pixel img[MAX][MAX]){
+    strcat(strcat(strcat(file, "_"), op), ".ppm");
+
+    FILE *img_f;
+    img_f = fopen(file, "w");
+
+    fprintf(img_f, "%s\n", header);
+    fprintf(img_f, "%i %i\n", w, h);
+    fprintf(img_f, "%i\n", comp);
+    for (i = 0; i < h; i++)
+        for (j = 0; j < w; j++)
+            fprintf(img_f, "%i %i %i\n",
+            (img[i][j].r > comp) ? comp : (img[i][j].r < 0) ? 0 : img[i][j].r,
+            (img[i][j].g > comp) ? comp : (img[i][j].g < 0) ? 0 : img[i][j].g,
+            (img[i][j].b > comp) ? comp : (img[i][j].b < 0) ? 0 : img[i][j].b);
+
+    fclose(img_f);
+
+    printf("\nA imagem foi salva como %s\n", file);
+}
+
+/*
+ * Funções de Manipulação de Imagem
+ */
+
 void img_info(Pixel img[MAX][MAX]) {
     printf("Dados da Imagem lida:\n");
     printf("Tipo: %s\n", header);
@@ -9,12 +44,6 @@ void img_info(Pixel img[MAX][MAX]) {
         for (j = 0; j < w; j++)
             printf("%i %i %i\n", img[i][j].r, img[i][j].g, img[i][j].b);
     */
-}
-
-void copy_img(Pixel origin[MAX][MAX], Pixel destiny[MAX][MAX]) {
-    for (i = 0; i < h; i++)
-        for (j = 0; j < w; j++)
-            destiny[i][j] = origin[i][j];
 }
 
 void img_high_relief(Pixel img[MAX][MAX]) {
@@ -184,26 +213,9 @@ void img_red(char file[], int zoom, Pixel img[MAX][MAX]) {
     printf("\nA imagem foi salva como %s\n", file);
 }
 
-void build_img(char file[], Pixel img[MAX][MAX]){
-    strcat(strcat(strcat(file, "_"), op), ".ppm");
-
-    FILE *img_f;
-    img_f = fopen(file, "w");
-
-    fprintf(img_f, "%s\n", header);
-    fprintf(img_f, "%i %i\n", w, h);
-    fprintf(img_f, "%i\n", comp);
-    for (i = 0; i < h; i++)
-        for (j = 0; j < w; j++)
-            fprintf(img_f, "%i %i %i\n",
-            (img[i][j].r > comp) ? comp : (img[i][j].r < 0) ? 0 : img[i][j].r,
-            (img[i][j].g > comp) ? comp : (img[i][j].g < 0) ? 0 : img[i][j].g,
-            (img[i][j].b > comp) ? comp : (img[i][j].b < 0) ? 0 : img[i][j].b);
-
-    fclose(img_f);
-
-    printf("\nA imagem foi salva como %s\n", file);
-}
+/*
+ * Compressão de Imagem
+ */
 
 void img_compress(char file[], Pixel img[MAX][MAX]) {
     int cont = 0;
