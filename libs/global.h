@@ -1,59 +1,43 @@
-/*
- * Arquivo com todas as variáveis, constantes e
- * estruturas a serem usados em todo o projeto.
+/**
+ *  \file global.h
+ *  \brief Arquivo com as variáveis globais.
  *
- * Constantes
- *  - header:
- *     - Tipo: Vetor de char - String
- *     - Função: Definir o cabeçalho do arquivo ppm suportado
+ *  Arquivo com todas as constantes, variáveis e estruturas globais.
  *
- * Variáveis
- *  - file_img:
- *     - Tipo: FILE - Arquivo
- *     - Função: Armazenar a imagem lida
- *  - file_name:
- *     - Tipo: Vetor de char - String
- *     - Função: Armazenar o nome final da imagem
- *  - op:
- *     - Tipo: Vetor de char - String
- *     - Função: Armazenar a escolha do usuário no menu
- *  - w, h:
- *     - Tipo: Inteiro
- *     - Função: Armazenar a largura e altura (respectivamente) da imagem
- *  - MAX:
- *     - Tipo: Inteiro
- *     - Função: Armazenar o valor máximo que a imagem pode
-                 assumir (maior entre a largura e a altura)
- *  - comp:
- *     - Tipo: Inteiro
- *     - Função: Armazenar o máximo de cor da imagem (qualidade)
- *  - i, j:
- *     - Tipo: Inteiro
- *     - Função: Variáveis padrão para iteração
- *
- * Estruturas
- *  - Pixel:
- *     - Tipo: Tipo (struct)
- *     - Função: Armazenar as cores (em RGB) de um pixel
- *     - Conteúdo:
- *        - r:
- *           - Tipo: Inteiro
- *           - Função: Armazenar a quantidade de vermelho da cor
- *        - g:
- *           - Tipo: Inteiro
- *           - Função: Armazenar a quantidade de verde da cor
- *        - b:
- *           - Tipo: Inteiro
- *           - Função: Armazenar a quantidade de azul da cor
  */
 
+/** Define o cabeçalho do arquivo ppm suportado. */
 #define header "P3"
 
+/** Armazena a imagem lida. */
 FILE *file_img;
 
-char file_name[50], op[3];
-int w, h, MAX, comp, i, j;
+/** Armazena o nome final da imagem. */
+char file_name[50];
 
+/** Armazena a escolha do usuário no menu. */
+char op[3];
+
+/** Armazena a largura da imagem. */
+int w;
+
+/** Armazena a altura da imagem. */
+int h;
+
+/** Armazena o valor máximo que a imagem pode assumir. */
+int MAX;
+
+/** Armazena a cor máxima da imagem (qualidade). */
+int comp;
+
+int i, j;
+
+
+/**
+ *  Struct para armazenar as cores (em RGB) de um pixel.
+ */
 typedef struct {
-    int r, g, b;
+    int r; /**< Armazena a quantidade de vermelho (r) da cor. */
+    int g; /**< Armazena a quantidade de verde (g) da cor. */
+    int b; /**< Armazena a quantidade de azul (b) da cor. */
 } Pixel;
