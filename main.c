@@ -1,44 +1,34 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <ctype.h>
-#include "libs/img_manip.h"
-
-/*
- * Bibliotecas utilizadas:
- *  - stdio.h:
- *     - Funções de input/output
- *     - Funções de leitura/escrita de arquivos
- *  - stdlib.h:
- *     - Funções do systema, para a função clr_screen()
- *  - string.h:
- *     - strcmp() para comparação de strings (escolhas do menu)
- *     - strcat() para concatenar strings (nome do arquivo de saída)
- *     - strcpy() para copiar strings ("backup" do nome do arquivo original)
- *  - ctype.h:
- *     - tolower() para prevenir letras maiúsculas na interação com o usuário
- *  - img_manip.h:
- *     - Biblioteca com todas as funcionalidades do processamento de imagem
+/**
+ *  \mainpage Arquivo principal
+ *  \author Elton Viana
+ *  \date 2015
  */
 
+#include <stdio.h> /** Biblioteca de funções de entrada/saída */
+#include <stdlib.h> /** Biblioteca de funções padrão */
+#include <string.h> /** Biblioteca de funções com strings */
+#include <ctype.h>  /** Biblioteca de funções úteis */
+#include "libs/img_manip.h" /** Biblioteca para o processamento da imagem */
+
+/** \brief Função principal */
 int main() {
-    /*
-     * Variáveis utilizadas
-     *  - file:
-     *     - Tipo: Vetor de char - String
-     *     - Função: Armazenar o nome do arquivo a ser lido
+    /**
+     *  \details Função para receber o arquivo
+     *  \param Nenhum
+     *  \return Um inteiro 0
      */
 
+    /** Aramazena o nome do arquivo a ser lido */
     char file[50];
 
-    // Limpa a tela
+    /** Limpa a tela */
     clr_screen();
 
-    // Recebe o nome do arquivo
     printf("Digite o nome do arquivo a ser lido (sem extensão): ");
+    /** Recebe o nome do arquivo */
     scanf("%s", file);
 
-    // Processa a imagem
+    /** Processa a imagem */
     manip_ppm(file);
 
     printf("Programa finalizado.\n");
