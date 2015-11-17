@@ -18,18 +18,31 @@ int main() {
      *  \return Um inteiro 0
      */
 
-    /** Aramazena o nome do arquivo a ser lido */
+    /** Armazena o nome do arquivo a ser lido */
     char file[50];
+    /** Armazena a escolha do usuário de continuar ou não */
+    int alive;
 
-    /** Limpa a tela */
-    clr_screen();
+    /** Loop para poder executar o programa várias vezes */
+    do {
+        /** Limpa a tela */
+        clr_screen();
 
-    printf("Digite o nome do arquivo a ser lido (sem extensão): ");
-    /** Recebe o nome do arquivo */
-    scanf("%s", file);
+        printf("Digite o nome do arquivo a ser lido (sem extensão): ");
+        /** Recebe o nome do arquivo */
+        scanf("%s", file);
 
-    /** Processa a imagem */
-    manip_ppm(file);
+        /** Processa a imagem */
+        manip_ppm(file);
+
+        /** Loop para receber a resposta do usuário */
+        do {
+            printf("Fazer outra manipulação? [1 - Sim | 0 - Não] ");
+            /** Recebe a resposta do usuário */
+            scanf("%i", &alive);
+        } while (alive != 0 && alive != 1);
+
+    } while (alive);
 
     printf("Programa finalizado.\n");
 
