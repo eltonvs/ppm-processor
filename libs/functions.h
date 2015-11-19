@@ -102,19 +102,16 @@ void img_blurring(Pixel img[MAX][MAX]) {
     for (i = 1; i < h - 1; i++)
         for (j = 1; j < w - 1; j++)
             // Percorre cada elemento do array img e atribui à matriz \
-               temporária o valor do algoritmo de blurring.
-            tmp[i][j].r = (img[i-1][j-1].r + img[i-1][j].r + img[i-1][j+1].r +
-                           img[i][j-1].r + img[i][j].r + img[i][j+1].r +
-                           img[i+1][j-1].r + img[i+1][j].r + img[i+1][j+1].r)/9,
-            tmp[i][j].g = (img[i-1][j-1].g + img[i-1][j].g + img[i-1][j+1].g +
-                           img[i][j-1].g + img[i][j].g + img[i][j+1].g +
-                           img[i+1][j-1].g + img[i+1][j].g + img[i+1][j+1].g)/9,
-            tmp[i][j].b = (img[i-1][j-1].b + img[i-1][j].b + img[i-1][j+1].b +
-                           img[i][j-1].b + img[i][j].b + img[i][j+1].b +
-                           img[i+1][j-1].b + img[i+1][j].b + img[i+1][j+1].b)/9;
-
-    // Copia a matriz temporária para a matriz da imagem original
-    copy_img(tmp, img);
+               original o valor do algoritmo de blurring.
+            img[i][j].r = (tmp[i-1][j-1].r + tmp[i-1][j].r + tmp[i-1][j+1].r +
+                           tmp[i][j-1].r + tmp[i][j].r + tmp[i][j+1].r +
+                           tmp[i+1][j-1].r + tmp[i+1][j].r + tmp[i+1][j+1].r)/9,
+            img[i][j].g = (tmp[i-1][j-1].g + tmp[i-1][j].g + tmp[i-1][j+1].g +
+                           tmp[i][j-1].g + tmp[i][j].g + tmp[i][j+1].g +
+                           tmp[i+1][j-1].g + tmp[i+1][j].g + tmp[i+1][j+1].g)/9,
+            img[i][j].b = (tmp[i-1][j-1].b + tmp[i-1][j].b + tmp[i-1][j+1].b +
+                           tmp[i][j-1].b + tmp[i][j].b + tmp[i][j+1].b +
+                           tmp[i+1][j-1].b + tmp[i+1][j].b + tmp[i+1][j+1].b)/9;
 }
 
 void img_sharpening(Pixel img[MAX][MAX]) {
@@ -137,13 +134,10 @@ void img_sharpening(Pixel img[MAX][MAX]) {
     for (i = 1; i < h - 1; i++)
         for (j = 1; j < w - 1; j++)
             // Percorre cada elemento do array img e atribui à matriz \
-               temporária o valor do algoritmo de sharpening
-            tmp[i][j].r = 5*img[i][j].r - img[i-1][j].r - img[i][j-1].r - img[i][j+1].r - img[i+1][j].r,
-            tmp[i][j].g = 5*img[i][j].g - img[i-1][j].g - img[i][j-1].g - img[i][j+1].g - img[i+1][j].g,
-            tmp[i][j].b = 5*img[i][j].b - img[i-1][j].b - img[i][j-1].b - img[i][j+1].b - img[i+1][j].b;
-
-    // Copia a matriz temporária para a matriz da imagem original
-    copy_img(tmp, img);
+               original o valor do algoritmo de sharpening
+            img[i][j].r = 5*tmp[i][j].r - tmp[i-1][j].r - tmp[i][j-1].r - tmp[i][j+1].r - tmp[i+1][j].r,
+            img[i][j].g = 5*tmp[i][j].g - tmp[i-1][j].g - tmp[i][j-1].g - tmp[i][j+1].g - tmp[i+1][j].g,
+            img[i][j].b = 5*tmp[i][j].b - tmp[i-1][j].b - tmp[i][j-1].b - tmp[i][j+1].b - tmp[i+1][j].b;
 }
 
 void img_rot_left(Pixel img[MAX][MAX]) {
