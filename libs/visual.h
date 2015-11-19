@@ -17,6 +17,7 @@ void menu() {
     printf("'rle' \t Comprimir imagem usando RLE.\n");
     printf("'neg' \t Criar o negativo da imagem.\n");
     printf("'inv' \t Inverter imagem (flip).\n");
+    printf("'esp' \t Espelhar imagem.\n");
     printf("'rlv' \t Deixar imagem em Alto Relevo.\n");
     printf("'pos' \t Posterizar imagem.\n");
     printf("'peb' \t Deixar imagem em Preto e Branco.\n");

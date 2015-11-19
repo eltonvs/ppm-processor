@@ -349,6 +349,18 @@ void img_invert_v(Pixel img[MAX][MAX]) {
             img[h-i-1][j] = tmp[i][j];
 }
 
+void img_reflect_h(Pixel img[MAX][MAX]) {
+    for (i = 0; i < h; i++)
+        for (j = 0; j < w; j++)
+            img[i][w-j-1] = img[i][j];
+}
+
+void img_reflect_v(Pixel img[MAX][MAX]) {
+    for (i = 0; i < h; i++)
+        for (j = 0; j < w; j++)
+            img[h-i-1][j] = img[i][j];
+}
+
 /*
  * Compressão de Imagem
  */

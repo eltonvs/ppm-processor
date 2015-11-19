@@ -99,6 +99,34 @@ void choice(Pixel img[w][h]) {
         printf("Invertendo imagem...\n");
         // Cria um novo arquivo ppm com as alterações feitas
         build_img(file_name, img);
+    }else if (!strcmp(op, "esp")) {
+        // Cria uma variável para armazenar a direção do espelhamento
+        char dir;
+        // Lê a direção do espelhamento
+        printf("Digite o tipo de espelhamento [h: horizontal ou v: vertical]: ");
+        scanf(" %c", &dir);
+        if(dir == 'h') {
+            // Se a direção escolhida foi h, chama a função img_reflect_h()
+            img_reflect_h(img);
+            // Concatena a operação realizada com "_h" \
+               para alterar o nome do arquivo de saída
+            strcat(op, "_h");
+        }else if(dir == 'v') {
+            // Se a direção escolhida foi v, chama a função img_reflect_v()
+            img_reflect_v(img);
+            // Concatena a operação realizada com "_v" \
+               para alterar o nome do arquivo de saída
+            strcat(op, "_v");
+        }else {
+            // Se a opção escolhida não for válida, mostra uma mensagem de erro
+            error_message(0);
+            // Recursão para ler novamente até que a opção escolhida seja válida
+            choice(img);
+            return;
+        }
+        printf("Espelhando imagem...\n");
+        // Cria um novo arquivo ppm com as alterações feitas
+        build_img(file_name, img);
     }else if (!strcmp(op, "rot")) {
         // Cria uma variável para armazenar o ângulo/direção de rotação
         char ang[3];
