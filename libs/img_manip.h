@@ -1,25 +1,19 @@
-#include "global.h"
-#include "headers.h"
-#include "visual.h"
-#include "functions.h"
-
-/*
- * Bibliotecas utilizadas:
- *  - global.h:
- *     - Constantes, variáveis e typedefs globais
- *  - headers.h:
- *     - Inicialização das funções para evitar erros de declaração implícita
- *  - visual.h:
- *     - Funções com o intuito "visual"
- *        - clr_screen()
- *        - error_message()
- *        - menu()
- *  - functions.h:
- *     - Funções de processamento e manipulação da imagem
+/**
+ *  \file img_manip.h
+ *  \brief Arquivo com as funções principais do programa.
+ *
+ *  Arquivo com todas as constantes, variáveis e estruturas globais.
+ *
  */
 
+#include "global.h" /** Constantes, variáveis e typedefs globais */
+#include "headers.h" /** Inicialização das funções para evitar erros de declaração implícita */
+#include "visual.h" /** Funções com o intuito "visual" */
+#include "functions.h" /** Funções de processamento e manipulação da imagem */
+
+
 void choice(Pixel img[w][h]) {
-    /*
+    /**
      * Função para verificar a opção escolhida
      * no menu e chamar sua respectiva função
      */
