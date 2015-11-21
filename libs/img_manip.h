@@ -286,10 +286,12 @@ void manip_ppm(char file[]) {
         int c;
         // Lê a escolha do usuário
         printf("A imagem selecionada está comprimida.\n");
-        printf("Deseja descomprimir? [0 - Sim / 1 - Não] ");
-        scanf("%i", &c);
+        do {
+            printf("Deseja descomprimir? [1 - Sim / 0 - Não] ");
+            scanf("%i", &c);
+        } while (c != 1 && c != 0);
         // Verifica se o usuário quer descomprimir a imagem
-        if (!c)
+        if (c)
             // Chama a função para descompressão
             img_uncompress(file_name, image);
         // Fecha a leitura do arquivo e finaliza programa
