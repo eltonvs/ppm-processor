@@ -3,6 +3,7 @@
  *  \author Elton Viana
  *  \date 2015
  *  \version 1.0
+ *
  *  \file main.c
  *  \brief Arquivo principal
  *
@@ -42,7 +43,7 @@ int main() {
 
         /** Loop para receber a resposta do usuário */
         do {
-            printf("Fazer outra manipulação? [1 - Sim | 0 - Não] ");
+            printf("\nFazer outra manipulação? [1 - Sim | 0 - Não] ");
             /** Recebe a resposta do usuário */
             scanf("%i", &alive);
         } while (alive != 0 && alive != 1);
@@ -50,7 +51,7 @@ int main() {
     } while (alive);
 
     /** Mensagem de programa finalizado */
-    printf("Programa finalizado.\n");
+    printf("\nPrograma finalizado.\n");
 
     return 0;
 }
