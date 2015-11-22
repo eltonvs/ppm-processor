@@ -30,6 +30,8 @@ void img_invert_v(Pixel img[w][h]);
 void img_negative(Pixel img[w][h]);
 void img_posterize(Pixel img[w][h]);
 void img_red(char file[], int zoom, Pixel img[MAX][MAX]);
+void img_reflect_h(Pixel img[MAX][MAX]);
+void img_reflect_v(Pixel img[MAX][MAX]);
 void img_rot_180(Pixel img[MAX][MAX]);
 void img_rot_left(Pixel img[MAX][MAX]);
 void img_rot_right(Pixel img[MAX][MAX]);
