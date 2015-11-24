@@ -24,6 +24,7 @@
 4. Inversão de cores (negativo)
 5. Filtro de Posterização
 6. Inversão da imagem (flip) horizontal e vertical
+7. "Espelhamento" da imagem (refletir imagem)
 
 
 ===============================
