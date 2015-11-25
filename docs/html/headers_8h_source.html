@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>Trabalho de PTP: Código-Fonte de libs/headers.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Trabalho de PTP
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Processador de imagens PPM em C</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;Principal</span></a></li>
+      <li><a href="annotated.html"><span>Estruturas&#160;de&#160;Dados</span></a></li>
+      <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+      <li><a href="globals.html"><span>Globais</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6719ab1f1f7655efc2fa43f7eb574fd1.html">libs</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">headers.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="headers_8h.html">Vá para a documentação deste arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">// img_manip.h</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keywordtype">void</span> <a class="code" href="headers_8h.html#a860fdce73e137f23fb45b58111d09f30">build_img</a>(<span class="keywordtype">char</span> file[], <a class="code" href="structPixel.html">Pixel</a> img[<a class="code" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>][<a class="code" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>]);</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keywordtype">void</span> <a class="code" href="headers_8h.html#af3615554d94b47247a59ce85d2a984c7">choice</a>(<a class="code" href="structPixel.html">Pixel</a> img[<a class="code" href="global_8h.html#aac374e320caaadeca4874add33b62af2">w</a>][<a class="code" href="global_8h.html#a16611451551e3d15916bae723c3f59f7">h</a>]);</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keywordtype">void</span> <a class="code" href="headers_8h.html#a6f1ab26e10d1408022d73e1cc8ca249e">manip_ppm</a>(<span class="keywordtype">char</span> file[]);</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keywordtype">void</span> <a class="code" href="headers_8h.html#aa31b8edc9b83fb2dda75d68fc1fd794f">read_ppm</a>(<a class="code" href="structPixel.html">Pixel</a> img[<a class="code" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>][<a class="code" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>]);</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keywordtype">void</span> <a class="code" href="headers_8h.html#a8ded1bf355a87911f21277f6c3f41c9c">skip_comments</a>();</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">// visual.h</span></div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keywordtype">void</span> <a class="code" href="headers_8h.html#aba25dbc0fb187c3af7dd75b1aac34c79">clr_screen</a>();</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">void</span> <a class="code" href="headers_8h.html#a1e644502d25d110c650094691210e448">error_message</a>(<span class="keywordtype">int</span> type);</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keywordtype">void</span> <a class="code" href="headers_8h.html#a2a0e843767aeea4f433a28b9c54f573a">menu</a>();</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">// functions.h</span></div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keywordtype">void</span> <a class="code" href="headers_8h.html#a65e342ed9460bf3b4b4fff1fa8082146">copy_img</a>(<a class="code" href="structPixel.html">Pixel</a> origin[<a class="code" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>][<a class="code" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>], <a class="code" href="structPixel.html">Pixel</a> destiny[MAX][MAX]);</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keywordtype">void</span> <a class="code" href="headers_8h.html#a49d55ac1b9c6d9ad453d86590df4ccc0">img_amp</a>(<span class="keywordtype">char</span> file[], <span class="keywordtype">int</span> zoom, <a class="code" href="structPixel.html">Pixel</a> img[<a class="code" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>][<a class="code" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>]);</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keywordtype">void</span> <a class="code" href="functions_8h.html#a08d876cbd4e3322dd9a9b24178eb9c5e">img_blurring</a>(<a class="code" href="structPixel.html">Pixel</a> img[<a class="code" href="global_8h.html#aac374e320caaadeca4874add33b62af2">w</a>][<a class="code" href="global_8h.html#a16611451551e3d15916bae723c3f59f7">h</a>]);</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keywordtype">void</span> <a class="code" href="headers_8h.html#a87afa72718981a5fa83334ea9ca6cc92">img_compress</a>(<span class="keywordtype">char</span> file[], <a class="code" href="structPixel.html">Pixel</a> img[<a class="code" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>][<a class="code" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>]);</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keywordtype">void</span> <a class="code" href="functions_8h.html#a7f177ad31c7179648c462baf8a626726">img_emboss</a>(<a class="code" href="structPixel.html">Pixel</a> img[<a class="code" href="global_8h.html#aac374e320caaadeca4874add33b62af2">w</a>][<a class="code" href="global_8h.html#a16611451551e3d15916bae723c3f59f7">h</a>]);</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keywordtype">void</span> <a class="code" href="functions_8h.html#ac4a1605cae9108d60189827b4c3e6c0e">img_grayscale</a>(<a class="code" href="structPixel.html">Pixel</a> img[<a class="code" href="global_8h.html#aac374e320caaadeca4874add33b62af2">w</a>][<a class="code" href="global_8h.html#a16611451551e3d15916bae723c3f59f7">h</a>]);</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keywordtype">void</span> <a class="code" href="functions_8h.html#a29f2e33de3edf2757c5bbe429542bd58">img_info</a>(<a class="code" href="structPixel.html">Pixel</a> img[<a class="code" href="global_8h.html#aac374e320caaadeca4874add33b62af2">w</a>][<a class="code" href="global_8h.html#a16611451551e3d15916bae723c3f59f7">h</a>]);</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keywordtype">void</span> <a class="code" href="functions_8h.html#a70f96b4ba9528ba54ffe8f4953fa2958">img_invert_h</a>(<a class="code" href="structPixel.html">Pixel</a> img[<a class="code" href="global_8h.html#aac374e320caaadeca4874add33b62af2">w</a>][<a class="code" href="global_8h.html#a16611451551e3d15916bae723c3f59f7">h</a>]);</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keywordtype">void</span> <a class="code" href="functions_8h.html#a151774396a3953ffb291abb2f223068a">img_invert_v</a>(<a class="code" href="structPixel.html">Pixel</a> img[<a class="code" href="global_8h.html#aac374e320caaadeca4874add33b62af2">w</a>][<a class="code" href="global_8h.html#a16611451551e3d15916bae723c3f59f7">h</a>]);</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keywordtype">void</span> <a class="code" href="functions_8h.html#a901cff23a59419db063e3cff445990aa">img_negative</a>(<a class="code" href="structPixel.html">Pixel</a> img[<a class="code" href="global_8h.html#aac374e320caaadeca4874add33b62af2">w</a>][<a class="code" href="global_8h.html#a16611451551e3d15916bae723c3f59f7">h</a>]);</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keywordtype">void</span> <a class="code" href="functions_8h.html#a528aef42d35d700a32a34db531c4e055">img_posterize</a>(<a class="code" href="structPixel.html">Pixel</a> img[<a class="code" href="global_8h.html#aac374e320caaadeca4874add33b62af2">w</a>][<a class="code" href="global_8h.html#a16611451551e3d15916bae723c3f59f7">h</a>]);</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keywordtype">void</span> <a class="code" href="headers_8h.html#ae716a13edac5d1aa1e8c054f0946c448">img_red</a>(<span class="keywordtype">char</span> file[], <span class="keywordtype">int</span> zoom, <a class="code" href="structPixel.html">Pixel</a> img[<a class="code" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>][<a class="code" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>]);</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keywordtype">void</span> <a class="code" href="headers_8h.html#aca284dbfa2ce5c106338f11b53e8fb68">img_reflect_h</a>(<a class="code" href="structPixel.html">Pixel</a> img[<a class="code" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>][<a class="code" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>]);</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keywordtype">void</span> <a class="code" href="headers_8h.html#ac54728b7ee42294fdeac2754a443e0fa">img_reflect_v</a>(<a class="code" href="structPixel.html">Pixel</a> img[<a class="code" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>][<a class="code" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>]);</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keywordtype">void</span> <a class="code" href="headers_8h.html#a40f897fc17dfad9a2d61307c5ac83690">img_rot_180</a>(<a class="code" href="structPixel.html">Pixel</a> img[<a class="code" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>][<a class="code" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>]);</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keywordtype">void</span> <a class="code" href="headers_8h.html#a13a779a640b08906ef45176088e3d00f">img_rot_left</a>(<a class="code" href="structPixel.html">Pixel</a> img[<a class="code" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>][<a class="code" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>]);</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keywordtype">void</span> <a class="code" href="headers_8h.html#aea8f3765b240d30c2d321d6a879ccc4d">img_rot_right</a>(<a class="code" href="structPixel.html">Pixel</a> img[<a class="code" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>][<a class="code" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>]);</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keywordtype">void</span> <a class="code" href="functions_8h.html#a39dc6f7ba1214f7b4a1bb0f07dbd9dc4">img_sharpening</a>(<a class="code" href="structPixel.html">Pixel</a> img[<a class="code" href="global_8h.html#aac374e320caaadeca4874add33b62af2">w</a>][<a class="code" href="global_8h.html#a16611451551e3d15916bae723c3f59f7">h</a>]);</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keywordtype">void</span> <a class="code" href="functions_8h.html#ace88dc5e25cda0cb1a351375bfa9c246">img_thresholding</a>(<a class="code" href="structPixel.html">Pixel</a> img[<a class="code" href="global_8h.html#aac374e320caaadeca4874add33b62af2">w</a>][<a class="code" href="global_8h.html#a16611451551e3d15916bae723c3f59f7">h</a>]);</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keywordtype">void</span> <a class="code" href="headers_8h.html#a62be2199207067abf3e58f8e1396996a">img_uncompress</a>(<span class="keywordtype">char</span> file[]);</div><div class="ttc" id="global_8h_html_a36ecf0006f5fe9d8bf1f2c1f2f2b4554"><div class="ttname"><a href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a></div><div class="ttdeci">int MAX</div><div class="ttdef"><b>Definition:</b> global.h:28</div></div>
+<div class="ttc" id="headers_8h_html_aea8f3765b240d30c2d321d6a879ccc4d"><div class="ttname"><a href="headers_8h.html#aea8f3765b240d30c2d321d6a879ccc4d">img_rot_right</a></div><div class="ttdeci">void img_rot_right(Pixel img[MAX][MAX])</div><div class="ttdef"><b>Definition:</b> functions.h:186</div></div>
+<div class="ttc" id="headers_8h_html_a6f1ab26e10d1408022d73e1cc8ca249e"><div class="ttname"><a href="headers_8h.html#a6f1ab26e10d1408022d73e1cc8ca249e">manip_ppm</a></div><div class="ttdeci">void manip_ppm(char file[])</div><div class="ttdef"><b>Definition:</b> img_manip.h:265</div></div>
+<div class="ttc" id="functions_8h_html_ac4a1605cae9108d60189827b4c3e6c0e"><div class="ttname"><a href="functions_8h.html#ac4a1605cae9108d60189827b4c3e6c0e">img_grayscale</a></div><div class="ttdeci">void img_grayscale(Pixel img[MAX][MAX])</div><div class="ttdef"><b>Definition:</b> functions.h:410</div></div>
+<div class="ttc" id="functions_8h_html_a151774396a3953ffb291abb2f223068a"><div class="ttname"><a href="functions_8h.html#a151774396a3953ffb291abb2f223068a">img_invert_v</a></div><div class="ttdeci">void img_invert_v(Pixel img[MAX][MAX])</div><div class="ttdef"><b>Definition:</b> functions.h:483</div></div>
+<div class="ttc" id="headers_8h_html_aba25dbc0fb187c3af7dd75b1aac34c79"><div class="ttname"><a href="headers_8h.html#aba25dbc0fb187c3af7dd75b1aac34c79">clr_screen</a></div><div class="ttdeci">void clr_screen()</div><div class="ttdef"><b>Definition:</b> visual.h:38</div></div>
+<div class="ttc" id="headers_8h_html_a13a779a640b08906ef45176088e3d00f"><div class="ttname"><a href="headers_8h.html#a13a779a640b08906ef45176088e3d00f">img_rot_left</a></div><div class="ttdeci">void img_rot_left(Pixel img[MAX][MAX])</div><div class="ttdef"><b>Definition:</b> functions.h:160</div></div>
+<div class="ttc" id="functions_8h_html_a7f177ad31c7179648c462baf8a626726"><div class="ttname"><a href="functions_8h.html#a7f177ad31c7179648c462baf8a626726">img_emboss</a></div><div class="ttdeci">void img_emboss(Pixel img[MAX][MAX])</div><div class="ttdef"><b>Definition:</b> functions.h:358</div></div>
+<div class="ttc" id="functions_8h_html_a39dc6f7ba1214f7b4a1bb0f07dbd9dc4"><div class="ttname"><a href="functions_8h.html#a39dc6f7ba1214f7b4a1bb0f07dbd9dc4">img_sharpening</a></div><div class="ttdeci">void img_sharpening(Pixel img[MAX][MAX])</div><div class="ttdef"><b>Definition:</b> functions.h:132</div></div>
+<div class="ttc" id="headers_8h_html_ac54728b7ee42294fdeac2754a443e0fa"><div class="ttname"><a href="headers_8h.html#ac54728b7ee42294fdeac2754a443e0fa">img_reflect_v</a></div><div class="ttdeci">void img_reflect_v(Pixel img[MAX][MAX])</div><div class="ttdef"><b>Definition:</b> functions.h:530</div></div>
+<div class="ttc" id="headers_8h_html_aca284dbfa2ce5c106338f11b53e8fb68"><div class="ttname"><a href="headers_8h.html#aca284dbfa2ce5c106338f11b53e8fb68">img_reflect_h</a></div><div class="ttdeci">void img_reflect_h(Pixel img[MAX][MAX])</div><div class="ttdef"><b>Definition:</b> functions.h:510</div></div>
+<div class="ttc" id="headers_8h_html_a87afa72718981a5fa83334ea9ca6cc92"><div class="ttname"><a href="headers_8h.html#a87afa72718981a5fa83334ea9ca6cc92">img_compress</a></div><div class="ttdeci">void img_compress(char file[], Pixel img[MAX][MAX])</div><div class="ttdef"><b>Definition:</b> functions.h:554</div></div>
+<div class="ttc" id="headers_8h_html_a1e644502d25d110c650094691210e448"><div class="ttname"><a href="headers_8h.html#a1e644502d25d110c650094691210e448">error_message</a></div><div class="ttdeci">void error_message(int type)</div><div class="ttdef"><b>Definition:</b> visual.h:54</div></div>
+<div class="ttc" id="headers_8h_html_af3615554d94b47247a59ce85d2a984c7"><div class="ttname"><a href="headers_8h.html#af3615554d94b47247a59ce85d2a984c7">choice</a></div><div class="ttdeci">void choice(Pixel img[w][h])</div><div class="ttdef"><b>Definition:</b> img_manip.h:15</div></div>
+<div class="ttc" id="headers_8h_html_a40f897fc17dfad9a2d61307c5ac83690"><div class="ttname"><a href="headers_8h.html#a40f897fc17dfad9a2d61307c5ac83690">img_rot_180</a></div><div class="ttdeci">void img_rot_180(Pixel img[MAX][MAX])</div><div class="ttdef"><b>Definition:</b> functions.h:206</div></div>
+<div class="ttc" id="headers_8h_html_aa31b8edc9b83fb2dda75d68fc1fd794f"><div class="ttname"><a href="headers_8h.html#aa31b8edc9b83fb2dda75d68fc1fd794f">read_ppm</a></div><div class="ttdeci">void read_ppm(Pixel img[MAX][MAX])</div><div class="ttdef"><b>Definition:</b> img_manip.h:241</div></div>
+<div class="ttc" id="global_8h_html_a16611451551e3d15916bae723c3f59f7"><div class="ttname"><a href="global_8h.html#a16611451551e3d15916bae723c3f59f7">h</a></div><div class="ttdeci">int h</div><div class="ttdef"><b>Definition:</b> global.h:25</div></div>
+<div class="ttc" id="headers_8h_html_a62be2199207067abf3e58f8e1396996a"><div class="ttname"><a href="headers_8h.html#a62be2199207067abf3e58f8e1396996a">img_uncompress</a></div><div class="ttdeci">void img_uncompress(char file[])</div><div class="ttdef"><b>Definition:</b> functions.h:619</div></div>
+<div class="ttc" id="global_8h_html_aac374e320caaadeca4874add33b62af2"><div class="ttname"><a href="global_8h.html#aac374e320caaadeca4874add33b62af2">w</a></div><div class="ttdeci">int w</div><div class="ttdef"><b>Definition:</b> global.h:22</div></div>
+<div class="ttc" id="headers_8h_html_a65e342ed9460bf3b4b4fff1fa8082146"><div class="ttname"><a href="headers_8h.html#a65e342ed9460bf3b4b4fff1fa8082146">copy_img</a></div><div class="ttdeci">void copy_img(Pixel origin[MAX][MAX], Pixel destiny[MAX][MAX])</div><div class="ttdef"><b>Definition:</b> functions.h:9</div></div>
+<div class="ttc" id="headers_8h_html_ae716a13edac5d1aa1e8c054f0946c448"><div class="ttname"><a href="headers_8h.html#ae716a13edac5d1aa1e8c054f0946c448">img_red</a></div><div class="ttdeci">void img_red(char file[], int zoom, Pixel img[MAX][MAX])</div><div class="ttdef"><b>Definition:</b> functions.h:271</div></div>
+<div class="ttc" id="functions_8h_html_ace88dc5e25cda0cb1a351375bfa9c246"><div class="ttname"><a href="functions_8h.html#ace88dc5e25cda0cb1a351375bfa9c246">img_thresholding</a></div><div class="ttdeci">void img_thresholding(Pixel img[MAX][MAX])</div><div class="ttdef"><b>Definition:</b> functions.h:69</div></div>
+<div class="ttc" id="headers_8h_html_a860fdce73e137f23fb45b58111d09f30"><div class="ttname"><a href="headers_8h.html#a860fdce73e137f23fb45b58111d09f30">build_img</a></div><div class="ttdeci">void build_img(char file[], Pixel img[MAX][MAX])</div><div class="ttdef"><b>Definition:</b> functions.h:26</div></div>
+<div class="ttc" id="functions_8h_html_a901cff23a59419db063e3cff445990aa"><div class="ttname"><a href="functions_8h.html#a901cff23a59419db063e3cff445990aa">img_negative</a></div><div class="ttdeci">void img_negative(Pixel img[MAX][MAX])</div><div class="ttdef"><b>Definition:</b> functions.h:436</div></div>
+<div class="ttc" id="headers_8h_html_a2a0e843767aeea4f433a28b9c54f573a"><div class="ttname"><a href="headers_8h.html#a2a0e843767aeea4f433a28b9c54f573a">menu</a></div><div class="ttdeci">void menu()</div><div class="ttdef"><b>Definition:</b> visual.h:9</div></div>
+<div class="ttc" id="functions_8h_html_a29f2e33de3edf2757c5bbe429542bd58"><div class="ttname"><a href="functions_8h.html#a29f2e33de3edf2757c5bbe429542bd58">img_info</a></div><div class="ttdeci">void img_info(Pixel img[MAX][MAX])</div><div class="ttdef"><b>Definition:</b> functions.h:328</div></div>
+<div class="ttc" id="functions_8h_html_a528aef42d35d700a32a34db531c4e055"><div class="ttname"><a href="functions_8h.html#a528aef42d35d700a32a34db531c4e055">img_posterize</a></div><div class="ttdeci">void img_posterize(Pixel img[MAX][MAX])</div><div class="ttdef"><b>Definition:</b> functions.h:389</div></div>
+<div class="ttc" id="headers_8h_html_a49d55ac1b9c6d9ad453d86590df4ccc0"><div class="ttname"><a href="headers_8h.html#a49d55ac1b9c6d9ad453d86590df4ccc0">img_amp</a></div><div class="ttdeci">void img_amp(char file[], int zoom, Pixel img[MAX][MAX])</div><div class="ttdef"><b>Definition:</b> functions.h:227</div></div>
+<div class="ttc" id="functions_8h_html_a08d876cbd4e3322dd9a9b24178eb9c5e"><div class="ttname"><a href="functions_8h.html#a08d876cbd4e3322dd9a9b24178eb9c5e">img_blurring</a></div><div class="ttdeci">void img_blurring(Pixel img[MAX][MAX])</div><div class="ttdef"><b>Definition:</b> functions.h:98</div></div>
+<div class="ttc" id="structPixel_html"><div class="ttname"><a href="structPixel.html">Pixel</a></div><div class="ttdef"><b>Definition:</b> global.h:43</div></div>
+<div class="ttc" id="functions_8h_html_a70f96b4ba9528ba54ffe8f4953fa2958"><div class="ttname"><a href="functions_8h.html#a70f96b4ba9528ba54ffe8f4953fa2958">img_invert_h</a></div><div class="ttdeci">void img_invert_h(Pixel img[MAX][MAX])</div><div class="ttdef"><b>Definition:</b> functions.h:456</div></div>
+<div class="ttc" id="headers_8h_html_a8ded1bf355a87911f21277f6c3f41c9c"><div class="ttname"><a href="headers_8h.html#a8ded1bf355a87911f21277f6c3f41c9c">skip_comments</a></div><div class="ttdeci">void skip_comments()</div><div class="ttdef"><b>Definition:</b> img_manip.h:206</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>

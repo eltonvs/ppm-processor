@@ -1,0 +1,893 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>Trabalho de PTP: Referência do Arquivo libs/functions.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Trabalho de PTP
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Processador de imagens PPM em C</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;Principal</span></a></li>
+      <li><a href="annotated.html"><span>Estruturas&#160;de&#160;Dados</span></a></li>
+      <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+      <li><a href="globals.html"><span>Globais</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_6719ab1f1f7655efc2fa43f7eb574fd1.html">libs</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funções</a>  </div>
+  <div class="headertitle">
+<div class="title">Referência do Arquivo functions.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Arquivo com funções de manipulação da imagem.  
+<a href="#details">Mais...</a></p>
+
+<p><a href="functions_8h_source.html">Vá para o código-fonte deste arquivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funções</h2></td></tr>
+<tr class="memitem:a65e342ed9460bf3b4b4fff1fa8082146"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8h.html#a65e342ed9460bf3b4b4fff1fa8082146">copy_img</a> (<a class="el" href="structPixel.html">Pixel</a> origin[<a class="el" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>][<a class="el" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>], <a class="el" href="structPixel.html">Pixel</a> destiny[<a class="el" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>][<a class="el" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>])</td></tr>
+<tr class="separator:a65e342ed9460bf3b4b4fff1fa8082146"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a860fdce73e137f23fb45b58111d09f30"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8h.html#a860fdce73e137f23fb45b58111d09f30">build_img</a> (char file[], <a class="el" href="structPixel.html">Pixel</a> img[<a class="el" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>][<a class="el" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>])</td></tr>
+<tr class="separator:a860fdce73e137f23fb45b58111d09f30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace88dc5e25cda0cb1a351375bfa9c246"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8h.html#ace88dc5e25cda0cb1a351375bfa9c246">img_thresholding</a> (<a class="el" href="structPixel.html">Pixel</a> img[<a class="el" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>][<a class="el" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>])</td></tr>
+<tr class="separator:ace88dc5e25cda0cb1a351375bfa9c246"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08d876cbd4e3322dd9a9b24178eb9c5e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8h.html#a08d876cbd4e3322dd9a9b24178eb9c5e">img_blurring</a> (<a class="el" href="structPixel.html">Pixel</a> img[<a class="el" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>][<a class="el" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>])</td></tr>
+<tr class="separator:a08d876cbd4e3322dd9a9b24178eb9c5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39dc6f7ba1214f7b4a1bb0f07dbd9dc4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8h.html#a39dc6f7ba1214f7b4a1bb0f07dbd9dc4">img_sharpening</a> (<a class="el" href="structPixel.html">Pixel</a> img[<a class="el" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>][<a class="el" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>])</td></tr>
+<tr class="separator:a39dc6f7ba1214f7b4a1bb0f07dbd9dc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13a779a640b08906ef45176088e3d00f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8h.html#a13a779a640b08906ef45176088e3d00f">img_rot_left</a> (<a class="el" href="structPixel.html">Pixel</a> img[<a class="el" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>][<a class="el" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>])</td></tr>
+<tr class="separator:a13a779a640b08906ef45176088e3d00f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea8f3765b240d30c2d321d6a879ccc4d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8h.html#aea8f3765b240d30c2d321d6a879ccc4d">img_rot_right</a> (<a class="el" href="structPixel.html">Pixel</a> img[<a class="el" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>][<a class="el" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>])</td></tr>
+<tr class="separator:aea8f3765b240d30c2d321d6a879ccc4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40f897fc17dfad9a2d61307c5ac83690"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8h.html#a40f897fc17dfad9a2d61307c5ac83690">img_rot_180</a> (<a class="el" href="structPixel.html">Pixel</a> img[<a class="el" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>][<a class="el" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>])</td></tr>
+<tr class="separator:a40f897fc17dfad9a2d61307c5ac83690"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49d55ac1b9c6d9ad453d86590df4ccc0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8h.html#a49d55ac1b9c6d9ad453d86590df4ccc0">img_amp</a> (char file[], int zoom, <a class="el" href="structPixel.html">Pixel</a> img[<a class="el" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>][<a class="el" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>])</td></tr>
+<tr class="separator:a49d55ac1b9c6d9ad453d86590df4ccc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae716a13edac5d1aa1e8c054f0946c448"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8h.html#ae716a13edac5d1aa1e8c054f0946c448">img_red</a> (char file[], int zoom, <a class="el" href="structPixel.html">Pixel</a> img[<a class="el" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>][<a class="el" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>])</td></tr>
+<tr class="separator:ae716a13edac5d1aa1e8c054f0946c448"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29f2e33de3edf2757c5bbe429542bd58"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8h.html#a29f2e33de3edf2757c5bbe429542bd58">img_info</a> (<a class="el" href="structPixel.html">Pixel</a> img[<a class="el" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>][<a class="el" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>])</td></tr>
+<tr class="separator:a29f2e33de3edf2757c5bbe429542bd58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f177ad31c7179648c462baf8a626726"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8h.html#a7f177ad31c7179648c462baf8a626726">img_emboss</a> (<a class="el" href="structPixel.html">Pixel</a> img[<a class="el" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>][<a class="el" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>])</td></tr>
+<tr class="separator:a7f177ad31c7179648c462baf8a626726"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a528aef42d35d700a32a34db531c4e055"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8h.html#a528aef42d35d700a32a34db531c4e055">img_posterize</a> (<a class="el" href="structPixel.html">Pixel</a> img[<a class="el" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>][<a class="el" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>])</td></tr>
+<tr class="separator:a528aef42d35d700a32a34db531c4e055"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4a1605cae9108d60189827b4c3e6c0e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8h.html#ac4a1605cae9108d60189827b4c3e6c0e">img_grayscale</a> (<a class="el" href="structPixel.html">Pixel</a> img[<a class="el" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>][<a class="el" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>])</td></tr>
+<tr class="separator:ac4a1605cae9108d60189827b4c3e6c0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a901cff23a59419db063e3cff445990aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8h.html#a901cff23a59419db063e3cff445990aa">img_negative</a> (<a class="el" href="structPixel.html">Pixel</a> img[<a class="el" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>][<a class="el" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>])</td></tr>
+<tr class="separator:a901cff23a59419db063e3cff445990aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70f96b4ba9528ba54ffe8f4953fa2958"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8h.html#a70f96b4ba9528ba54ffe8f4953fa2958">img_invert_h</a> (<a class="el" href="structPixel.html">Pixel</a> img[<a class="el" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>][<a class="el" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>])</td></tr>
+<tr class="separator:a70f96b4ba9528ba54ffe8f4953fa2958"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a151774396a3953ffb291abb2f223068a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8h.html#a151774396a3953ffb291abb2f223068a">img_invert_v</a> (<a class="el" href="structPixel.html">Pixel</a> img[<a class="el" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>][<a class="el" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>])</td></tr>
+<tr class="separator:a151774396a3953ffb291abb2f223068a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca284dbfa2ce5c106338f11b53e8fb68"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8h.html#aca284dbfa2ce5c106338f11b53e8fb68">img_reflect_h</a> (<a class="el" href="structPixel.html">Pixel</a> img[<a class="el" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>][<a class="el" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>])</td></tr>
+<tr class="separator:aca284dbfa2ce5c106338f11b53e8fb68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac54728b7ee42294fdeac2754a443e0fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8h.html#ac54728b7ee42294fdeac2754a443e0fa">img_reflect_v</a> (<a class="el" href="structPixel.html">Pixel</a> img[<a class="el" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>][<a class="el" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>])</td></tr>
+<tr class="separator:ac54728b7ee42294fdeac2754a443e0fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87afa72718981a5fa83334ea9ca6cc92"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8h.html#a87afa72718981a5fa83334ea9ca6cc92">img_compress</a> (char file[], <a class="el" href="structPixel.html">Pixel</a> img[<a class="el" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>][<a class="el" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>])</td></tr>
+<tr class="separator:a87afa72718981a5fa83334ea9ca6cc92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62be2199207067abf3e58f8e1396996a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="functions_8h.html#a62be2199207067abf3e58f8e1396996a">img_uncompress</a> (char file[])</td></tr>
+<tr class="separator:a62be2199207067abf3e58f8e1396996a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição Detalhada</h2>
+<div class="textblock"><p>Arquivo com funções de manipulação da imagem. </p>
+<p>Arquivo com todas as funções de filtro e manipulação da imagem. </p>
+</div><h2 class="groupheader">Funções</h2>
+<a class="anchor" id="a860fdce73e137f23fb45b58111d09f30"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void build_img </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>file</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structPixel.html">Pixel</a>&#160;</td>
+          <td class="paramname"><em>img</em>[MAX][MAX]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Função para criar a imagem</p>
+<p>Função que gera uma imagem ppm a partir de uma matriz de Pixels</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>- Nome do arquivo de saída </td></tr>
+    <tr><td class="paramname">img</td><td>- Matriz da imagem a ser gerada </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Nada</dd></dl>
+<div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                                                {</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    strcat(strcat(strcat(file, <span class="stringliteral">&quot;_&quot;</span>), <a class="code" href="global_8h.html#a78a961ecdab406eb3243a85c4be46848">op</a>), <span class="stringliteral">&quot;.ppm&quot;</span>);</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="comment">// Cria uma variável do tipo arquivo</span></div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    FILE *img_f;</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="comment">// Cria um arquivo com o nome do arquivo + &#39;_&#39; + operação escolhida</span></div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    img_f = fopen(file, <span class="stringliteral">&quot;w&quot;</span>);</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment">// Cria o cabeçalho da imagem ppm</span></div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    fprintf(img_f, <span class="stringliteral">&quot;%s\n&quot;</span>, <a class="code" href="global_8h.html#a383d5e14413e39bc8997c9f4edbe05d4">header</a>);</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="comment">// Define a largura e altura da imagem</span></div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    fprintf(img_f, <span class="stringliteral">&quot;%i %i\n&quot;</span>, <a class="code" href="global_8h.html#aac374e320caaadeca4874add33b62af2">w</a>, <a class="code" href="global_8h.html#a16611451551e3d15916bae723c3f59f7">h</a>);</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="comment">// Define a cor máximo (qualidade) da imagem</span></div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    fprintf(img_f, <span class="stringliteral">&quot;%i\n&quot;</span>, <a class="code" href="global_8h.html#a1b3f06ddcdb29e455759b0afa41793a5">comp</a>);</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a> = 0; <a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a> &lt; <a class="code" href="global_8h.html#a16611451551e3d15916bae723c3f59f7">h</a>; <a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>++)</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a> = 0; <a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a> &lt; <a class="code" href="global_8h.html#aac374e320caaadeca4874add33b62af2">w</a>; <a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>++)</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="comment">// Trata erros básicos, como de cor negativa e/ou maior que o máximo.</span></div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            fprintf(img_f, <span class="stringliteral">&quot;%i %i %i\n&quot;</span>,</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            (img[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].r &gt; <a class="code" href="global_8h.html#a1b3f06ddcdb29e455759b0afa41793a5">comp</a>) ? <a class="code" href="global_8h.html#a1b3f06ddcdb29e455759b0afa41793a5">comp</a> : (img[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].r &lt; 0) ? 0 : img[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].r,</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            (img[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].g &gt; <a class="code" href="global_8h.html#a1b3f06ddcdb29e455759b0afa41793a5">comp</a>) ? <a class="code" href="global_8h.html#a1b3f06ddcdb29e455759b0afa41793a5">comp</a> : (img[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].g &lt; 0) ? 0 : img[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].g,</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            (img[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].b &gt; <a class="code" href="global_8h.html#a1b3f06ddcdb29e455759b0afa41793a5">comp</a>) ? <a class="code" href="global_8h.html#a1b3f06ddcdb29e455759b0afa41793a5">comp</a> : (img[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].b &lt; 0) ? 0 : img[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].b);</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="comment">// Fecha o arquivo aberto</span></div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    fclose(img_f);</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div><div class="ttc" id="global_8h_html_a1b3f06ddcdb29e455759b0afa41793a5"><div class="ttname"><a href="global_8h.html#a1b3f06ddcdb29e455759b0afa41793a5">comp</a></div><div class="ttdeci">int comp</div><div class="ttdef"><b>Definition:</b> global.h:31</div></div>
+<div class="ttc" id="global_8h_html_acb559820d9ca11295b4500f179ef6392"><div class="ttname"><a href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a></div><div class="ttdeci">int i</div><div class="ttdef"><b>Definition:</b> global.h:34</div></div>
+<div class="ttc" id="global_8h_html_a78a961ecdab406eb3243a85c4be46848"><div class="ttname"><a href="global_8h.html#a78a961ecdab406eb3243a85c4be46848">op</a></div><div class="ttdeci">char op[3]</div><div class="ttdef"><b>Definition:</b> global.h:19</div></div>
+<div class="ttc" id="global_8h_html_a16611451551e3d15916bae723c3f59f7"><div class="ttname"><a href="global_8h.html#a16611451551e3d15916bae723c3f59f7">h</a></div><div class="ttdeci">int h</div><div class="ttdef"><b>Definition:</b> global.h:25</div></div>
+<div class="ttc" id="global_8h_html_aac374e320caaadeca4874add33b62af2"><div class="ttname"><a href="global_8h.html#aac374e320caaadeca4874add33b62af2">w</a></div><div class="ttdeci">int w</div><div class="ttdef"><b>Definition:</b> global.h:22</div></div>
+<div class="ttc" id="global_8h_html_a383d5e14413e39bc8997c9f4edbe05d4"><div class="ttname"><a href="global_8h.html#a383d5e14413e39bc8997c9f4edbe05d4">header</a></div><div class="ttdeci">#define header</div><div class="ttdef"><b>Definition:</b> global.h:10</div></div>
+<div class="ttc" id="global_8h_html_a37d972ae0b47b9099e30983131d31916"><div class="ttname"><a href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a></div><div class="ttdeci">int j</div><div class="ttdef"><b>Definition:</b> global.h:37</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a65e342ed9460bf3b4b4fff1fa8082146"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void copy_img </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structPixel.html">Pixel</a>&#160;</td>
+          <td class="paramname"><em>origin</em>[MAX][MAX], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structPixel.html">Pixel</a>&#160;</td>
+          <td class="paramname"><em>destiny</em>[MAX][MAX]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Função para copiar a matriz da imagem</p>
+<p>Função que copia uma imagem de uma matriz para outra através da passagem de parâmetros por referência</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">origin</td><td>- Imagem a ser copiada </td></tr>
+    <tr><td class="paramname">destiny</td><td>- Imagem para onde será copiada </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Nada</dd></dl>
+<div class="fragment"><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;                                                               {</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a> = 0; <a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a> &lt; <a class="code" href="global_8h.html#a16611451551e3d15916bae723c3f59f7">h</a>; <a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>++)</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a> = 0; <a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a> &lt; <a class="code" href="global_8h.html#aac374e320caaadeca4874add33b62af2">w</a>; <a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>++)</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            destiny[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>] = origin[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>];</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div><div class="ttc" id="global_8h_html_acb559820d9ca11295b4500f179ef6392"><div class="ttname"><a href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a></div><div class="ttdeci">int i</div><div class="ttdef"><b>Definition:</b> global.h:34</div></div>
+<div class="ttc" id="global_8h_html_a16611451551e3d15916bae723c3f59f7"><div class="ttname"><a href="global_8h.html#a16611451551e3d15916bae723c3f59f7">h</a></div><div class="ttdeci">int h</div><div class="ttdef"><b>Definition:</b> global.h:25</div></div>
+<div class="ttc" id="global_8h_html_aac374e320caaadeca4874add33b62af2"><div class="ttname"><a href="global_8h.html#aac374e320caaadeca4874add33b62af2">w</a></div><div class="ttdeci">int w</div><div class="ttdef"><b>Definition:</b> global.h:22</div></div>
+<div class="ttc" id="global_8h_html_a37d972ae0b47b9099e30983131d31916"><div class="ttname"><a href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a></div><div class="ttdeci">int j</div><div class="ttdef"><b>Definition:</b> global.h:37</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a49d55ac1b9c6d9ad453d86590df4ccc0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void img_amp </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>file</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>zoom</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structPixel.html">Pixel</a>&#160;</td>
+          <td class="paramname"><em>img</em>[MAX][MAX]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Função de ampliação da imagem</p>
+<p>Para ampliar uma imagem n vezes, devemos repetir cada pixel n vezes horizontalmente e também cada linha n vezes.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>- Nome do arquivo de saída </td></tr>
+    <tr><td class="paramname">zoom</td><td>- Zoom de ampliação da imagem </td></tr>
+    <tr><td class="paramname">img</td><td>- Matriz da imagem a ser ampliada </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Nada</dd></dl>
+<div class="fragment"><div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                                                         {</div><div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="comment">// Iteradores</span></div><div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="keywordtype">int</span> k, l;</div><div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;</div><div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    strcat(file, <span class="stringliteral">&quot;_amp.ppm&quot;</span>);</div><div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;</div><div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="comment">// Cria uma variável do tipo arquivo</span></div><div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    FILE *img_f;</div><div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <span class="comment">// Cria um arquivo com o nome do arquivo + &#39;_amp.ppm&#39;</span></div><div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    img_f = fopen(file, <span class="stringliteral">&quot;w&quot;</span>);</div><div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;</div><div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="comment">// Cria o cabeçalho da imagem ppm</span></div><div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    fprintf(img_f, <span class="stringliteral">&quot;%s\n&quot;</span>, <a class="code" href="global_8h.html#a383d5e14413e39bc8997c9f4edbe05d4">header</a>);</div><div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="comment">// Define as novas largura e altura da imagem (multiplicadas pelo zoom)</span></div><div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    fprintf(img_f, <span class="stringliteral">&quot;%i %i\n&quot;</span>, <a class="code" href="global_8h.html#aac374e320caaadeca4874add33b62af2">w</a>*zoom, <a class="code" href="global_8h.html#a16611451551e3d15916bae723c3f59f7">h</a>*zoom);</div><div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="comment">// Define a cor máximo (qualidade) da imagem</span></div><div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    fprintf(img_f, <span class="stringliteral">&quot;%i\n&quot;</span>, <a class="code" href="global_8h.html#a1b3f06ddcdb29e455759b0afa41793a5">comp</a>);</div><div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a> = 0; <a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a> &lt; <a class="code" href="global_8h.html#a16611451551e3d15916bae723c3f59f7">h</a>; <a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>++)</div><div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        <span class="keywordflow">for</span> (k = 0; k &lt; zoom; k++)</div><div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;            <span class="keywordflow">for</span> (<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a> = 0; <a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a> &lt; <a class="code" href="global_8h.html#aac374e320caaadeca4874add33b62af2">w</a>; <a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>++)</div><div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                <span class="keywordflow">for</span> (l = 0; l &lt; zoom; l++)</div><div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;                    <span class="comment">// Trata erros básicos, como de cor negativa e/ou maior que o máximo.</span></div><div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;                    fprintf(img_f, <span class="stringliteral">&quot;%i %i %i\n&quot;</span>,</div><div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                    (img[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].r &gt; <a class="code" href="global_8h.html#a1b3f06ddcdb29e455759b0afa41793a5">comp</a>) ? <a class="code" href="global_8h.html#a1b3f06ddcdb29e455759b0afa41793a5">comp</a> : img[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].r,</div><div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;                    (img[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].g &gt; <a class="code" href="global_8h.html#a1b3f06ddcdb29e455759b0afa41793a5">comp</a>) ? <a class="code" href="global_8h.html#a1b3f06ddcdb29e455759b0afa41793a5">comp</a> : img[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].g,</div><div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                    (img[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].b &gt; <a class="code" href="global_8h.html#a1b3f06ddcdb29e455759b0afa41793a5">comp</a>) ? <a class="code" href="global_8h.html#a1b3f06ddcdb29e455759b0afa41793a5">comp</a> : img[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].b);</div><div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;</div><div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <span class="comment">// Fecha o arquivo aberto</span></div><div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    fclose(img_f);</div><div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;}</div><div class="ttc" id="global_8h_html_a1b3f06ddcdb29e455759b0afa41793a5"><div class="ttname"><a href="global_8h.html#a1b3f06ddcdb29e455759b0afa41793a5">comp</a></div><div class="ttdeci">int comp</div><div class="ttdef"><b>Definition:</b> global.h:31</div></div>
+<div class="ttc" id="global_8h_html_acb559820d9ca11295b4500f179ef6392"><div class="ttname"><a href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a></div><div class="ttdeci">int i</div><div class="ttdef"><b>Definition:</b> global.h:34</div></div>
+<div class="ttc" id="global_8h_html_a16611451551e3d15916bae723c3f59f7"><div class="ttname"><a href="global_8h.html#a16611451551e3d15916bae723c3f59f7">h</a></div><div class="ttdeci">int h</div><div class="ttdef"><b>Definition:</b> global.h:25</div></div>
+<div class="ttc" id="global_8h_html_aac374e320caaadeca4874add33b62af2"><div class="ttname"><a href="global_8h.html#aac374e320caaadeca4874add33b62af2">w</a></div><div class="ttdeci">int w</div><div class="ttdef"><b>Definition:</b> global.h:22</div></div>
+<div class="ttc" id="global_8h_html_a383d5e14413e39bc8997c9f4edbe05d4"><div class="ttname"><a href="global_8h.html#a383d5e14413e39bc8997c9f4edbe05d4">header</a></div><div class="ttdeci">#define header</div><div class="ttdef"><b>Definition:</b> global.h:10</div></div>
+<div class="ttc" id="global_8h_html_a37d972ae0b47b9099e30983131d31916"><div class="ttname"><a href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a></div><div class="ttdeci">int j</div><div class="ttdef"><b>Definition:</b> global.h:37</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a08d876cbd4e3322dd9a9b24178eb9c5e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void img_blurring </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structPixel.html">Pixel</a>&#160;</td>
+          <td class="paramname"><em>img</em>[MAX][MAX]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Função de blurring</p>
+<p>Desfoca a imagem atribuindo o valor da média do pixel (i, j) e todos os 8 pixels ao redor.<br />
+ Seguindo a matriz:<br />
+ | 1 &#160; 1 &#160; 1 | <br />
+ | 1 &#160; 1 &#160; 1 | * 1/9 <br />
+ | 1 &#160; 1 &#160; 1 |</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">img</td><td>- Matriz da imagem a ser alterada </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Nada</dd></dl>
+<div class="fragment"><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                                       {</div><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="comment">// Cria uma matriz para armazenar a imagem original temporariamente</span></div><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <a class="code" href="structPixel.html">Pixel</a> tmp[<a class="code" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>][<a class="code" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>];</div><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="comment">// Copia a imagem original para a temporária</span></div><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <a class="code" href="functions_8h.html#a65e342ed9460bf3b4b4fff1fa8082146">copy_img</a>(img, tmp);</div><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a> = 1; <a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a> &lt; <a class="code" href="global_8h.html#a16611451551e3d15916bae723c3f59f7">h</a> - 1; <a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>++)</div><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a> = 1; <a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a> &lt; <a class="code" href="global_8h.html#aac374e320caaadeca4874add33b62af2">w</a> - 1; <a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>++)</div><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            img[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].r = (tmp[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>-1][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>-1].r + tmp[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>-1][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].r + tmp[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>-1][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>+1].r +</div><div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                           tmp[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>-1].r + tmp[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].r + tmp[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>+1].r +</div><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                           tmp[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>+1][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>-1].r + tmp[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>+1][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].r + tmp[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>+1][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>+1].r)/9,</div><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            img[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].<a class="code" href="structPixel.html#a73515f179e3c1bd28156e434da111d05">g</a> = (tmp[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>-1][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>-1].<a class="code" href="structPixel.html#a73515f179e3c1bd28156e434da111d05">g</a> + tmp[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>-1][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].<a class="code" href="structPixel.html#a73515f179e3c1bd28156e434da111d05">g</a> + tmp[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>-1][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>+1].<a class="code" href="structPixel.html#a73515f179e3c1bd28156e434da111d05">g</a> +</div><div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                           tmp[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>-1].<a class="code" href="structPixel.html#a73515f179e3c1bd28156e434da111d05">g</a> + tmp[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].<a class="code" href="structPixel.html#a73515f179e3c1bd28156e434da111d05">g</a> + tmp[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>+1].<a class="code" href="structPixel.html#a73515f179e3c1bd28156e434da111d05">g</a> +</div><div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                           tmp[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>+1][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>-1].<a class="code" href="structPixel.html#a73515f179e3c1bd28156e434da111d05">g</a> + tmp[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>+1][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].<a class="code" href="structPixel.html#a73515f179e3c1bd28156e434da111d05">g</a> + tmp[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>+1][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>+1].<a class="code" href="structPixel.html#a73515f179e3c1bd28156e434da111d05">g</a>)/9,</div><div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            img[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].b = (tmp[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>-1][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>-1].b + tmp[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>-1][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].b + tmp[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>-1][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>+1].b +</div><div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                           tmp[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>-1].b + tmp[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].b + tmp[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>+1].b +</div><div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                           tmp[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>+1][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>-1].b + tmp[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>+1][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].b + tmp[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>+1][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>+1].b)/9;</div><div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;}</div><div class="ttc" id="global_8h_html_a36ecf0006f5fe9d8bf1f2c1f2f2b4554"><div class="ttname"><a href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a></div><div class="ttdeci">int MAX</div><div class="ttdef"><b>Definition:</b> global.h:28</div></div>
+<div class="ttc" id="functions_8h_html_a65e342ed9460bf3b4b4fff1fa8082146"><div class="ttname"><a href="functions_8h.html#a65e342ed9460bf3b4b4fff1fa8082146">copy_img</a></div><div class="ttdeci">void copy_img(Pixel origin[MAX][MAX], Pixel destiny[MAX][MAX])</div><div class="ttdef"><b>Definition:</b> functions.h:9</div></div>
+<div class="ttc" id="structPixel_html_a73515f179e3c1bd28156e434da111d05"><div class="ttname"><a href="structPixel.html#a73515f179e3c1bd28156e434da111d05">Pixel::g</a></div><div class="ttdeci">int g</div><div class="ttdef"><b>Definition:</b> global.h:45</div></div>
+<div class="ttc" id="global_8h_html_acb559820d9ca11295b4500f179ef6392"><div class="ttname"><a href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a></div><div class="ttdeci">int i</div><div class="ttdef"><b>Definition:</b> global.h:34</div></div>
+<div class="ttc" id="global_8h_html_a16611451551e3d15916bae723c3f59f7"><div class="ttname"><a href="global_8h.html#a16611451551e3d15916bae723c3f59f7">h</a></div><div class="ttdeci">int h</div><div class="ttdef"><b>Definition:</b> global.h:25</div></div>
+<div class="ttc" id="global_8h_html_aac374e320caaadeca4874add33b62af2"><div class="ttname"><a href="global_8h.html#aac374e320caaadeca4874add33b62af2">w</a></div><div class="ttdeci">int w</div><div class="ttdef"><b>Definition:</b> global.h:22</div></div>
+<div class="ttc" id="structPixel_html"><div class="ttname"><a href="structPixel.html">Pixel</a></div><div class="ttdef"><b>Definition:</b> global.h:43</div></div>
+<div class="ttc" id="global_8h_html_a37d972ae0b47b9099e30983131d31916"><div class="ttname"><a href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a></div><div class="ttdeci">int j</div><div class="ttdef"><b>Definition:</b> global.h:37</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a87afa72718981a5fa83334ea9ca6cc92"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void img_compress </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>file</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structPixel.html">Pixel</a>&#160;</td>
+          <td class="paramname"><em>img</em>[MAX][MAX]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Função para comprimir a imagem</p>
+<p>Essa função comprime a imagem utilizando o algoritmo RLE (Run-Length Encoding), que verifica o número de pixels (rgb) repetidos sequencialmente e cria uma nova imagem com a estrutura n (r g b), no qual n representa o número de vezes que esse pixel está repetido sequencialmente.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>- Nome do arquivo de saída </td></tr>
+    <tr><td class="paramname">img</td><td>- Matriz da imagem a ser comprimida </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Nada</dd></dl>
+<div class="fragment"><div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;                                                    {</div><div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;    <span class="comment">// Cria a variável para contar as repetições (iniciada com 0)</span></div><div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;    <span class="keywordtype">int</span> cont = 0;</div><div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;    <span class="comment">// Cria duas variáveis do tipo pixel para comparação, sendo</span></div><div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;    <span class="comment">// a primeira inicializada com o primeiro pixel da imagem</span></div><div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;    <a class="code" href="structPixel.html">Pixel</a> t1 = img[0][0], t2;</div><div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;</div><div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;    strcat(file, <span class="stringliteral">&quot;_compressed.ppm&quot;</span>);</div><div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;</div><div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;    <span class="comment">// Cria uma variável do tipo arquivo</span></div><div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;    FILE *img_f;</div><div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;    <span class="comment">// Cria um arquivo com o nome do arquivo + &#39;_compressed.ppm&#39;</span></div><div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;    img_f = fopen(file, <span class="stringliteral">&quot;w&quot;</span>);</div><div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;</div><div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;    <span class="comment">// Cria o cabeçalho da imagem ppm</span></div><div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;    fprintf(img_f, <span class="stringliteral">&quot;%s\n&quot;</span>, <a class="code" href="global_8h.html#a383d5e14413e39bc8997c9f4edbe05d4">header</a>);</div><div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;    <span class="comment">// Define a largura e altura da imagem</span></div><div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;    fprintf(img_f, <span class="stringliteral">&quot;%i %i\n&quot;</span>, <a class="code" href="global_8h.html#aac374e320caaadeca4874add33b62af2">w</a>, <a class="code" href="global_8h.html#a16611451551e3d15916bae723c3f59f7">h</a>);</div><div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;    <span class="comment">// Define a cor máximo (qualidade) da imagem e põe um c,</span></div><div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;    <span class="comment">// para indicar que o arquivo está comprimido</span></div><div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;    fprintf(img_f, <span class="stringliteral">&quot;%ic\n&quot;</span>, <a class="code" href="global_8h.html#a1b3f06ddcdb29e455759b0afa41793a5">comp</a>);</div><div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;</div><div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a> = 0; <a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a> &lt; <a class="code" href="global_8h.html#a16611451551e3d15916bae723c3f59f7">h</a>; <a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>++)</div><div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a> = 0; <a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a> &lt; <a class="code" href="global_8h.html#aac374e320caaadeca4874add33b62af2">w</a>; <a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>++){</div><div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;            <span class="comment">// Atribui a t2 o conteúdo do &quot;pixel atual&quot; da leitura</span></div><div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;            t2 = img[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>];</div><div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;            <span class="keywordflow">if</span> (t1.<a class="code" href="structPixel.html#a8bdcc8f589c30333ec3f88d2c26d4e3a">r</a> == t2.r &amp;&amp; t1.<a class="code" href="structPixel.html#a73515f179e3c1bd28156e434da111d05">g</a> == t2.g &amp;&amp; t1.<a class="code" href="structPixel.html#a94b067f3c79425c953631f7bf1c7536c">b</a> == t2.b &amp;&amp; !(<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a> == h-1 &amp;&amp; <a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a> == w-1)) {</div><div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;                <span class="comment">// Se todos os componentes (rgb) de t2 forem iguais aos de t1 (pixel anterior)</span></div><div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;                <span class="comment">// e o pixel (i, j) não for o último pixel da imagem,</span></div><div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;                <span class="comment">// Incrementa o contador e pula para o próximo pixel (continue)</span></div><div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;                cont++;</div><div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;                <span class="keywordflow">continue</span>;</div><div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;            }</div><div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;            <span class="keywordflow">if</span> (t1.<a class="code" href="structPixel.html#a8bdcc8f589c30333ec3f88d2c26d4e3a">r</a> == t2.r &amp;&amp; t1.<a class="code" href="structPixel.html#a73515f179e3c1bd28156e434da111d05">g</a> == t2.g &amp;&amp; t1.<a class="code" href="structPixel.html#a94b067f3c79425c953631f7bf1c7536c">b</a> == t2.b &amp;&amp; <a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a> == h-1 &amp;&amp; <a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a> == w-1)</div><div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;                <span class="comment">// Se todos os componentes (rgb) de t2 forem iguais aos de t1 (pixel anterior)</span></div><div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;                <span class="comment">// e o pixel (i, j) for o último pixel da imagem, incrementa o contador</span></div><div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;                cont++;</div><div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;            <span class="comment">// Escreve no arquivo o valor do contador, seguido dos valores</span></div><div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;            <span class="comment">// dos componentes do pixel (que foi repetido contador vezes)</span></div><div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;            fprintf(img_f, <span class="stringliteral">&quot;%i(%i %i %i)\n&quot;</span>, cont, t1.<a class="code" href="structPixel.html#a8bdcc8f589c30333ec3f88d2c26d4e3a">r</a>, t1.<a class="code" href="structPixel.html#a73515f179e3c1bd28156e434da111d05">g</a>, t1.<a class="code" href="structPixel.html#a94b067f3c79425c953631f7bf1c7536c">b</a>);</div><div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;            <span class="comment">// O pixel anterior (de comparação) recebe o pixel atual (que</span></div><div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;            <span class="comment">// é diferente do anterior, pois a imagem foi escrita) e a</span></div><div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;            <span class="comment">// variável de contador recebe 1 (justamente o pixel t2)</span></div><div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;            t1 = t2, cont = 1;</div><div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;        }</div><div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;</div><div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;    <span class="comment">// Fecha o arquivo aberto</span></div><div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;    fclose(img_f);</div><div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;}</div><div class="ttc" id="global_8h_html_a1b3f06ddcdb29e455759b0afa41793a5"><div class="ttname"><a href="global_8h.html#a1b3f06ddcdb29e455759b0afa41793a5">comp</a></div><div class="ttdeci">int comp</div><div class="ttdef"><b>Definition:</b> global.h:31</div></div>
+<div class="ttc" id="structPixel_html_a8bdcc8f589c30333ec3f88d2c26d4e3a"><div class="ttname"><a href="structPixel.html#a8bdcc8f589c30333ec3f88d2c26d4e3a">Pixel::r</a></div><div class="ttdeci">int r</div><div class="ttdef"><b>Definition:</b> global.h:44</div></div>
+<div class="ttc" id="structPixel_html_a94b067f3c79425c953631f7bf1c7536c"><div class="ttname"><a href="structPixel.html#a94b067f3c79425c953631f7bf1c7536c">Pixel::b</a></div><div class="ttdeci">int b</div><div class="ttdef"><b>Definition:</b> global.h:46</div></div>
+<div class="ttc" id="structPixel_html_a73515f179e3c1bd28156e434da111d05"><div class="ttname"><a href="structPixel.html#a73515f179e3c1bd28156e434da111d05">Pixel::g</a></div><div class="ttdeci">int g</div><div class="ttdef"><b>Definition:</b> global.h:45</div></div>
+<div class="ttc" id="global_8h_html_acb559820d9ca11295b4500f179ef6392"><div class="ttname"><a href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a></div><div class="ttdeci">int i</div><div class="ttdef"><b>Definition:</b> global.h:34</div></div>
+<div class="ttc" id="global_8h_html_a16611451551e3d15916bae723c3f59f7"><div class="ttname"><a href="global_8h.html#a16611451551e3d15916bae723c3f59f7">h</a></div><div class="ttdeci">int h</div><div class="ttdef"><b>Definition:</b> global.h:25</div></div>
+<div class="ttc" id="global_8h_html_aac374e320caaadeca4874add33b62af2"><div class="ttname"><a href="global_8h.html#aac374e320caaadeca4874add33b62af2">w</a></div><div class="ttdeci">int w</div><div class="ttdef"><b>Definition:</b> global.h:22</div></div>
+<div class="ttc" id="global_8h_html_a383d5e14413e39bc8997c9f4edbe05d4"><div class="ttname"><a href="global_8h.html#a383d5e14413e39bc8997c9f4edbe05d4">header</a></div><div class="ttdeci">#define header</div><div class="ttdef"><b>Definition:</b> global.h:10</div></div>
+<div class="ttc" id="structPixel_html"><div class="ttname"><a href="structPixel.html">Pixel</a></div><div class="ttdef"><b>Definition:</b> global.h:43</div></div>
+<div class="ttc" id="global_8h_html_a37d972ae0b47b9099e30983131d31916"><div class="ttname"><a href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a></div><div class="ttdeci">int j</div><div class="ttdef"><b>Definition:</b> global.h:37</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a7f177ad31c7179648c462baf8a626726"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void img_emboss </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structPixel.html">Pixel</a>&#160;</td>
+          <td class="paramname"><em>img</em>[MAX][MAX]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Função para deixar a imagem com o efeito de Alto Relevo</p>
+<p>Esse filtro pega o valor de uma posição (i + 1, j) e subtrai do valor da posição oposta (i - 1, j), substiruindo no valor central (i, j) e somando com a metade do componente para clareamento. <br />
+ Seguindo a matriz: <br />
+ | 0 &#160;-1 &#160; 0 | <br />
+ | 0 &#160; 0 &#160; 0 | + component/2 <br />
+ | 0 &#160; 1 &#160; 0 |</p>
+<div class="fragment"><div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;                                     {</div><div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    <span class="comment">// Cria uma matriz para armazenar a imagem original temporariamente</span></div><div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    <a class="code" href="structPixel.html">Pixel</a> tmp[<a class="code" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>][<a class="code" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>];</div><div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;</div><div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    <span class="comment">// Copia a imagem original para a temporária</span></div><div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    <a class="code" href="functions_8h.html#a65e342ed9460bf3b4b4fff1fa8082146">copy_img</a>(img, tmp);</div><div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;</div><div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a> = 1; <a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a> &lt; <a class="code" href="global_8h.html#a16611451551e3d15916bae723c3f59f7">h</a> - 1; <a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>++)</div><div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a> = 0; <a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a> &lt; <a class="code" href="global_8h.html#aac374e320caaadeca4874add33b62af2">w</a>; <a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>++)</div><div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;            <span class="comment">// Percorre cada elemento do array img e atribui à matriz</span></div><div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;            <span class="comment">// temporária o valor do algoritmo de alto relevo.</span></div><div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;            tmp[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].r = img[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>+1][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].r - img[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>-1][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].r + <a class="code" href="global_8h.html#a1b3f06ddcdb29e455759b0afa41793a5">comp</a>/2,</div><div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;            tmp[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].g = img[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>+1][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].g - img[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>-1][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].g + <a class="code" href="global_8h.html#a1b3f06ddcdb29e455759b0afa41793a5">comp</a>/2,</div><div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;            tmp[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].b = img[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>+1][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].b - img[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>-1][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].b + <a class="code" href="global_8h.html#a1b3f06ddcdb29e455759b0afa41793a5">comp</a>/2;</div><div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;</div><div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    <span class="comment">// Copia a matriz temporária para a matriz da imagem original</span></div><div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    <a class="code" href="functions_8h.html#a65e342ed9460bf3b4b4fff1fa8082146">copy_img</a>(tmp, img);</div><div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;}</div><div class="ttc" id="global_8h_html_a36ecf0006f5fe9d8bf1f2c1f2f2b4554"><div class="ttname"><a href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a></div><div class="ttdeci">int MAX</div><div class="ttdef"><b>Definition:</b> global.h:28</div></div>
+<div class="ttc" id="functions_8h_html_a65e342ed9460bf3b4b4fff1fa8082146"><div class="ttname"><a href="functions_8h.html#a65e342ed9460bf3b4b4fff1fa8082146">copy_img</a></div><div class="ttdeci">void copy_img(Pixel origin[MAX][MAX], Pixel destiny[MAX][MAX])</div><div class="ttdef"><b>Definition:</b> functions.h:9</div></div>
+<div class="ttc" id="global_8h_html_a1b3f06ddcdb29e455759b0afa41793a5"><div class="ttname"><a href="global_8h.html#a1b3f06ddcdb29e455759b0afa41793a5">comp</a></div><div class="ttdeci">int comp</div><div class="ttdef"><b>Definition:</b> global.h:31</div></div>
+<div class="ttc" id="global_8h_html_acb559820d9ca11295b4500f179ef6392"><div class="ttname"><a href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a></div><div class="ttdeci">int i</div><div class="ttdef"><b>Definition:</b> global.h:34</div></div>
+<div class="ttc" id="global_8h_html_a16611451551e3d15916bae723c3f59f7"><div class="ttname"><a href="global_8h.html#a16611451551e3d15916bae723c3f59f7">h</a></div><div class="ttdeci">int h</div><div class="ttdef"><b>Definition:</b> global.h:25</div></div>
+<div class="ttc" id="global_8h_html_aac374e320caaadeca4874add33b62af2"><div class="ttname"><a href="global_8h.html#aac374e320caaadeca4874add33b62af2">w</a></div><div class="ttdeci">int w</div><div class="ttdef"><b>Definition:</b> global.h:22</div></div>
+<div class="ttc" id="structPixel_html"><div class="ttname"><a href="structPixel.html">Pixel</a></div><div class="ttdef"><b>Definition:</b> global.h:43</div></div>
+<div class="ttc" id="global_8h_html_a37d972ae0b47b9099e30983131d31916"><div class="ttname"><a href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a></div><div class="ttdeci">int j</div><div class="ttdef"><b>Definition:</b> global.h:37</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="ac4a1605cae9108d60189827b4c3e6c0e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void img_grayscale </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structPixel.html">Pixel</a>&#160;</td>
+          <td class="paramname"><em>img</em>[MAX][MAX]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Função para deixar a imagem em preto e branco</p>
+<p>Essa função lê cada pixel da imagem, faz a média entre os componentes (rgb) e atribui o valor da média a cada um dos componentes, deixando a imagem em preto e branco.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">img</td><td>- Matriz da imagem a ser alterada </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Nada</dd></dl>
+<div class="fragment"><div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;                                        {</div><div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;    <span class="comment">// Variável para armazenar a média dos componentes</span></div><div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;    <span class="keywordtype">int</span> pb;</div><div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;</div><div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a> = 0; <a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a> &lt; <a class="code" href="global_8h.html#a16611451551e3d15916bae723c3f59f7">h</a>; <a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>++)</div><div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a> = 0; <a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a> &lt; <a class="code" href="global_8h.html#aac374e320caaadeca4874add33b62af2">w</a>; <a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>++)</div><div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;            <span class="comment">// Faz o cálculo da média</span></div><div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;            pb = (img[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].r + img[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].g + img[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].b)/3,</div><div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;            <span class="comment">// Atribui o valor da média a cada um dos componentes</span></div><div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;            img[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].<a class="code" href="structPixel.html#a8bdcc8f589c30333ec3f88d2c26d4e3a">r</a> = pb,</div><div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;            img[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].<a class="code" href="structPixel.html#a73515f179e3c1bd28156e434da111d05">g</a> = pb,</div><div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;            img[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].<a class="code" href="structPixel.html#a94b067f3c79425c953631f7bf1c7536c">b</a> = pb;</div><div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;}</div><div class="ttc" id="structPixel_html_a8bdcc8f589c30333ec3f88d2c26d4e3a"><div class="ttname"><a href="structPixel.html#a8bdcc8f589c30333ec3f88d2c26d4e3a">Pixel::r</a></div><div class="ttdeci">int r</div><div class="ttdef"><b>Definition:</b> global.h:44</div></div>
+<div class="ttc" id="structPixel_html_a94b067f3c79425c953631f7bf1c7536c"><div class="ttname"><a href="structPixel.html#a94b067f3c79425c953631f7bf1c7536c">Pixel::b</a></div><div class="ttdeci">int b</div><div class="ttdef"><b>Definition:</b> global.h:46</div></div>
+<div class="ttc" id="structPixel_html_a73515f179e3c1bd28156e434da111d05"><div class="ttname"><a href="structPixel.html#a73515f179e3c1bd28156e434da111d05">Pixel::g</a></div><div class="ttdeci">int g</div><div class="ttdef"><b>Definition:</b> global.h:45</div></div>
+<div class="ttc" id="global_8h_html_acb559820d9ca11295b4500f179ef6392"><div class="ttname"><a href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a></div><div class="ttdeci">int i</div><div class="ttdef"><b>Definition:</b> global.h:34</div></div>
+<div class="ttc" id="global_8h_html_a16611451551e3d15916bae723c3f59f7"><div class="ttname"><a href="global_8h.html#a16611451551e3d15916bae723c3f59f7">h</a></div><div class="ttdeci">int h</div><div class="ttdef"><b>Definition:</b> global.h:25</div></div>
+<div class="ttc" id="global_8h_html_aac374e320caaadeca4874add33b62af2"><div class="ttname"><a href="global_8h.html#aac374e320caaadeca4874add33b62af2">w</a></div><div class="ttdeci">int w</div><div class="ttdef"><b>Definition:</b> global.h:22</div></div>
+<div class="ttc" id="global_8h_html_a37d972ae0b47b9099e30983131d31916"><div class="ttname"><a href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a></div><div class="ttdeci">int j</div><div class="ttdef"><b>Definition:</b> global.h:37</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a29f2e33de3edf2757c5bbe429542bd58"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void img_info </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structPixel.html">Pixel</a>&#160;</td>
+          <td class="paramname"><em>img</em>[MAX][MAX]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Função para mostrar informações básicas da imagem</p>
+<p>Função que mostra informações sobre a imagem lida Tipo do cabeçalho, largura, altura e cor máxima</p>
+<p>Obs: As cores de cada pixel foram comentadas para evitar um laço muito extenso em imagens grandes</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">img</td><td>- Matriz da imagem a ser lida </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Nada</dd></dl>
+<div class="fragment"><div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;                                   {</div><div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    printf(<span class="stringliteral">&quot;Dados da Imagem lida:\n&quot;</span>);</div><div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    <span class="comment">// Mostra o cabeçalho da imagem</span></div><div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    printf(<span class="stringliteral">&quot;Tipo: %s\n&quot;</span>, <a class="code" href="global_8h.html#a383d5e14413e39bc8997c9f4edbe05d4">header</a>);</div><div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    <span class="comment">// Mostra o tamanho da imagem (largura x altura)</span></div><div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    printf(<span class="stringliteral">&quot;Tamanho: %ix%i\n&quot;</span>, <a class="code" href="global_8h.html#aac374e320caaadeca4874add33b62af2">w</a>, <a class="code" href="global_8h.html#a16611451551e3d15916bae723c3f59f7">h</a>);</div><div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    <span class="comment">// Mostra a cor máxima da imagem (qualidade)</span></div><div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    printf(<span class="stringliteral">&quot;Cor máxima: %i\n&quot;</span>, <a class="code" href="global_8h.html#a1b3f06ddcdb29e455759b0afa41793a5">comp</a>);</div><div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;</div><div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    <span class="comment">/*</span></div><div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;<span class="comment">    printf(&quot;Cores de cada pixel:\n&quot;);</span></div><div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;<span class="comment">    for (i = 0; i &lt; h; i++)</span></div><div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;<span class="comment">        for (j = 0; j &lt; w; j++)</span></div><div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;<span class="comment">            printf(&quot;%i %i %i\n&quot;, img[i][j].r, img[i][j].g, img[i][j].b);</span></div><div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;<span class="comment">    */</span></div><div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;}</div><div class="ttc" id="global_8h_html_a1b3f06ddcdb29e455759b0afa41793a5"><div class="ttname"><a href="global_8h.html#a1b3f06ddcdb29e455759b0afa41793a5">comp</a></div><div class="ttdeci">int comp</div><div class="ttdef"><b>Definition:</b> global.h:31</div></div>
+<div class="ttc" id="global_8h_html_a16611451551e3d15916bae723c3f59f7"><div class="ttname"><a href="global_8h.html#a16611451551e3d15916bae723c3f59f7">h</a></div><div class="ttdeci">int h</div><div class="ttdef"><b>Definition:</b> global.h:25</div></div>
+<div class="ttc" id="global_8h_html_aac374e320caaadeca4874add33b62af2"><div class="ttname"><a href="global_8h.html#aac374e320caaadeca4874add33b62af2">w</a></div><div class="ttdeci">int w</div><div class="ttdef"><b>Definition:</b> global.h:22</div></div>
+<div class="ttc" id="global_8h_html_a383d5e14413e39bc8997c9f4edbe05d4"><div class="ttname"><a href="global_8h.html#a383d5e14413e39bc8997c9f4edbe05d4">header</a></div><div class="ttdeci">#define header</div><div class="ttdef"><b>Definition:</b> global.h:10</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a70f96b4ba9528ba54ffe8f4953fa2958"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void img_invert_h </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structPixel.html">Pixel</a>&#160;</td>
+          <td class="paramname"><em>img</em>[MAX][MAX]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Função para inverter a imagem horizontalmente (flip)</p>
+<p>Para inverter a imagem horizontalmente, foi utilizado uma matriz auxiliar (para armazenar a imagem original) e depois atribui a cada pixel n de cada linha da imagem original o valor do pixel largura - n - 1 (-1 pois a matriz vai de 0 até n-1).</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">img</td><td>- Matriz da imagem a ser invertida horizontalmente </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Nada</dd></dl>
+<div class="fragment"><div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;                                       {</div><div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;    <span class="comment">// Cria a matriz para a imagem auxiliar</span></div><div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;    <a class="code" href="structPixel.html">Pixel</a> tmp[<a class="code" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>][<a class="code" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>];</div><div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;</div><div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;    <span class="comment">// Copia a imagem original para a matriz auxiliar</span></div><div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;    <a class="code" href="functions_8h.html#a65e342ed9460bf3b4b4fff1fa8082146">copy_img</a>(img, tmp);</div><div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;</div><div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a> = 0; <a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a> &lt; <a class="code" href="global_8h.html#a16611451551e3d15916bae723c3f59f7">h</a>; <a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>++)</div><div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a> = 0; <a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a> &lt; <a class="code" href="global_8h.html#aac374e320caaadeca4874add33b62af2">w</a>; <a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>++)</div><div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;            <span class="comment">// Atribui à imagem original (i, largura-j-1)</span></div><div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;            <span class="comment">// o valor da imagem auxiliar (i, j)</span></div><div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;            img[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][w-<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>-1] = tmp[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>];</div><div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;}</div><div class="ttc" id="global_8h_html_a36ecf0006f5fe9d8bf1f2c1f2f2b4554"><div class="ttname"><a href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a></div><div class="ttdeci">int MAX</div><div class="ttdef"><b>Definition:</b> global.h:28</div></div>
+<div class="ttc" id="functions_8h_html_a65e342ed9460bf3b4b4fff1fa8082146"><div class="ttname"><a href="functions_8h.html#a65e342ed9460bf3b4b4fff1fa8082146">copy_img</a></div><div class="ttdeci">void copy_img(Pixel origin[MAX][MAX], Pixel destiny[MAX][MAX])</div><div class="ttdef"><b>Definition:</b> functions.h:9</div></div>
+<div class="ttc" id="global_8h_html_acb559820d9ca11295b4500f179ef6392"><div class="ttname"><a href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a></div><div class="ttdeci">int i</div><div class="ttdef"><b>Definition:</b> global.h:34</div></div>
+<div class="ttc" id="global_8h_html_a16611451551e3d15916bae723c3f59f7"><div class="ttname"><a href="global_8h.html#a16611451551e3d15916bae723c3f59f7">h</a></div><div class="ttdeci">int h</div><div class="ttdef"><b>Definition:</b> global.h:25</div></div>
+<div class="ttc" id="global_8h_html_aac374e320caaadeca4874add33b62af2"><div class="ttname"><a href="global_8h.html#aac374e320caaadeca4874add33b62af2">w</a></div><div class="ttdeci">int w</div><div class="ttdef"><b>Definition:</b> global.h:22</div></div>
+<div class="ttc" id="structPixel_html"><div class="ttname"><a href="structPixel.html">Pixel</a></div><div class="ttdef"><b>Definition:</b> global.h:43</div></div>
+<div class="ttc" id="global_8h_html_a37d972ae0b47b9099e30983131d31916"><div class="ttname"><a href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a></div><div class="ttdeci">int j</div><div class="ttdef"><b>Definition:</b> global.h:37</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a151774396a3953ffb291abb2f223068a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void img_invert_v </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structPixel.html">Pixel</a>&#160;</td>
+          <td class="paramname"><em>img</em>[MAX][MAX]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Função para inverter a imagem verticalmente (flip)</p>
+<p>Para inverter a imagem veticalmente, foi utilizado uma matriz auxiliar (para armazenar a imagem original) e depois atribui a cada pixel n de cada coluna da imagem original o valor do pixel altura - n - 1 (-1 pois a matriz vai de 0 até n-1).</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">img</td><td>- Matriz da imagem a ser invertida veticalmente </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Nada</dd></dl>
+<div class="fragment"><div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;                                       {</div><div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;    <span class="comment">// Cria a matriz para a imagem auxiliar</span></div><div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;    <a class="code" href="structPixel.html">Pixel</a> tmp[<a class="code" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>][<a class="code" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>];</div><div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;</div><div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;    <span class="comment">// Copia a imagem original para a matriz auxiliar</span></div><div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;    <a class="code" href="functions_8h.html#a65e342ed9460bf3b4b4fff1fa8082146">copy_img</a>(img, tmp);</div><div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;</div><div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a> = 0; <a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a> &lt; <a class="code" href="global_8h.html#a16611451551e3d15916bae723c3f59f7">h</a>; <a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>++)</div><div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a> = 0; <a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a> &lt; <a class="code" href="global_8h.html#aac374e320caaadeca4874add33b62af2">w</a>; <a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>++)</div><div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;            <span class="comment">// Atribui à imagem original (altura - i - 1, j)</span></div><div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;            <span class="comment">// o valor da imagem auxiliar (i, j)</span></div><div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;            img[h-<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>-1][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>] = tmp[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>];</div><div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;}</div><div class="ttc" id="global_8h_html_a36ecf0006f5fe9d8bf1f2c1f2f2b4554"><div class="ttname"><a href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a></div><div class="ttdeci">int MAX</div><div class="ttdef"><b>Definition:</b> global.h:28</div></div>
+<div class="ttc" id="functions_8h_html_a65e342ed9460bf3b4b4fff1fa8082146"><div class="ttname"><a href="functions_8h.html#a65e342ed9460bf3b4b4fff1fa8082146">copy_img</a></div><div class="ttdeci">void copy_img(Pixel origin[MAX][MAX], Pixel destiny[MAX][MAX])</div><div class="ttdef"><b>Definition:</b> functions.h:9</div></div>
+<div class="ttc" id="global_8h_html_acb559820d9ca11295b4500f179ef6392"><div class="ttname"><a href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a></div><div class="ttdeci">int i</div><div class="ttdef"><b>Definition:</b> global.h:34</div></div>
+<div class="ttc" id="global_8h_html_a16611451551e3d15916bae723c3f59f7"><div class="ttname"><a href="global_8h.html#a16611451551e3d15916bae723c3f59f7">h</a></div><div class="ttdeci">int h</div><div class="ttdef"><b>Definition:</b> global.h:25</div></div>
+<div class="ttc" id="global_8h_html_aac374e320caaadeca4874add33b62af2"><div class="ttname"><a href="global_8h.html#aac374e320caaadeca4874add33b62af2">w</a></div><div class="ttdeci">int w</div><div class="ttdef"><b>Definition:</b> global.h:22</div></div>
+<div class="ttc" id="structPixel_html"><div class="ttname"><a href="structPixel.html">Pixel</a></div><div class="ttdef"><b>Definition:</b> global.h:43</div></div>
+<div class="ttc" id="global_8h_html_a37d972ae0b47b9099e30983131d31916"><div class="ttname"><a href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a></div><div class="ttdeci">int j</div><div class="ttdef"><b>Definition:</b> global.h:37</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a901cff23a59419db063e3cff445990aa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void img_negative </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structPixel.html">Pixel</a>&#160;</td>
+          <td class="paramname"><em>img</em>[MAX][MAX]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Função para inverter as cores da imagem (negativo)</p>
+<p>Essa função lê cada pixel da imagem, e inverte a sua cor (se era branco, fica preto...) aplicando ao pixel o valor de comp menos o valor original.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">img</td><td>- Matriz da imagem a ser alterada </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Nada</dd></dl>
+<div class="fragment"><div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;                                       {</div><div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a> = 0; <a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a> &lt; <a class="code" href="global_8h.html#a16611451551e3d15916bae723c3f59f7">h</a>; <a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>++)</div><div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a> = 0; <a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a> &lt; <a class="code" href="global_8h.html#aac374e320caaadeca4874add33b62af2">w</a>; <a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>++)</div><div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;            <span class="comment">// Lê cada pixel da imagem e executa o algoritmo</span></div><div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;            img[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].r = <a class="code" href="global_8h.html#a1b3f06ddcdb29e455759b0afa41793a5">comp</a>-img[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].r,</div><div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;            img[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].g = <a class="code" href="global_8h.html#a1b3f06ddcdb29e455759b0afa41793a5">comp</a>-img[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].g,</div><div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;            img[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].b = <a class="code" href="global_8h.html#a1b3f06ddcdb29e455759b0afa41793a5">comp</a>-img[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].b;</div><div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;}</div><div class="ttc" id="global_8h_html_a1b3f06ddcdb29e455759b0afa41793a5"><div class="ttname"><a href="global_8h.html#a1b3f06ddcdb29e455759b0afa41793a5">comp</a></div><div class="ttdeci">int comp</div><div class="ttdef"><b>Definition:</b> global.h:31</div></div>
+<div class="ttc" id="global_8h_html_acb559820d9ca11295b4500f179ef6392"><div class="ttname"><a href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a></div><div class="ttdeci">int i</div><div class="ttdef"><b>Definition:</b> global.h:34</div></div>
+<div class="ttc" id="global_8h_html_a16611451551e3d15916bae723c3f59f7"><div class="ttname"><a href="global_8h.html#a16611451551e3d15916bae723c3f59f7">h</a></div><div class="ttdeci">int h</div><div class="ttdef"><b>Definition:</b> global.h:25</div></div>
+<div class="ttc" id="global_8h_html_aac374e320caaadeca4874add33b62af2"><div class="ttname"><a href="global_8h.html#aac374e320caaadeca4874add33b62af2">w</a></div><div class="ttdeci">int w</div><div class="ttdef"><b>Definition:</b> global.h:22</div></div>
+<div class="ttc" id="global_8h_html_a37d972ae0b47b9099e30983131d31916"><div class="ttname"><a href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a></div><div class="ttdeci">int j</div><div class="ttdef"><b>Definition:</b> global.h:37</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a528aef42d35d700a32a34db531c4e055"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void img_posterize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structPixel.html">Pixel</a>&#160;</td>
+          <td class="paramname"><em>img</em>[MAX][MAX]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Função para posterizar a imagem</p>
+<p>Função que lê cada componente (rgb) da cor da imagem e o altera para o seu extremo (se for menor que comp/2, vira 0, caso contrário, recebe o valor de comp).</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">img</td><td>- Matriz da imagem a ser alterada </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Nada</dd></dl>
+<div class="fragment"><div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;                                        {</div><div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a> = 0; <a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a> &lt; <a class="code" href="global_8h.html#a16611451551e3d15916bae723c3f59f7">h</a>; <a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>++)</div><div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a> = 0; <a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a> &lt; <a class="code" href="global_8h.html#aac374e320caaadeca4874add33b62af2">w</a>; <a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>++)</div><div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;            <span class="comment">// Lê cada elemento da imagem e aplica o algoritmo</span></div><div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;            img[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].r = (img[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].r &gt; <a class="code" href="global_8h.html#a1b3f06ddcdb29e455759b0afa41793a5">comp</a>/2) ? <a class="code" href="global_8h.html#a1b3f06ddcdb29e455759b0afa41793a5">comp</a>: 0,</div><div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;            img[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].<a class="code" href="structPixel.html#a73515f179e3c1bd28156e434da111d05">g</a> = (img[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].<a class="code" href="structPixel.html#a73515f179e3c1bd28156e434da111d05">g</a> &gt; <a class="code" href="global_8h.html#a1b3f06ddcdb29e455759b0afa41793a5">comp</a>/2) ? <a class="code" href="global_8h.html#a1b3f06ddcdb29e455759b0afa41793a5">comp</a>: 0,</div><div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;            img[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].b = (img[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].b &gt; <a class="code" href="global_8h.html#a1b3f06ddcdb29e455759b0afa41793a5">comp</a>/2) ? <a class="code" href="global_8h.html#a1b3f06ddcdb29e455759b0afa41793a5">comp</a>: 0;</div><div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;}</div><div class="ttc" id="global_8h_html_a1b3f06ddcdb29e455759b0afa41793a5"><div class="ttname"><a href="global_8h.html#a1b3f06ddcdb29e455759b0afa41793a5">comp</a></div><div class="ttdeci">int comp</div><div class="ttdef"><b>Definition:</b> global.h:31</div></div>
+<div class="ttc" id="structPixel_html_a73515f179e3c1bd28156e434da111d05"><div class="ttname"><a href="structPixel.html#a73515f179e3c1bd28156e434da111d05">Pixel::g</a></div><div class="ttdeci">int g</div><div class="ttdef"><b>Definition:</b> global.h:45</div></div>
+<div class="ttc" id="global_8h_html_acb559820d9ca11295b4500f179ef6392"><div class="ttname"><a href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a></div><div class="ttdeci">int i</div><div class="ttdef"><b>Definition:</b> global.h:34</div></div>
+<div class="ttc" id="global_8h_html_a16611451551e3d15916bae723c3f59f7"><div class="ttname"><a href="global_8h.html#a16611451551e3d15916bae723c3f59f7">h</a></div><div class="ttdeci">int h</div><div class="ttdef"><b>Definition:</b> global.h:25</div></div>
+<div class="ttc" id="global_8h_html_aac374e320caaadeca4874add33b62af2"><div class="ttname"><a href="global_8h.html#aac374e320caaadeca4874add33b62af2">w</a></div><div class="ttdeci">int w</div><div class="ttdef"><b>Definition:</b> global.h:22</div></div>
+<div class="ttc" id="global_8h_html_a37d972ae0b47b9099e30983131d31916"><div class="ttname"><a href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a></div><div class="ttdeci">int j</div><div class="ttdef"><b>Definition:</b> global.h:37</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="ae716a13edac5d1aa1e8c054f0946c448"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void img_red </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>file</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>zoom</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structPixel.html">Pixel</a>&#160;</td>
+          <td class="paramname"><em>img</em>[MAX][MAX]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Função de redução da imagem</p>
+<p>Para reduzir uma imagem n vezes (sendo n|h e n|w), devemos atribuir à cada novo pixel da nova imagem a média dos pixels de subimagens de tamanho n x n da imagem original.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>- Nome do arquivo de saída </td></tr>
+    <tr><td class="paramname">zoom</td><td>- Zoom de redução da imagem </td></tr>
+    <tr><td class="paramname">img</td><td>- Matriz da imagem a ser reduzida </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Nada</dd></dl>
+<div class="fragment"><div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;                                                         {</div><div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    <span class="comment">// Iteradores</span></div><div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    <span class="keywordtype">int</span> k, l;</div><div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <span class="comment">// Variável para armazenar o valor da área das subimagens</span></div><div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    <span class="keywordtype">int</span> area = zoom*zoom;</div><div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <span class="comment">// Pixel para salvar o valor da soma dos pixels da subimagem</span></div><div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <a class="code" href="structPixel.html">Pixel</a> sum = {0, 0, 0};</div><div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;</div><div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    strcat(file, <span class="stringliteral">&quot;_red.ppm&quot;</span>);</div><div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;</div><div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    <span class="comment">// Cria uma variável do tipo arquivo</span></div><div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    FILE *img_f;</div><div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <span class="comment">// Cria um arquivo com o nome do arquivo + &#39;_red.ppm&#39;</span></div><div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    img_f = fopen(file, <span class="stringliteral">&quot;w&quot;</span>);</div><div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;</div><div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    <span class="comment">// Cria o cabeçalho da imagem ppm</span></div><div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    fprintf(img_f, <span class="stringliteral">&quot;%s\n&quot;</span>, <a class="code" href="global_8h.html#a383d5e14413e39bc8997c9f4edbe05d4">header</a>);</div><div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <span class="comment">// Define as novas largura e altura da imagem (divididas pelo zoom)</span></div><div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    fprintf(img_f, <span class="stringliteral">&quot;%i %i\n&quot;</span>, <a class="code" href="global_8h.html#aac374e320caaadeca4874add33b62af2">w</a>/zoom, <a class="code" href="global_8h.html#a16611451551e3d15916bae723c3f59f7">h</a>/zoom);</div><div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <span class="comment">// Define a cor máximo (qualidade) da imagem</span></div><div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    fprintf(img_f, <span class="stringliteral">&quot;%i\n&quot;</span>, <a class="code" href="global_8h.html#a1b3f06ddcdb29e455759b0afa41793a5">comp</a>);</div><div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;</div><div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a> = 0; <a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a> &lt;= <a class="code" href="global_8h.html#a16611451551e3d15916bae723c3f59f7">h</a>-zoom; <a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a> += zoom)</div><div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a> = 0; <a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a> &lt;= <a class="code" href="global_8h.html#aac374e320caaadeca4874add33b62af2">w</a>-zoom; <a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a> += zoom, sum.<a class="code" href="structPixel.html#a8bdcc8f589c30333ec3f88d2c26d4e3a">r</a> = 0, sum.<a class="code" href="structPixel.html#a73515f179e3c1bd28156e434da111d05">g</a> = 0, sum.<a class="code" href="structPixel.html#a94b067f3c79425c953631f7bf1c7536c">b</a> = 0) {</div><div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;            <span class="keywordflow">for</span> (k = 0; k &lt; zoom; k++)</div><div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;                <span class="keywordflow">for</span> (l = 0; l &lt; zoom; l++)</div><div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;                    <span class="comment">// Soma à sum o valor das cores de cada pixel da subimagem</span></div><div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;                    sum.<a class="code" href="structPixel.html#a8bdcc8f589c30333ec3f88d2c26d4e3a">r</a> += img[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>+k][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>+l].<a class="code" href="structPixel.html#a8bdcc8f589c30333ec3f88d2c26d4e3a">r</a>,</div><div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;                    sum.<a class="code" href="structPixel.html#a73515f179e3c1bd28156e434da111d05">g</a> += img[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>+k][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>+l].<a class="code" href="structPixel.html#a73515f179e3c1bd28156e434da111d05">g</a>,</div><div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;                    sum.<a class="code" href="structPixel.html#a94b067f3c79425c953631f7bf1c7536c">b</a> += img[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>+k][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>+l].<a class="code" href="structPixel.html#a94b067f3c79425c953631f7bf1c7536c">b</a>;</div><div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;            <span class="comment">// Salva no arquivo o valor de cada pixel de soma dividido pela área</span></div><div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;            fprintf(img_f, <span class="stringliteral">&quot;%i %i %i\n&quot;</span>,</div><div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;            (sum.<a class="code" href="structPixel.html#a8bdcc8f589c30333ec3f88d2c26d4e3a">r</a>/area &gt; <a class="code" href="global_8h.html#a1b3f06ddcdb29e455759b0afa41793a5">comp</a>) ? <a class="code" href="global_8h.html#a1b3f06ddcdb29e455759b0afa41793a5">comp</a> : sum.<a class="code" href="structPixel.html#a8bdcc8f589c30333ec3f88d2c26d4e3a">r</a>/area,</div><div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;            (sum.<a class="code" href="structPixel.html#a73515f179e3c1bd28156e434da111d05">g</a>/area &gt; <a class="code" href="global_8h.html#a1b3f06ddcdb29e455759b0afa41793a5">comp</a>) ? <a class="code" href="global_8h.html#a1b3f06ddcdb29e455759b0afa41793a5">comp</a> : sum.<a class="code" href="structPixel.html#a73515f179e3c1bd28156e434da111d05">g</a>/area,</div><div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;            (sum.<a class="code" href="structPixel.html#a94b067f3c79425c953631f7bf1c7536c">b</a>/area &gt; <a class="code" href="global_8h.html#a1b3f06ddcdb29e455759b0afa41793a5">comp</a>) ? <a class="code" href="global_8h.html#a1b3f06ddcdb29e455759b0afa41793a5">comp</a> : sum.<a class="code" href="structPixel.html#a94b067f3c79425c953631f7bf1c7536c">b</a>/area);</div><div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        }</div><div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;</div><div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    <span class="comment">// Fecha o arquivo aberto</span></div><div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    fclose(img_f);</div><div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;}</div><div class="ttc" id="global_8h_html_a1b3f06ddcdb29e455759b0afa41793a5"><div class="ttname"><a href="global_8h.html#a1b3f06ddcdb29e455759b0afa41793a5">comp</a></div><div class="ttdeci">int comp</div><div class="ttdef"><b>Definition:</b> global.h:31</div></div>
+<div class="ttc" id="structPixel_html_a8bdcc8f589c30333ec3f88d2c26d4e3a"><div class="ttname"><a href="structPixel.html#a8bdcc8f589c30333ec3f88d2c26d4e3a">Pixel::r</a></div><div class="ttdeci">int r</div><div class="ttdef"><b>Definition:</b> global.h:44</div></div>
+<div class="ttc" id="structPixel_html_a94b067f3c79425c953631f7bf1c7536c"><div class="ttname"><a href="structPixel.html#a94b067f3c79425c953631f7bf1c7536c">Pixel::b</a></div><div class="ttdeci">int b</div><div class="ttdef"><b>Definition:</b> global.h:46</div></div>
+<div class="ttc" id="structPixel_html_a73515f179e3c1bd28156e434da111d05"><div class="ttname"><a href="structPixel.html#a73515f179e3c1bd28156e434da111d05">Pixel::g</a></div><div class="ttdeci">int g</div><div class="ttdef"><b>Definition:</b> global.h:45</div></div>
+<div class="ttc" id="global_8h_html_acb559820d9ca11295b4500f179ef6392"><div class="ttname"><a href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a></div><div class="ttdeci">int i</div><div class="ttdef"><b>Definition:</b> global.h:34</div></div>
+<div class="ttc" id="global_8h_html_a16611451551e3d15916bae723c3f59f7"><div class="ttname"><a href="global_8h.html#a16611451551e3d15916bae723c3f59f7">h</a></div><div class="ttdeci">int h</div><div class="ttdef"><b>Definition:</b> global.h:25</div></div>
+<div class="ttc" id="global_8h_html_aac374e320caaadeca4874add33b62af2"><div class="ttname"><a href="global_8h.html#aac374e320caaadeca4874add33b62af2">w</a></div><div class="ttdeci">int w</div><div class="ttdef"><b>Definition:</b> global.h:22</div></div>
+<div class="ttc" id="global_8h_html_a383d5e14413e39bc8997c9f4edbe05d4"><div class="ttname"><a href="global_8h.html#a383d5e14413e39bc8997c9f4edbe05d4">header</a></div><div class="ttdeci">#define header</div><div class="ttdef"><b>Definition:</b> global.h:10</div></div>
+<div class="ttc" id="structPixel_html"><div class="ttname"><a href="structPixel.html">Pixel</a></div><div class="ttdef"><b>Definition:</b> global.h:43</div></div>
+<div class="ttc" id="global_8h_html_a37d972ae0b47b9099e30983131d31916"><div class="ttname"><a href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a></div><div class="ttdeci">int j</div><div class="ttdef"><b>Definition:</b> global.h:37</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="aca284dbfa2ce5c106338f11b53e8fb68"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void img_reflect_h </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structPixel.html">Pixel</a>&#160;</td>
+          <td class="paramname"><em>img</em>[MAX][MAX]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Função para refletir a imagem horizontalmente</p>
+<p>Essa função faz com que a imagem fique espelhada horizontalmente, isto é, a imagem é "normal" até a sua metade (horizontal), quando começa a repetir a imagem, só que invertida, criando o efeito de ter colocado um espelho no meio da imagem.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">img</td><td>- Matriz da imagem a ser refletida horizontalmente </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Nada</dd></dl>
+<div class="fragment"><div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;                                        {</div><div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a> = 0; <a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a> &lt; <a class="code" href="global_8h.html#a16611451551e3d15916bae723c3f59f7">h</a>; <a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>++)</div><div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a> = 0; <a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a> &lt; <a class="code" href="global_8h.html#aac374e320caaadeca4874add33b62af2">w</a>; <a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>++)</div><div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;            <span class="comment">// Atribui a cada elemento (i, largura - j - 1)</span></div><div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;            <span class="comment">// o seu &quot;correspondente&quot; (i, j) da imagem</span></div><div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;            img[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][w-<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>-1] = img[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>];</div><div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;}</div><div class="ttc" id="global_8h_html_acb559820d9ca11295b4500f179ef6392"><div class="ttname"><a href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a></div><div class="ttdeci">int i</div><div class="ttdef"><b>Definition:</b> global.h:34</div></div>
+<div class="ttc" id="global_8h_html_a16611451551e3d15916bae723c3f59f7"><div class="ttname"><a href="global_8h.html#a16611451551e3d15916bae723c3f59f7">h</a></div><div class="ttdeci">int h</div><div class="ttdef"><b>Definition:</b> global.h:25</div></div>
+<div class="ttc" id="global_8h_html_aac374e320caaadeca4874add33b62af2"><div class="ttname"><a href="global_8h.html#aac374e320caaadeca4874add33b62af2">w</a></div><div class="ttdeci">int w</div><div class="ttdef"><b>Definition:</b> global.h:22</div></div>
+<div class="ttc" id="global_8h_html_a37d972ae0b47b9099e30983131d31916"><div class="ttname"><a href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a></div><div class="ttdeci">int j</div><div class="ttdef"><b>Definition:</b> global.h:37</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="ac54728b7ee42294fdeac2754a443e0fa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void img_reflect_v </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structPixel.html">Pixel</a>&#160;</td>
+          <td class="paramname"><em>img</em>[MAX][MAX]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Função para refletir a imagem verticalmente</p>
+<p>Essa função faz com que a imagem fique espelhada verticalmente, isto é, a imagem é "normal" até a sua metade (vertical), quando começa a ser repetida, só que invertida, criando o efeito de ter colocado um espelho no meio da imagem.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">img</td><td>- Matriz da imagem a ser refletida verticalmente </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Nada</dd></dl>
+<div class="fragment"><div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;                                        {</div><div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a> = 0; <a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a> &lt; <a class="code" href="global_8h.html#a16611451551e3d15916bae723c3f59f7">h</a>; <a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>++)</div><div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a> = 0; <a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a> &lt; <a class="code" href="global_8h.html#aac374e320caaadeca4874add33b62af2">w</a>; <a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>++)</div><div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;            <span class="comment">// Atribui a cada elemento (altura - i - 1, j)</span></div><div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;            <span class="comment">// o seu &quot;correspondente&quot; (i, j) da imagem</span></div><div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;            img[h-<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>-1][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>] = img[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>];</div><div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;}</div><div class="ttc" id="global_8h_html_acb559820d9ca11295b4500f179ef6392"><div class="ttname"><a href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a></div><div class="ttdeci">int i</div><div class="ttdef"><b>Definition:</b> global.h:34</div></div>
+<div class="ttc" id="global_8h_html_a16611451551e3d15916bae723c3f59f7"><div class="ttname"><a href="global_8h.html#a16611451551e3d15916bae723c3f59f7">h</a></div><div class="ttdeci">int h</div><div class="ttdef"><b>Definition:</b> global.h:25</div></div>
+<div class="ttc" id="global_8h_html_aac374e320caaadeca4874add33b62af2"><div class="ttname"><a href="global_8h.html#aac374e320caaadeca4874add33b62af2">w</a></div><div class="ttdeci">int w</div><div class="ttdef"><b>Definition:</b> global.h:22</div></div>
+<div class="ttc" id="global_8h_html_a37d972ae0b47b9099e30983131d31916"><div class="ttname"><a href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a></div><div class="ttdeci">int j</div><div class="ttdef"><b>Definition:</b> global.h:37</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a40f897fc17dfad9a2d61307c5ac83690"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void img_rot_180 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structPixel.html">Pixel</a>&#160;</td>
+          <td class="paramname"><em>img</em>[MAX][MAX]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Função de rotação em 180º</p>
+<p>Para rotacionar uma imagem em 180º, poderíamos aplicar duas vezes o algoritmo de rotação para a esquerda (ou para a direita), no entanto, não há essa necessidade, pois uma imagem rotacionada em 180º nada mais é do que uma imagem invertida horizontalmente e verticalmente ao mesmo tempo (flip_h + flip_v). E é isso que essa função faz.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">img</td><td>- Matriz da imagem a ser alterada </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Nada</dd></dl>
+<div class="fragment"><div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;                                      {</div><div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <span class="comment">// Inverte a imagem verticalmente (flip vertical)</span></div><div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <a class="code" href="functions_8h.html#a151774396a3953ffb291abb2f223068a">img_invert_v</a>(img);</div><div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="comment">// Inverte a imagem horizontalmente (flip horizontal)</span></div><div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <a class="code" href="functions_8h.html#a70f96b4ba9528ba54ffe8f4953fa2958">img_invert_h</a>(img);</div><div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;}</div><div class="ttc" id="functions_8h_html_a151774396a3953ffb291abb2f223068a"><div class="ttname"><a href="functions_8h.html#a151774396a3953ffb291abb2f223068a">img_invert_v</a></div><div class="ttdeci">void img_invert_v(Pixel img[MAX][MAX])</div><div class="ttdef"><b>Definition:</b> functions.h:483</div></div>
+<div class="ttc" id="functions_8h_html_a70f96b4ba9528ba54ffe8f4953fa2958"><div class="ttname"><a href="functions_8h.html#a70f96b4ba9528ba54ffe8f4953fa2958">img_invert_h</a></div><div class="ttdeci">void img_invert_h(Pixel img[MAX][MAX])</div><div class="ttdef"><b>Definition:</b> functions.h:456</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a13a779a640b08906ef45176088e3d00f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void img_rot_left </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structPixel.html">Pixel</a>&#160;</td>
+          <td class="paramname"><em>img</em>[MAX][MAX]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Função de rotação em 90º para a esquerda</p>
+<p>Faz a transposta da matriz da imagem e espelha verticalmente</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">img</td><td>- Matriz da imagem a ser alterada </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Nada</dd></dl>
+<div class="fragment"><div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;                                       {</div><div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keywordtype">int</span> aux;</div><div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div><div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="comment">// Cria uma matriz para armazenar a imagem original temporariamente</span></div><div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <a class="code" href="structPixel.html">Pixel</a> tmp[<a class="code" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>][<a class="code" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>];</div><div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;</div><div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="comment">// Copia a imagem original para a temporária</span></div><div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <a class="code" href="functions_8h.html#a65e342ed9460bf3b4b4fff1fa8082146">copy_img</a>(img, tmp);</div><div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;</div><div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a> = 0; <a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a> &lt; <a class="code" href="global_8h.html#a16611451551e3d15916bae723c3f59f7">h</a>; <a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>++)</div><div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a> = 0; <a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a> &lt; <a class="code" href="global_8h.html#aac374e320caaadeca4874add33b62af2">w</a>; <a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>++)</div><div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            img[w-<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>-1][<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>] = tmp[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>];</div><div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div><div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <span class="comment">// Faz o swap entre h e w, pois ao rotacionar, a altura troca com a largura</span></div><div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    aux = <a class="code" href="global_8h.html#a16611451551e3d15916bae723c3f59f7">h</a>, h = <a class="code" href="global_8h.html#aac374e320caaadeca4874add33b62af2">w</a>, w = aux;</div><div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;}</div><div class="ttc" id="global_8h_html_a36ecf0006f5fe9d8bf1f2c1f2f2b4554"><div class="ttname"><a href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a></div><div class="ttdeci">int MAX</div><div class="ttdef"><b>Definition:</b> global.h:28</div></div>
+<div class="ttc" id="functions_8h_html_a65e342ed9460bf3b4b4fff1fa8082146"><div class="ttname"><a href="functions_8h.html#a65e342ed9460bf3b4b4fff1fa8082146">copy_img</a></div><div class="ttdeci">void copy_img(Pixel origin[MAX][MAX], Pixel destiny[MAX][MAX])</div><div class="ttdef"><b>Definition:</b> functions.h:9</div></div>
+<div class="ttc" id="global_8h_html_acb559820d9ca11295b4500f179ef6392"><div class="ttname"><a href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a></div><div class="ttdeci">int i</div><div class="ttdef"><b>Definition:</b> global.h:34</div></div>
+<div class="ttc" id="global_8h_html_a16611451551e3d15916bae723c3f59f7"><div class="ttname"><a href="global_8h.html#a16611451551e3d15916bae723c3f59f7">h</a></div><div class="ttdeci">int h</div><div class="ttdef"><b>Definition:</b> global.h:25</div></div>
+<div class="ttc" id="global_8h_html_aac374e320caaadeca4874add33b62af2"><div class="ttname"><a href="global_8h.html#aac374e320caaadeca4874add33b62af2">w</a></div><div class="ttdeci">int w</div><div class="ttdef"><b>Definition:</b> global.h:22</div></div>
+<div class="ttc" id="structPixel_html"><div class="ttname"><a href="structPixel.html">Pixel</a></div><div class="ttdef"><b>Definition:</b> global.h:43</div></div>
+<div class="ttc" id="global_8h_html_a37d972ae0b47b9099e30983131d31916"><div class="ttname"><a href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a></div><div class="ttdeci">int j</div><div class="ttdef"><b>Definition:</b> global.h:37</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="aea8f3765b240d30c2d321d6a879ccc4d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void img_rot_right </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structPixel.html">Pixel</a>&#160;</td>
+          <td class="paramname"><em>img</em>[MAX][MAX]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Função de rotação em 90º para a direita</p>
+<p>Se considerarmos o ângulo de rotação para esquerda como x, o ângulo de rotação para esquerda se dá por x + 180º, portanto, para rotacionar a imagem para esquerda, podemos rotacioná-la para esquerda uma vez e depois rotacionar em 180º. E é isso que essa função faz.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">img</td><td>- Matriz da imagem a ser alterada </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Nada</dd></dl>
+<div class="fragment"><div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;                                        {</div><div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="comment">// Rotaciona a imagem original 1 vez para a esquerda</span></div><div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <a class="code" href="functions_8h.html#a13a779a640b08906ef45176088e3d00f">img_rot_left</a>(img);</div><div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <span class="comment">// Rotaciona a imagem original em 180º</span></div><div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <a class="code" href="functions_8h.html#a40f897fc17dfad9a2d61307c5ac83690">img_rot_180</a>(img);</div><div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;}</div><div class="ttc" id="functions_8h_html_a13a779a640b08906ef45176088e3d00f"><div class="ttname"><a href="functions_8h.html#a13a779a640b08906ef45176088e3d00f">img_rot_left</a></div><div class="ttdeci">void img_rot_left(Pixel img[MAX][MAX])</div><div class="ttdef"><b>Definition:</b> functions.h:160</div></div>
+<div class="ttc" id="functions_8h_html_a40f897fc17dfad9a2d61307c5ac83690"><div class="ttname"><a href="functions_8h.html#a40f897fc17dfad9a2d61307c5ac83690">img_rot_180</a></div><div class="ttdeci">void img_rot_180(Pixel img[MAX][MAX])</div><div class="ttdef"><b>Definition:</b> functions.h:206</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a39dc6f7ba1214f7b4a1bb0f07dbd9dc4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void img_sharpening </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structPixel.html">Pixel</a>&#160;</td>
+          <td class="paramname"><em>img</em>[MAX][MAX]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Função de sharpening</p>
+<p>Aumenta a clareza de detalhes da imagem subtraindo de 5x o pixel (i, j) cada um dos 4 pixels laterais.<br />
+ Seguindo a matriz:<br />
+ | 0 &#160;-1 &#160; 0 | <br />
+ | -1&#160; 5 &#160;-1 | <br />
+ | 0 &#160;-1 &#160; 0 |</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">img</td><td>- Matriz da imagem a ser alterada </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Nada</dd></dl>
+<div class="fragment"><div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                                         {</div><div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="comment">// Cria uma matriz para armazenar a imagem original temporariamente</span></div><div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <a class="code" href="structPixel.html">Pixel</a> tmp[<a class="code" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>][<a class="code" href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a>];</div><div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div><div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="comment">// Copia a imagem original para a temporária</span></div><div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <a class="code" href="functions_8h.html#a65e342ed9460bf3b4b4fff1fa8082146">copy_img</a>(img, tmp);</div><div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div><div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a> = 1; <a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a> &lt; <a class="code" href="global_8h.html#a16611451551e3d15916bae723c3f59f7">h</a> - 1; <a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>++)</div><div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a> = 1; <a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a> &lt; <a class="code" href="global_8h.html#aac374e320caaadeca4874add33b62af2">w</a> - 1; <a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>++)</div><div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            img[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].r = 5*tmp[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].r - tmp[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>-1][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].r - tmp[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>-1].r - tmp[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>+1].r - tmp[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>+1][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].r,</div><div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            img[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].g = 5*tmp[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].g - tmp[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>-1][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].g - tmp[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>-1].g - tmp[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>+1].g - tmp[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>+1][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].g,</div><div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            img[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].b = 5*tmp[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].b - tmp[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>-1][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].b - tmp[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>-1].b - tmp[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>+1].b - tmp[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>+1][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].b;</div><div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;}</div><div class="ttc" id="global_8h_html_a36ecf0006f5fe9d8bf1f2c1f2f2b4554"><div class="ttname"><a href="global_8h.html#a36ecf0006f5fe9d8bf1f2c1f2f2b4554">MAX</a></div><div class="ttdeci">int MAX</div><div class="ttdef"><b>Definition:</b> global.h:28</div></div>
+<div class="ttc" id="functions_8h_html_a65e342ed9460bf3b4b4fff1fa8082146"><div class="ttname"><a href="functions_8h.html#a65e342ed9460bf3b4b4fff1fa8082146">copy_img</a></div><div class="ttdeci">void copy_img(Pixel origin[MAX][MAX], Pixel destiny[MAX][MAX])</div><div class="ttdef"><b>Definition:</b> functions.h:9</div></div>
+<div class="ttc" id="global_8h_html_acb559820d9ca11295b4500f179ef6392"><div class="ttname"><a href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a></div><div class="ttdeci">int i</div><div class="ttdef"><b>Definition:</b> global.h:34</div></div>
+<div class="ttc" id="global_8h_html_a16611451551e3d15916bae723c3f59f7"><div class="ttname"><a href="global_8h.html#a16611451551e3d15916bae723c3f59f7">h</a></div><div class="ttdeci">int h</div><div class="ttdef"><b>Definition:</b> global.h:25</div></div>
+<div class="ttc" id="global_8h_html_aac374e320caaadeca4874add33b62af2"><div class="ttname"><a href="global_8h.html#aac374e320caaadeca4874add33b62af2">w</a></div><div class="ttdeci">int w</div><div class="ttdef"><b>Definition:</b> global.h:22</div></div>
+<div class="ttc" id="structPixel_html"><div class="ttname"><a href="structPixel.html">Pixel</a></div><div class="ttdef"><b>Definition:</b> global.h:43</div></div>
+<div class="ttc" id="global_8h_html_a37d972ae0b47b9099e30983131d31916"><div class="ttname"><a href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a></div><div class="ttdeci">int j</div><div class="ttdef"><b>Definition:</b> global.h:37</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="ace88dc5e25cda0cb1a351375bfa9c246"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void img_thresholding </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structPixel.html">Pixel</a>&#160;</td>
+          <td class="paramname"><em>img</em>[MAX][MAX]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Função de thresholding</p>
+<p>Binariza a imagem, deixando-a apenas com as cores preta e branca, sem tons de cinza.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">img</td><td>- Matriz da imagem a ser alterada </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Nada</dd></dl>
+<p>Cria uma variável para armazenar o valor da cor binária</p>
+<p>Define a cor máxima (componente) como 1, literalmente, binárizando a imagem </p>
+<div class="fragment"><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                                           {</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">int</span> bin_color;</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">for</span> (<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a> = 0; <a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a> &lt; <a class="code" href="global_8h.html#a16611451551e3d15916bae723c3f59f7">h</a>; <a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>++)</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a> = 0; <a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a> &lt; <a class="code" href="global_8h.html#aac374e320caaadeca4874add33b62af2">w</a>; <a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>++)</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <span class="comment">// Percorre cada elemento da matriz imagem e atribui a</span></div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <span class="comment">// bin_color 1 se a média dos 3 componentes (r, g, b) do</span></div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <span class="comment">// pixel for maior ou igual à metade da cor máxima, e 0</span></div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <span class="comment">// se a média for menor, atribuindo o mesmo valor a cada um</span></div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            bin_color = (img[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].r + img[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].g + img[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].b)/3 &gt; <a class="code" href="global_8h.html#a1b3f06ddcdb29e455759b0afa41793a5">comp</a>/2,</div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            img[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].<a class="code" href="structPixel.html#a8bdcc8f589c30333ec3f88d2c26d4e3a">r</a> = bin_color,</div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            img[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].<a class="code" href="structPixel.html#a73515f179e3c1bd28156e434da111d05">g</a> = bin_color,</div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            img[<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>][<a class="code" href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a>].<a class="code" href="structPixel.html#a94b067f3c79425c953631f7bf1c7536c">b</a> = bin_color;</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <a class="code" href="global_8h.html#a1b3f06ddcdb29e455759b0afa41793a5">comp</a> = 1;</div><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;}</div><div class="ttc" id="global_8h_html_a1b3f06ddcdb29e455759b0afa41793a5"><div class="ttname"><a href="global_8h.html#a1b3f06ddcdb29e455759b0afa41793a5">comp</a></div><div class="ttdeci">int comp</div><div class="ttdef"><b>Definition:</b> global.h:31</div></div>
+<div class="ttc" id="structPixel_html_a8bdcc8f589c30333ec3f88d2c26d4e3a"><div class="ttname"><a href="structPixel.html#a8bdcc8f589c30333ec3f88d2c26d4e3a">Pixel::r</a></div><div class="ttdeci">int r</div><div class="ttdef"><b>Definition:</b> global.h:44</div></div>
+<div class="ttc" id="structPixel_html_a94b067f3c79425c953631f7bf1c7536c"><div class="ttname"><a href="structPixel.html#a94b067f3c79425c953631f7bf1c7536c">Pixel::b</a></div><div class="ttdeci">int b</div><div class="ttdef"><b>Definition:</b> global.h:46</div></div>
+<div class="ttc" id="structPixel_html_a73515f179e3c1bd28156e434da111d05"><div class="ttname"><a href="structPixel.html#a73515f179e3c1bd28156e434da111d05">Pixel::g</a></div><div class="ttdeci">int g</div><div class="ttdef"><b>Definition:</b> global.h:45</div></div>
+<div class="ttc" id="global_8h_html_acb559820d9ca11295b4500f179ef6392"><div class="ttname"><a href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a></div><div class="ttdeci">int i</div><div class="ttdef"><b>Definition:</b> global.h:34</div></div>
+<div class="ttc" id="global_8h_html_a16611451551e3d15916bae723c3f59f7"><div class="ttname"><a href="global_8h.html#a16611451551e3d15916bae723c3f59f7">h</a></div><div class="ttdeci">int h</div><div class="ttdef"><b>Definition:</b> global.h:25</div></div>
+<div class="ttc" id="global_8h_html_aac374e320caaadeca4874add33b62af2"><div class="ttname"><a href="global_8h.html#aac374e320caaadeca4874add33b62af2">w</a></div><div class="ttdeci">int w</div><div class="ttdef"><b>Definition:</b> global.h:22</div></div>
+<div class="ttc" id="global_8h_html_a37d972ae0b47b9099e30983131d31916"><div class="ttname"><a href="global_8h.html#a37d972ae0b47b9099e30983131d31916">j</a></div><div class="ttdeci">int j</div><div class="ttdef"><b>Definition:</b> global.h:37</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a62be2199207067abf3e58f8e1396996a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void img_uncompress </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>file</em>[]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Função para descomprimir a imagem</p>
+<p>Essa função descomprime a imagem utilizando o algoritmo RLE (Run-Length Encoding) de forma reversa, lendo o número n de repetições do pixel (rgb) e repetindo n vezes o pixel na escrita de uma nova imagem (descomprimida).</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>- Nome do arquivo de saída </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Nada</dd></dl>
+<div class="fragment"><div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;                                 {</div><div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;    <span class="comment">// Armazena o número de repetições do pixel</span></div><div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;    <span class="keywordtype">int</span> rpt;</div><div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;    <span class="comment">// Armazena os valores (rgb) do pixel lido</span></div><div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;    <a class="code" href="structPixel.html">Pixel</a> p;</div><div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;</div><div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;    strcat(file, <span class="stringliteral">&quot;_uncompressed.ppm&quot;</span>);</div><div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;</div><div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;    <span class="comment">// Cria uma variável do tipo arquivo</span></div><div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;    FILE *uncomp_img;</div><div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;</div><div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;    <span class="comment">// Cria um arquivo com o nome do arquivo + &#39;_compressed.ppm&#39;</span></div><div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;    uncomp_img = fopen(file, <span class="stringliteral">&quot;w&quot;</span>);</div><div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;</div><div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;    <span class="comment">// Cria o cabeçalho da imagem ppm</span></div><div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;    fprintf(uncomp_img, <span class="stringliteral">&quot;%s\n&quot;</span>, <a class="code" href="global_8h.html#a383d5e14413e39bc8997c9f4edbe05d4">header</a>);</div><div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;    <span class="comment">// Define a largura e altura da imagem</span></div><div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;    fprintf(uncomp_img, <span class="stringliteral">&quot;%i %i\n&quot;</span>, <a class="code" href="global_8h.html#aac374e320caaadeca4874add33b62af2">w</a>, <a class="code" href="global_8h.html#a16611451551e3d15916bae723c3f59f7">h</a>);</div><div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;    <span class="comment">// Define a cor máximo (qualidade) da imagem,</span></div><div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;    fprintf(uncomp_img, <span class="stringliteral">&quot;%i\n&quot;</span>, <a class="code" href="global_8h.html#a1b3f06ddcdb29e455759b0afa41793a5">comp</a>);</div><div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;</div><div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;    <span class="keywordflow">while</span> (fscanf(<a class="code" href="global_8h.html#a19d059e59f83809b2971ddc322e83130">file_img</a>, <span class="stringliteral">&quot;%i(%i %i %i) &quot;</span>, &amp;rpt, &amp;p.<a class="code" href="structPixel.html#a8bdcc8f589c30333ec3f88d2c26d4e3a">r</a>, &amp;p.<a class="code" href="structPixel.html#a73515f179e3c1bd28156e434da111d05">g</a>, &amp;p.<a class="code" href="structPixel.html#a94b067f3c79425c953631f7bf1c7536c">b</a>) != EOF)</div><div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;        <span class="comment">// Lê os valores de rpt e do pixel da imagem até</span></div><div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;        <span class="comment">// que o arquivo comprimido chegue ao final</span></div><div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a> = 0; <a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a> &lt; rpt; <a class="code" href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a>++)</div><div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;            <span class="comment">// Repete rpt vezes o valor do pixel</span></div><div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;            <span class="comment">// repetido no arquivo da nova imagem</span></div><div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;            fprintf(uncomp_img, <span class="stringliteral">&quot;%i %i %i\n&quot;</span>, p.<a class="code" href="structPixel.html#a8bdcc8f589c30333ec3f88d2c26d4e3a">r</a>, p.<a class="code" href="structPixel.html#a73515f179e3c1bd28156e434da111d05">g</a>, p.<a class="code" href="structPixel.html#a94b067f3c79425c953631f7bf1c7536c">b</a>);</div><div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;</div><div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;    <span class="comment">// Fecha o arquivo aberto</span></div><div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;    fclose(uncomp_img);</div><div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;</div><div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;    <span class="comment">// Mostra para o usuário o nome da imagem final gerada</span></div><div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;    printf(<span class="stringliteral">&quot;\nA imagem foi salva como %s\n&quot;</span>, file);</div><div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;}<div class="ttc" id="global_8h_html_a19d059e59f83809b2971ddc322e83130"><div class="ttname"><a href="global_8h.html#a19d059e59f83809b2971ddc322e83130">file_img</a></div><div class="ttdeci">FILE * file_img</div><div class="ttdef"><b>Definition:</b> global.h:13</div></div>
+<div class="ttc" id="global_8h_html_a1b3f06ddcdb29e455759b0afa41793a5"><div class="ttname"><a href="global_8h.html#a1b3f06ddcdb29e455759b0afa41793a5">comp</a></div><div class="ttdeci">int comp</div><div class="ttdef"><b>Definition:</b> global.h:31</div></div>
+<div class="ttc" id="structPixel_html_a8bdcc8f589c30333ec3f88d2c26d4e3a"><div class="ttname"><a href="structPixel.html#a8bdcc8f589c30333ec3f88d2c26d4e3a">Pixel::r</a></div><div class="ttdeci">int r</div><div class="ttdef"><b>Definition:</b> global.h:44</div></div>
+<div class="ttc" id="structPixel_html_a94b067f3c79425c953631f7bf1c7536c"><div class="ttname"><a href="structPixel.html#a94b067f3c79425c953631f7bf1c7536c">Pixel::b</a></div><div class="ttdeci">int b</div><div class="ttdef"><b>Definition:</b> global.h:46</div></div>
+<div class="ttc" id="structPixel_html_a73515f179e3c1bd28156e434da111d05"><div class="ttname"><a href="structPixel.html#a73515f179e3c1bd28156e434da111d05">Pixel::g</a></div><div class="ttdeci">int g</div><div class="ttdef"><b>Definition:</b> global.h:45</div></div>
+<div class="ttc" id="global_8h_html_acb559820d9ca11295b4500f179ef6392"><div class="ttname"><a href="global_8h.html#acb559820d9ca11295b4500f179ef6392">i</a></div><div class="ttdeci">int i</div><div class="ttdef"><b>Definition:</b> global.h:34</div></div>
+<div class="ttc" id="global_8h_html_a16611451551e3d15916bae723c3f59f7"><div class="ttname"><a href="global_8h.html#a16611451551e3d15916bae723c3f59f7">h</a></div><div class="ttdeci">int h</div><div class="ttdef"><b>Definition:</b> global.h:25</div></div>
+<div class="ttc" id="global_8h_html_aac374e320caaadeca4874add33b62af2"><div class="ttname"><a href="global_8h.html#aac374e320caaadeca4874add33b62af2">w</a></div><div class="ttdeci">int w</div><div class="ttdef"><b>Definition:</b> global.h:22</div></div>
+<div class="ttc" id="global_8h_html_a383d5e14413e39bc8997c9f4edbe05d4"><div class="ttname"><a href="global_8h.html#a383d5e14413e39bc8997c9f4edbe05d4">header</a></div><div class="ttdeci">#define header</div><div class="ttdef"><b>Definition:</b> global.h:10</div></div>
+<div class="ttc" id="structPixel_html"><div class="ttname"><a href="structPixel.html">Pixel</a></div><div class="ttdef"><b>Definition:</b> global.h:43</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>
