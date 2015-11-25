@@ -199,6 +199,7 @@ void choice(Pixel img[w][h]) {
         choice(img);
     }
 
+    // Mostra para o usuário o nome da imagem final gerada
     printf("\nA imagem foi salva como %s\n", file_name);
 }
 
