@@ -236,6 +236,7 @@ void img_amp(char file[], int zoom, Pixel img[MAX][MAX]) {
      *  linha n vezes.
      *
      *  \param file - Nome do arquivo de saída
+     *  \param zoom - Zoom de ampliação da imagem
      *  \param img - Matriz da imagem a ser ampliada
      *  \return Nada
      */
@@ -283,6 +284,7 @@ void img_red(char file[], int zoom, Pixel img[MAX][MAX]) {
      *  da imagem original.
      *
      *  \param file - Nome do arquivo de saída
+     *  \param zoom - Zoom de redução da imagem
      *  \param img - Matriz da imagem a ser reduzida
      *  \return Nada
      */

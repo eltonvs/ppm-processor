@@ -30,7 +30,11 @@ int MAX;
 /** Armazena a cor máxima da imagem (qualidade). */
 int comp;
 
-int i, j;
+/** Iterador primário padrão. */
+int i;
+
+/** Iterador secundário padrão.. */
+int j;
 
 
 /**
