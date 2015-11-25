@@ -40,4 +40,4 @@ void img_rot_left(Pixel img[MAX][MAX]);
 void img_rot_right(Pixel img[MAX][MAX]);
 void img_sharpening(Pixel img[w][h]);
 void img_thresholding(Pixel img[w][h]);
-void img_uncompress(char file[], Pixel img[MAX][MAX]);
+void img_uncompress(char file[]);

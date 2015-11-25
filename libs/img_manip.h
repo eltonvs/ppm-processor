@@ -293,7 +293,7 @@ void manip_ppm(char file[]) {
         /** Verifica se o usuário quer descomprimir a imagem */
         if (c)
             /** Chama a função para descompressão */
-            img_uncompress(file_name, image);
+            img_uncompress(file_name);
         /** Fecha a leitura do arquivo e finaliza programa */
         fclose(file_img);
         return;

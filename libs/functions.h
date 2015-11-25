@@ -626,7 +626,7 @@ void img_compress(char file[], Pixel img[MAX][MAX]) {
     printf("\nA imagem foi salva como %s\n", file);
 }
 
-void img_uncompress(char file[], Pixel img[MAX][MAX]) {
+void img_uncompress(char file[]) {
     /**
      *  \brief Função para descomprimir a imagem
      *
@@ -636,7 +636,6 @@ void img_uncompress(char file[], Pixel img[MAX][MAX]) {
      *  na escrita de uma nova imagem (descomprimida).
      *
      *  \param file - Nome do arquivo de saída
-     *  \param img - Matriz da imagem a ser descomprimida
      *  \return Nada
      */
 
