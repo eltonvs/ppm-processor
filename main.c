@@ -20,7 +20,6 @@
 int main() {
     /**
      *  \brief Função para receber o arquivo
-     *  \param Nenhum
      *  \return 0
      */
 

@@ -9,7 +9,6 @@
 void menu() {
     /**
      * \brief Função para mostrar o menu de opções para o usuário
-     * \param Nenhum
      * \return Nada
      */
 
@@ -35,7 +34,6 @@ void menu() {
 void clr_screen() {
     /**
      * \brief Função para limpar a tela do console em qualquer SO
-     * \param Nenhum
      * \return Nada
      */
 
@@ -49,7 +47,7 @@ void clr_screen() {
 void error_message(int type) {
     /**
      * \brief Função para mostrar as mensagens de erro para cada situação
-     * \param int type - Recebe o tipo (número) do erro
+     * \param [in] type Recebe o tipo (número) do erro
      * \return Nada
      */
 

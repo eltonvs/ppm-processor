@@ -1,8 +1,11 @@
-/*
- * Arquivo com os protótipos (headers) das funções,
- * a fim de se evitar erros de declaração implícita
+/**
+ *  \file headers.h
+ *  \brief Arquivo com os protótipos das funções
  *
- * Obs: As funções estão separadas por arquivo e organizadas alfabeticamente
+ *  Arquivo com todos os protótipos das funções a fim de se evitar erros de declaração implícita.
+ *
+ *  Obs: As funções estão separadas por arquivo e organizadas alfabeticamente
+ *
  */
 
 // img_manip.h
