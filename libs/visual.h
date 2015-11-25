@@ -8,8 +8,12 @@
 
 void menu() {
     /**
-     * \brief Função para mostrar o menu de opções para o usuário
-     * \return Nada
+     *  \brief Função para mostrar o menu de opções para o usuário
+     *
+     *  Essa função serve apenas para mostrar o menu com as
+     *  opções de manipulação de imagem que o usuário tem.
+     *
+     *  \return Nada
      */
 
     printf("-------------------- MENU --------------------\n");
@@ -33,8 +37,11 @@ void menu() {
 
 void clr_screen() {
     /**
-     * \brief Função para limpar a tela do console em qualquer SO
-     * \return Nada
+     *  \brief Função para limpar a tela
+     *
+     *  Essa função consegue limpar a tela do console em qualquer SO
+     *
+     *  \return Nada
      */
 
     #if defined WIN32
@@ -46,18 +53,22 @@ void clr_screen() {
 
 void error_message(int type) {
     /**
-     * \brief Função para mostrar as mensagens de erro para cada situação
-     * \param [in] type Recebe o tipo (número) do erro
-     * \return Nada
+     *  \brief Função para mostrar as mensagens de erro para cada situação
+     *
+     *  Essa função mostra uma determinada mensagem de erro
+     *  para cada cada código de erro predefinido.
+     *
+     *  \param type Recebe o tipo (número) do erro
+     *  \return Nada
      */
 
     clr_screen();
     switch (type) {
-        /** Erro padrão de opção inválida */
+        // Erro padrão de opção inválida
         case 0:
             printf("Você nao escolheu uma opção válida. Tente novamente:\n");
             break;
-        /** Opção inválida do menu */
+        // Opção inválida do menu
         case 1:
             menu();
             printf("Você não escolheu uma opção válida. Tente novamente:\n");
@@ -65,15 +76,15 @@ void error_message(int type) {
             scanf("%s", op);
             clr_screen();
             break;
-        /** Zoom de redução inválida */
+        // Zoom de redução inválida
         case 2:
             printf("O zoom de redução deve ser múltiplo de ambos os lados (%i, %i).\n", w, h);
             break;
-        /** Erro de abertura de arquivo */
+        // Erro de abertura de arquivo
         case 3:
             printf("Erro ao abrir o arquivo.\n");
             break;
-            /** Erro desconhecido */
+        // Erro desconhecido
         default:
             printf("Ocorreu um erro desconhecido.\n");
     }

@@ -14,8 +14,13 @@
 
 void choice(Pixel img[w][h]) {
     /**
-     * Função para verificar a opção escolhida
-     * no menu e chamar sua respectiva função
+     *  \brief Chama a função de manipulação de imagem
+     *
+     *  Função para verificar a opção escolhida
+     *  no menu e chamar sua respectiva função.
+     *
+     *  \param img - Imagem a ser alterada
+     *  \return Nada
      */
 
     // Percorre cada elemento de op[] e converte para minúsculo
@@ -80,8 +85,8 @@ void choice(Pixel img[w][h]) {
         if(dir == 'h') {
             // Se a direção escolhida foi h, chama a função img_invert_h()
             img_invert_h(img);
-            /** Concatena a operação realizada com "_h" \
-               para alterar o nome do arquivo de saída */
+            // Concatena a operação realizada com "_h"
+            // para alterar o nome do arquivo de saída
             strcat(op, "_h");
         }else if(dir == 'v') {
             // Se a direção escolhida foi v, chama a função img_invert_v()
@@ -196,29 +201,55 @@ void choice(Pixel img[w][h]) {
 }
 
 void skip_comments() {
-    /*
-     * Função para ignorar os comentários da imagem durante a sua leitura
+    /**
+     *  \brief Ignora os comentários da imagem
+     *
+     *  Função para ignorar os comentários da
+     *  imagem durante a sua leitura.
+     *
+     *  \return Nada
      */
 
+    // Cria uma variável para armazenar cada caracter do comentário
     char buffer = fgetc(file_img);
+
+    // Repete o laço enquanto a variável de buffer for igual a um '#'
     do {
         if (buffer == '#')
+            // Se buffer for igual a '#', é por que está iniciando
+            // um comentário, então a variável buffer recebe cada
+            // caractere até que ele seja uma quebra de linha
             while (buffer != '\n')
                 buffer = fgetc(file_img);
         else
+            // Caso contrário, não é um comentário, então "devolve"
+            // para o arquivo, para que ele possa ser lido novamente
             ungetc(buffer, file_img);
+        // buffer pega novamente um caracter (para verificar
+        // se tem mais algum comentário no arquivo)
         buffer = fgetc(file_img);
     } while (buffer == '#');
+    // Quando o laço acabar (o último caracter pego for
+    // diferente de um '#'), "devolve" para o arquivo o
+    // caracter que está em buffer, pois não é um comentário
     ungetc(buffer, file_img);
 }
 
 void read_ppm(Pixel img[MAX][MAX]) {
-    /*
-     * Função para ler as cores de cada pixel do arquivo ppm
+    /**
+     *  \brief Lê o arquivo PPM
+     *
+     *  Função para ler as cores do arquivo
+     *  da imagem e salvá-la em uma matriz.
+     *
+     *  \param img - Matriz onde será salva a imagem
+     *  \return Nada
      */
 
     for (i = 0; i < h; i++)
         for (j = 0; j < w; j++) {
+            // Lê cada elemento da imagem e salva na matriz img,
+            // sempre chamando a função para ignorar os comentários
             fscanf(file_img, "%i ", &img[i][j].r);
             skip_comments();
             fscanf(file_img, "%i ", &img[i][j].g);
@@ -229,9 +260,14 @@ void read_ppm(Pixel img[MAX][MAX]) {
 }
 
 void manip_ppm(char file[]) {
-    /*
-     * Função "principal" que processa a imagem ppm
-     * e direciona o usuário para outras funções
+    /**
+     *  \brief Função principal de manipulação da imagem
+     *
+     *  Essa função abre o arquivo PPM e integra
+     *  todas as outras funções do programa.
+     *
+     *  \param file - Nome do arquivo a ser lido
+     *  \return Nada
      */
 
     // Variável para verificar se a imagem lida está comprimida
@@ -273,8 +309,8 @@ void manip_ppm(char file[]) {
         return;
     }
 
-    /** Define, com uma comparação ternária, o valor máximo de altura/largura \
-       a fim de evitar erros de segmentação (Segmentation fault) na matriz */
+    // Define, com uma comparação ternária, o valor máximo de altura/largura
+    // a fim de evitar erros de segmentação (Segmentation fault) na matriz
     MAX = (w > h) ? w : h;
 
     // Cria a imagem como uma matriz de pixels (tamanho MAX x MAX)
