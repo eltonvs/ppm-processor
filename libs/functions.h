@@ -58,9 +58,6 @@ void build_img(char file[], Pixel img[MAX][MAX]){
 
     // Fecha o arquivo aberto
     fclose(img_f);
-
-    // Mostra para o usuário o nome da imagem final gerada
-    printf("\nA imagem foi salva como %s\n", file);
 }
 
 /*
@@ -269,9 +266,6 @@ void img_amp(char file[], int zoom, Pixel img[MAX][MAX]) {
 
     // Fecha o arquivo aberto
     fclose(img_f);
-
-    // Mostra para o usuário o nome da imagem final gerada
-    printf("\nA imagem foi salva como %s\n", file);
 }
 
 void img_red(char file[], int zoom, Pixel img[MAX][MAX]) {
@@ -327,9 +321,6 @@ void img_red(char file[], int zoom, Pixel img[MAX][MAX]) {
 
     // Fecha o arquivo aberto
     fclose(img_f);
-
-    // Mostra para o usuário o nome da imagem final gerada
-    printf("\nA imagem foi salva como %s\n", file);
 }
 
 // Funções Extras
@@ -623,9 +614,6 @@ void img_compress(char file[], Pixel img[MAX][MAX]) {
 
     // Fecha o arquivo aberto
     fclose(img_f);
-
-    // Mostra para o usuário o nome da imagem final gerada
-    printf("\nA imagem foi salva como %s\n", file);
 }
 
 void img_uncompress(char file[]) {

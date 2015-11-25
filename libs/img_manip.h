@@ -198,6 +198,8 @@ void choice(Pixel img[w][h]) {
         // Recursão para ler novamente até que a opção escolhida seja válida
         choice(img);
     }
+
+    printf("\nA imagem foi salva como %s\n", file_name);
 }
 
 void skip_comments() {
