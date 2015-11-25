@@ -9,6 +9,7 @@
  *
  *  Arquivo que é compilado e executado
  *
+ *  \brief Includes
  */
 
 #include <stdio.h> /** Biblioteca de funções de entrada/saída */
@@ -23,33 +24,33 @@ int main() {
      *  \return 0
      */
 
-    /** Armazena o nome do arquivo a ser lido */
+    // Armazena o nome do arquivo a ser lido
     char file[50];
-    /** Armazena a escolha do usuário de continuar ou não */
+    // Armazena a escolha do usuário de continuar ou não
     int alive;
 
-    /** Loop para poder executar o programa várias vezes */
+    // Loop para poder executar o programa até que o usuário decida parar
     do {
-        /** Limpa a tela */
+        // Limpa a tela
         clr_screen();
 
         printf("Digite o nome do arquivo a ser lido (sem extensão): ");
-        /** Recebe o nome do arquivo */
+        // Recebe o nome do arquivo
         scanf("%s", file);
 
-        /** Processa a imagem */
+        // Processa a imagem
         manip_ppm(file);
 
-        /** Loop para receber a resposta do usuário */
+        // Loop para receber a resposta do usuário
         do {
             printf("\nFazer outra manipulação? [1 - Sim | 0 - Não] ");
-            /** Recebe a resposta do usuário */
+            // Recebe a resposta do usuário
             scanf("%i", &alive);
         } while (alive != 0 && alive != 1);
 
     } while (alive);
 
-    /** Mensagem de programa finalizado */
+    // Mensagem de programa finalizado
     printf("\nPrograma finalizado.\n");
 
     return 0;
