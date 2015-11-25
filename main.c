@@ -1,6 +1,6 @@
 /**
  *  \mainpage Processador de Imagens
- *  \author Elton Viana
+ *  \author Elton de Souza Vieira
  *  \date 2015
  *  \version 1.0
  *
