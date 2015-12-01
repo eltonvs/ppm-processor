@@ -1,40 +1,21 @@
 ======================
-# INFORMAÇÕES GERAIS #
+# FUNÇÕES DIPONÍVEIS #
 ======================
 
-* Aluno: Elton de Souza Vieira
-
-
-===================
-# O QUE FOI FEITO #
-===================
-
-=== BÁSICO ===
-1. Thresholding
-2. Blurring
-3. Sharpening
-4. Rotação da Imagem, dado o ângulo
-5. Ampliação da imagem, dado o zoom.
-6. Redução da Imagem, dado o zoom.
-
-=== EXTRAS ===
-1. Compressão de imagem usando algoritmo RLE
-2. Escala de Cinza
-3. Alto-relevo
-4. Inversão de cores (negativo)
-5. Filtro de Posterização
-6. Inversão da imagem (flip) horizontal e vertical
-7. "Espelhamento" da imagem (refletir imagem)
-   horizontal e vertical
-
-
-===============================
-# O QUE SERIA FEITO DIFERENTE #
-===============================
-
-  A função para reduzir imagem seria feita para
-  uma matriz e não diretamente para um arquivo.
-
+1.  Thresholding
+2.  Blurring
+3.  Sharpening
+4.  Rotação da Imagem, dado o ângulo
+5.  Ampliação da imagem, dado o zoom.
+6.  Redução da Imagem, dado o zoom.
+7.  Compressão de imagem usando algoritmo RLE
+8.  Escala de Cinza
+9.  Alto-relevo
+10. Inversão de cores (negativo)
+11. Filtro de Posterização
+12. Inversão da imagem (flip) horizontal e vertical
+13. Espelhamento da imagem (refletir imagem)
+    horizontal e vertical
 
 =================
 # COMO COMPILAR #
