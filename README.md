@@ -34,3 +34,7 @@ $ ./main
 ```
 
 That's all, Folks!
+
+## Contribua
+
+Ajude no desenvolvimento e aprimoramento desse projeto. Contribua!
