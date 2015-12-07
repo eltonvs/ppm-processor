@@ -23,7 +23,7 @@ void choice(Pixel img[w][h]) {
      *  \return Nada
      */
 
-    // Percorre cada elemento de op[] e converte para minúsculo
+    // Percorre cada caracter de op[] e converte para minúsculo
     for(i = 0; i < strlen(op); i++)
         op[i] = tolower(op[i]);
 
